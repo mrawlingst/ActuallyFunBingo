@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/bingo.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-32.tres" type="DynamicFont" id=2]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=3]
 [ext_resource path="res://scenes/scene_timer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/bingo_components/scene_card.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=6]
 
 [node name="root" type="Node" index="0"]
 
@@ -62,6 +64,16 @@ _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
 margin_top = 39.0
 margin_bottom = 114.0
+
+[node name="Card" parent="." index="3" instance=ExtResource( 5 )]
+
+margin_top = 125.0
+margin_bottom = 689.0
+
+[node name="Seed Generator" parent="." index="4" instance=ExtResource( 6 )]
+
+margin_top = 690.0
+margin_bottom = 770.0
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 

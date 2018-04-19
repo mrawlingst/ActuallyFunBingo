@@ -1,0 +1,434 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://resources/headers/border.png" type="Texture" id=1]
+[ext_resource path="res://scenes/bingo_components/scene_tl-br.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/bingo_components/scene_column.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/bingo_components/scene_row.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/bingo_components/scene_bl-tr.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/bingo_components/scene_milestone.tscn" type="PackedScene" id=6]
+
+[node name="Card" type="Control"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 636.0
+margin_bottom = 564.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Border_Vert_1" type="Sprite" parent="." index="0"]
+
+position = Vector2( 10, 0 )
+scale = Vector2( 3, 564 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 58, 0 )
+scale = Vector2( 3, 564 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_3" type="Sprite" parent="." index="2"]
+
+position = Vector2( 171, 0 )
+scale = Vector2( 3, 516 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_4" type="Sprite" parent="." index="3"]
+
+position = Vector2( 284, 0 )
+scale = Vector2( 3, 516 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_5" type="Sprite" parent="." index="4"]
+
+position = Vector2( 397, 0 )
+scale = Vector2( 3, 516 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_6" type="Sprite" parent="." index="5"]
+
+position = Vector2( 510, 0 )
+scale = Vector2( 3, 516 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Vert_7" type="Sprite" parent="." index="6"]
+
+position = Vector2( 623, 0 )
+scale = Vector2( 3, 516 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform", "Z Index" ]
+
+[node name="Border_Horz_1" type="Sprite" parent="." index="7"]
+
+position = Vector2( 10, 3 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_2" type="Sprite" parent="." index="8"]
+
+position = Vector2( 10, 51 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_3" type="Sprite" parent="." index="9"]
+
+position = Vector2( 10, 144 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_4" type="Sprite" parent="." index="10"]
+
+position = Vector2( 10, 237 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_5" type="Sprite" parent="." index="11"]
+
+position = Vector2( 10, 330 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_6" type="Sprite" parent="." index="12"]
+
+position = Vector2( 10, 423 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_7" type="Sprite" parent="." index="13"]
+
+position = Vector2( 10, 516 )
+rotation = -1.5708
+scale = Vector2( 3, 616 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Border_Horz_8" type="Sprite" parent="." index="14"]
+
+position = Vector2( 10, 564 )
+rotation = -1.5708
+scale = Vector2( 3, 51 )
+texture = ExtResource( 1 )
+centered = false
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="TL-BR" parent="." index="15" instance=ExtResource( 2 )]
+
+margin_left = 13.0
+margin_top = 3.0
+margin_right = 58.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Column_1" parent="." index="16" instance=ExtResource( 3 )]
+
+margin_left = 61.0
+margin_top = 3.0
+margin_right = 171.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+col_num = 1
+
+[node name="Column_2" parent="." index="17" instance=ExtResource( 3 )]
+
+margin_left = 174.0
+margin_top = 3.0
+margin_right = 284.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+col_num = 2
+
+[node name="Column_3" parent="." index="18" instance=ExtResource( 3 )]
+
+margin_left = 287.0
+margin_top = 3.0
+margin_right = 397.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+col_num = 3
+
+[node name="Column_4" parent="." index="19" instance=ExtResource( 3 )]
+
+margin_left = 400.0
+margin_top = 3.0
+margin_right = 510.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+col_num = 4
+
+[node name="Column_5" parent="." index="20" instance=ExtResource( 3 )]
+
+margin_left = 514.0
+margin_top = 3.0
+margin_right = 624.0
+margin_bottom = 48.0
+_sections_unfolded = [ "Rect", "Textures" ]
+col_num = 5
+
+[node name="Row_1" parent="." index="21" instance=ExtResource( 4 )]
+
+margin_left = 13.0
+margin_top = 51.0
+margin_right = 58.0
+margin_bottom = 141.0
+_sections_unfolded = [ "Rect", "Textures" ]
+row_num = 1
+
+[node name="Row_2" parent="." index="22" instance=ExtResource( 4 )]
+
+margin_left = 13.0
+margin_top = 144.0
+margin_right = 58.0
+margin_bottom = 234.0
+_sections_unfolded = [ "Rect", "Textures" ]
+row_num = 2
+
+[node name="Row_3" parent="." index="23" instance=ExtResource( 4 )]
+
+margin_left = 13.0
+margin_top = 237.0
+margin_right = 58.0
+margin_bottom = 327.0
+_sections_unfolded = [ "Rect", "Textures" ]
+row_num = 3
+
+[node name="Row_4" parent="." index="24" instance=ExtResource( 4 )]
+
+margin_left = 13.0
+margin_top = 330.0
+margin_right = 58.0
+margin_bottom = 420.0
+_sections_unfolded = [ "Rect", "Textures" ]
+row_num = 4
+
+[node name="Row_5" parent="." index="25" instance=ExtResource( 4 )]
+
+margin_left = 13.0
+margin_top = 423.0
+margin_right = 58.0
+margin_bottom = 513.0
+_sections_unfolded = [ "Rect", "Textures" ]
+row_num = 5
+
+[node name="BL-TR" parent="." index="26" instance=ExtResource( 5 )]
+
+margin_left = 13.0
+margin_top = 516.0
+margin_right = 58.0
+margin_bottom = 561.0
+
+[node name="Milestone_1" parent="." index="27" instance=ExtResource( 6 )]
+
+margin_left = 61.0
+margin_top = 51.0
+margin_right = 171.0
+margin_bottom = 141.0
+
+[node name="Milestone_2" parent="." index="28" instance=ExtResource( 6 )]
+
+margin_left = 174.0
+margin_top = 51.0
+margin_right = 284.0
+margin_bottom = 141.0
+
+[node name="Milestone_3" parent="." index="29" instance=ExtResource( 6 )]
+
+margin_left = 287.0
+margin_top = 51.0
+margin_right = 397.0
+margin_bottom = 141.0
+
+[node name="Milestone_4" parent="." index="30" instance=ExtResource( 6 )]
+
+margin_left = 400.0
+margin_top = 51.0
+margin_right = 510.0
+margin_bottom = 141.0
+
+[node name="Milestone_5" parent="." index="31" instance=ExtResource( 6 )]
+
+margin_left = 513.0
+margin_top = 51.0
+margin_right = 623.0
+margin_bottom = 141.0
+
+[node name="Milestone_6" parent="." index="32" instance=ExtResource( 6 )]
+
+margin_left = 61.0
+margin_top = 144.0
+margin_right = 171.0
+margin_bottom = 234.0
+
+[node name="Milestone_7" parent="." index="33" instance=ExtResource( 6 )]
+
+margin_left = 174.0
+margin_top = 144.0
+margin_right = 284.0
+margin_bottom = 234.0
+
+[node name="Milestone_8" parent="." index="34" instance=ExtResource( 6 )]
+
+margin_left = 287.0
+margin_top = 144.0
+margin_right = 397.0
+margin_bottom = 234.0
+
+[node name="Milestone_9" parent="." index="35" instance=ExtResource( 6 )]
+
+margin_left = 400.0
+margin_top = 144.0
+margin_right = 510.0
+margin_bottom = 234.0
+
+[node name="Milestone_10" parent="." index="36" instance=ExtResource( 6 )]
+
+margin_left = 513.0
+margin_top = 144.0
+margin_right = 623.0
+margin_bottom = 234.0
+
+[node name="Milestone_11" parent="." index="37" instance=ExtResource( 6 )]
+
+margin_left = 61.0
+margin_top = 237.0
+margin_right = 171.0
+margin_bottom = 327.0
+
+[node name="Milestone_12" parent="." index="38" instance=ExtResource( 6 )]
+
+margin_left = 174.0
+margin_top = 237.0
+margin_right = 284.0
+margin_bottom = 327.0
+
+[node name="Milestone_13" parent="." index="39" instance=ExtResource( 6 )]
+
+margin_left = 287.0
+margin_top = 237.0
+margin_right = 397.0
+margin_bottom = 327.0
+
+[node name="Milestone_14" parent="." index="40" instance=ExtResource( 6 )]
+
+margin_left = 400.0
+margin_top = 237.0
+margin_right = 510.0
+margin_bottom = 327.0
+
+[node name="Milestone_15" parent="." index="41" instance=ExtResource( 6 )]
+
+margin_left = 513.0
+margin_top = 237.0
+margin_right = 623.0
+margin_bottom = 327.0
+
+[node name="Milestone_16" parent="." index="42" instance=ExtResource( 6 )]
+
+margin_left = 61.0
+margin_top = 330.0
+margin_right = 171.0
+margin_bottom = 420.0
+
+[node name="Milestone_17" parent="." index="43" instance=ExtResource( 6 )]
+
+margin_left = 174.0
+margin_top = 330.0
+margin_right = 284.0
+margin_bottom = 420.0
+
+[node name="Milestone_18" parent="." index="44" instance=ExtResource( 6 )]
+
+margin_left = 287.0
+margin_top = 330.0
+margin_right = 397.0
+margin_bottom = 420.0
+
+[node name="Milestone_19" parent="." index="45" instance=ExtResource( 6 )]
+
+margin_left = 400.0
+margin_top = 330.0
+margin_right = 510.0
+margin_bottom = 420.0
+
+[node name="Milestone_20" parent="." index="46" instance=ExtResource( 6 )]
+
+margin_left = 513.0
+margin_top = 330.0
+margin_right = 623.0
+margin_bottom = 420.0
+
+[node name="Milestone_21" parent="." index="47" instance=ExtResource( 6 )]
+
+margin_left = 61.0
+margin_top = 423.0
+margin_right = 171.0
+margin_bottom = 513.0
+
+[node name="Milestone_22" parent="." index="48" instance=ExtResource( 6 )]
+
+margin_left = 174.0
+margin_top = 423.0
+margin_right = 284.0
+margin_bottom = 513.0
+
+[node name="Milestone_23" parent="." index="49" instance=ExtResource( 6 )]
+
+margin_left = 287.0
+margin_top = 423.0
+margin_right = 397.0
+margin_bottom = 513.0
+
+[node name="Milestone_24" parent="." index="50" instance=ExtResource( 6 )]
+
+margin_left = 400.0
+margin_top = 423.0
+margin_right = 510.0
+margin_bottom = 513.0
+
+[node name="Milestone_25" parent="." index="51" instance=ExtResource( 6 )]
+
+margin_left = 513.0
+margin_top = 423.0
+margin_right = 623.0
+margin_bottom = 513.0
+
+

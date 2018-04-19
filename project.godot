@@ -14,6 +14,10 @@ config/name="ActuallyFunBingo"
 run/main_scene="res://scenes/scene_menu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+bingo_info="*res://scripts/bingo_info.gd"
+
 [display]
 
 window/size/width=636

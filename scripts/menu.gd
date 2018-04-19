@@ -12,4 +12,5 @@ func _on_quit_pressed():
     get_tree().quit()
 
 func game_picked(game):
-    print(game)
+    bingo_info.game = game
+    get_tree().change_scene("res://scenes/scene_bingo.tscn")
