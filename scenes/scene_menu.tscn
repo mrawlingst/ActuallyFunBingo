@@ -41,7 +41,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Margin", "Rect", "custom_fonts" ]
 
-[node name="Credits" type="Button" parent="." index="1"]
+[node name="About" type="Button" parent="." index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -63,7 +63,7 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-text = "Credits"
+text = "About"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
@@ -97,6 +97,7 @@ _sections_unfolded = [ "Rect", "custom_fonts" ]
 
 [node name="Games" type="VBoxContainer" parent="." index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -452,7 +453,7 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="About" to="." method="_on_about_pressed"]
 
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
 
