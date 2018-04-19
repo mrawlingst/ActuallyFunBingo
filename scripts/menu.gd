@@ -10,3 +10,6 @@ func _on_credits_pressed():
 # Quit
 func _on_quit_pressed():
     get_tree().quit()
+
+func game_picked(game):
+    print(game)
