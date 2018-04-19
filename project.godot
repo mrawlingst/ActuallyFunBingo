@@ -11,8 +11,15 @@ config_version=3
 [application]
 
 config/name="ActuallyFunBingo"
+run/main_scene="res://scenes/scene_menu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=636
+window/size/height=775
 
 [rendering]
 
+environment/default_clear_color=Color( 0.184314, 0.192157, 0.211765, 1 )
 environment/default_environment="res://default_env.tres"
