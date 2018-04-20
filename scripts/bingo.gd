@@ -251,7 +251,7 @@ func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
     print("duh")
     if get_tree().is_network_server():
-        rpc("send_seed", get_node("Seed Generator").get_seed())
+        rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
 
 func _player_disconnected(id):
     if get_tree().is_network_server():
@@ -274,8 +274,6 @@ func _player_disconnected(id):
 # for client
 func _connected_ok():
     get_node("Lockout/Info").text = "Connected!"
-    #rpc("send_seed", get_node("Seed Generator").get_seed())
-    
 
 # for client
 func _connected_fail():
@@ -301,14 +299,15 @@ func _server_disconnected():
     get_node("Seed Generator/Reset").set_disabled(false)
     get_node("Seed Generator/Generate").set_disabled(false)
 
-remote func send_seed(bingo_seed):
+remote func send_seed(bingo_seed, info):
     if get_tree().is_network_server():
-        rpc("send_seed", bingo_seed)
+        rpc("send_seed", bingo_seed, info)
         print("SERVER")
     else:
         print("RPC: " + str(bingo_seed))
         get_node("Seed Generator").bingo_seed = bingo_seed
         populate_card()
+        get_node("Info").bbcode_text = info
 
 remote func start_timer():
     if !get_tree().is_network_server():
