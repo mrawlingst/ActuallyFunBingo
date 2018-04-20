@@ -39,10 +39,10 @@ Planned Official Game Support:
 Modes Supported:
 * Standard
     * Standard rules for bingo applies here
-
-Planned Bingo Modes:
 * Blackout
     * A bingo where you must fill in all 25 milestones before the timer stops
+
+Planned Bingo Modes:
 * Lockout
     * Players share same card and players can claim milestones for themselves
     * Left clicking a milestone will color the milestone and show it to other player

@@ -3,6 +3,7 @@ extends Node
 var game = "World of Warcraft"
 var gameInfo
 var gameVersion = "1.0.0"
+var bingoMode = "Standard"
 var milestones = {}
 
 func currentGame(game):

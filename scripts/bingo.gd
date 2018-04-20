@@ -6,6 +6,9 @@ func _ready():
     get_node("Title").text = bingo_info.game + " Bingo"
     get_node("Seed Generator").new_seed()
     
+    get_node("Modes").add_item("Standard")
+    get_node("Modes").add_item("Blackout")
+    
     populate_card()
 
 func populate_card():
@@ -99,6 +102,12 @@ func inBL_TR(p):
     return [false, 0]
 
 func check_for_bingo():
+    if bingo_info.bingoMode == "Standard":
+        check_standard_bingo()
+    elif bingo_info.bingoMode == "Blackout":
+        check_blackout_bingo()
+
+func check_standard_bingo():
     # Col
     for col in range(5):
         for row in range(5):
@@ -139,5 +148,20 @@ func check_for_bingo():
     
     get_node("Timer").start_timer()
 
+func check_blackout_bingo():
+    for i in range(25):
+        if not get_node("Card/Milestone_" + str(i + 1)).is_pressed():
+            break;
+            
+        if i == 24:
+            get_node("Timer").pause_timer()
+            return
+    
+    get_node("Timer").start_timer()
+
 func _on_back_pressed():
     get_tree().change_scene("res://scenes/scene_menu.tscn")
+
+func _on_Modes_item_selected(ID):
+    bingo_info.bingoMode = get_node("Modes").get_item_text(ID)
+    print(bingo_info.bingoMode)
