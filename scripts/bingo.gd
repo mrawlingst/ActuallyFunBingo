@@ -8,6 +8,7 @@ func _ready():
     
     get_node("Modes").add_item("Standard")
     get_node("Modes").add_item("Blackout")
+    get_node("Modes").add_item("Lockout")
     
     populate_card()
 
@@ -164,5 +165,12 @@ func _on_back_pressed():
 
 func _on_Modes_item_selected(ID):
     bingo_info.bingoMode = get_node("Modes").get_item_text(ID)
+    if bingo_info.bingoMode == "Lockout":
+        get_node("Lockout").show()
+    else:
+        get_node("Lockout").hide()
     get_node("Seed Generator")._on_reset_pressed()
     get_node("Timer")._on_reset_pressed()
+
+func _on_CheckBox_toggled(button_pressed):
+    get_node("Lockout/IP Editbox").secret = button_pressed
