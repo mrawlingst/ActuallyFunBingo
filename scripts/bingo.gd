@@ -192,6 +192,7 @@ func check_lockout_bingo():
     get_node("Timer").start_timer()
 
 func _on_back_pressed():
+    get_tree().set_network_peer(null)
     get_tree().change_scene("res://scenes/scene_menu.tscn")
 
 func _on_Modes_item_selected(ID):
@@ -202,6 +203,11 @@ func _on_Modes_item_selected(ID):
             lockoutMilestones[i] = 0
     else:
         get_node("Lockout").hide()
+        get_tree().set_network_peer(null)
+        get_node("Lockout/Join").set_disabled(false)
+        get_node("Lockout/Host").set_disabled(false)
+        get_node("Lockout/Info").text = ""
+        
     get_node("Seed Generator")._on_reset_pressed()
     get_node("Timer")._on_reset_pressed()
 
