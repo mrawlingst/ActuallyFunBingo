@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/bingo_components/scene_card.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=6]
 
-[node name="root" type="Node" index="0"]
+[node name="root" type="Node"]
 
 script = ExtResource( 1 )
 

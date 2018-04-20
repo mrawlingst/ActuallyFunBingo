@@ -33,6 +33,8 @@ func _on_reset_pressed():
     paused_elapsed = 0
     get_node("Current Time").text = "00:00:00.000"
     get_node("Start Pause").text = "Start"
+    get_node("../Seed Generator/Generate").set_disabled(false)
+    get_node("../Seed Generator/Reset").set_disabled(false)
 
 func start_timer():
     if timer_active:
@@ -42,6 +44,8 @@ func start_timer():
     timer_start = OS.get_unix_time()
     set_process(true)
     timer_active = true
+    get_node("../Seed Generator/Generate").set_disabled(true)
+    get_node("../Seed Generator/Reset").set_disabled(true)
 
 func pause_timer():
     if !timer_active:
@@ -51,3 +55,5 @@ func pause_timer():
     paused_elapsed = elapsed
     set_process(false)
     timer_active = false
+    get_node("../Seed Generator/Generate").set_disabled(false)
+    get_node("../Seed Generator/Reset").set_disabled(false)
