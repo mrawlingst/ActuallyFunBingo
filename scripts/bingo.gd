@@ -17,6 +17,7 @@ func _ready():
     get_node("Modes").add_item("Standard")
     get_node("Modes").add_item("Blackout")
     get_node("Modes").add_item("Lockout")
+    get_node("Modes").selected = 2
     
     get_tree().connect("network_peer_connected", self, "_player_connected")
     get_tree().connect("network_peer_disconnected",self,"_player_disconnected")
@@ -248,6 +249,9 @@ func _on_Join_pressed():
 
 func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
+    print("duh")
+    if get_tree().is_network_server():
+        rpc("send_seed", get_node("Seed Generator").get_seed())
 
 func _player_disconnected(id):
     if get_tree().is_network_server():
@@ -270,6 +274,8 @@ func _player_disconnected(id):
 # for client
 func _connected_ok():
     get_node("Lockout/Info").text = "Connected!"
+    #rpc("send_seed", get_node("Seed Generator").get_seed())
+    
 
 # for client
 func _connected_fail():
@@ -290,3 +296,12 @@ func _server_disconnected():
     
     get_node("Lockout/Host").set_disabled(false)
     get_node("Lockout/Join").set_disabled(false)
+
+remote func send_seed(bingo_seed):
+    if get_tree().is_network_server():
+        rpc("send_seed", bingo_seed)
+        print("SERVER")
+    
+    print("RPC: " + str(bingo_seed))
+    get_node("Seed Generator").bingo_seed = bingo_seed
+    populate_card()
