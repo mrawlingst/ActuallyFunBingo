@@ -18,7 +18,6 @@ First made a [web version](https://mrawlingst.github.io/wow-bingo/) of bingo for
 
 Planned Features:
 * Modes for Bingo
-    * Blackout Bingo
     * Lockout Bingo
 * Online bingo with another friend
 
