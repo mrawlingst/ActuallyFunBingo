@@ -164,4 +164,5 @@ func _on_back_pressed():
 
 func _on_Modes_item_selected(ID):
     bingo_info.bingoMode = get_node("Modes").get_item_text(ID)
-    print(bingo_info.bingoMode)
+    get_node("Seed Generator")._on_reset_pressed()
+    get_node("Timer")._on_reset_pressed()
