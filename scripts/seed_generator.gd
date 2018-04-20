@@ -15,7 +15,9 @@ func _on_generate_pressed():
     else:
         bingo_seed = int(get_node("Seed Editbox").text)
     
-    print(bingo_seed)
+    _on_reset_pressed()
+    get_node("../.").populate_card()
 
 func _on_reset_pressed():
-    pass
+    for i in range(25):
+        get_node(str("../Card/Milestone_", i + 1)).set_pressed(false)

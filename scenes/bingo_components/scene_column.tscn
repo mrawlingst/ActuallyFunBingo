@@ -53,4 +53,8 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Rect", "custom_fonts" ]
 
+[connection signal="mouse_entered" from="." to="." method="_on_Column_mouse_entered"]
+
+[connection signal="mouse_exited" from="." to="." method="_on_Column_mouse_exited"]
+
 

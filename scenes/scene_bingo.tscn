@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/bingo.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-32.tres" type="DynamicFont" id=2]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=3]
 [ext_resource path="res://scenes/scene_timer.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/bingo_components/scene_card.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=6]
+[ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=6]
+[ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=7]
 
 [node name="root" type="Node"]
 
@@ -70,7 +71,38 @@ margin_bottom = 114.0
 margin_top = 125.0
 margin_bottom = 689.0
 
-[node name="Seed Generator" parent="." index="4" instance=ExtResource( 6 )]
+[node name="Info" type="RichTextLabel" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 61.0
+margin_top = 656.0
+margin_right = 623.0
+margin_bottom = 674.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/bold_font = ExtResource( 6 )
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "[right]Info Label[/right]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Info Label"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Rect", "custom_fonts" ]
+
+[node name="Seed Generator" parent="." index="5" instance=ExtResource( 7 )]
 
 margin_top = 690.0
 margin_bottom = 770.0

@@ -17,6 +17,10 @@ config/icon="res://icon.png"
 [autoload]
 
 bingo_info="*res://scripts/bingo_info.gd"
+ds_data="*res://scripts/data/dark_souls_data.gd"
+ds2_data="*res://scripts/data/dark_souls_2_data.gd"
+wow_data="*res://scripts/data/wow_data.gd"
+botw_data="*res://scripts/data/breath_of_the_wild_data.gd"
 
 [display]
 
