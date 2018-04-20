@@ -109,6 +109,7 @@ margin_bottom = 770.0
 
 [node name="Lockout" type="Control" parent="." index="6"]
 
+visible = false
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -266,7 +267,6 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
-text = "Lockout Info"
 align = 2
 percent_visible = 1.0
 lines_skipped = 0

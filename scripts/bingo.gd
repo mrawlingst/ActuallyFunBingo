@@ -240,6 +240,10 @@ func _on_Join_pressed():
     get_tree().set_network_peer(host)
     get_node("Lockout/Join").set_disabled(true)
     get_node("Lockout/Host").set_disabled(true)
+    get_node("Seed Generator/Generate").set_disabled(true)
+    get_node("Seed Generator/Reset").set_disabled(true)
+    get_node("Timer/Start Pause").set_disabled(true)
+    get_node("Timer/Reset").set_disabled(true)
     get_node("Lockout/Info").text = "Connecting..."
 
 func _player_connected(id):
@@ -258,6 +262,10 @@ func _player_disconnected(id):
         
         get_node("Lockout/Host").set_disabled(false)
         get_node("Lockout/Join").set_disabled(false)
+        get_node("Seed Generator/Generate").set_disabled(false)
+        get_node("Seed Generator/Reset").set_disabled(false)
+        get_node("Timer/Start Pause").set_disabled(false)
+        get_node("Timer/Reset").set_disabled(false)
 
 # for client
 func _connected_ok():
@@ -271,6 +279,10 @@ func _connected_fail():
     
     get_node("Lockout/Host").set_disabled(false)
     get_node("Lockout/Join").set_disabled(false)
+    get_node("Seed Generator/Generate").set_disabled(false)
+    get_node("Seed Generator/Reset").set_disabled(false)
+    get_node("Timer/Start Pause").set_disabled(false)
+    get_node("Timer/Reset").set_disabled(false)
 
 func _server_disconnected():
     get_node("Lockout/Info").text = "Server disconnected"
