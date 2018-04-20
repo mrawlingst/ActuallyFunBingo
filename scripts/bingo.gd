@@ -218,6 +218,7 @@ func _on_Host_pressed():
     
     get_tree().set_network_peer(host)
     get_node("Lockout/Join").set_disabled(true)
+    get_node("Lockout/Host").set_disabled(true)
     get_node("Lockout/Info").text = "Hosting"
 
 func _on_Join_pressed():
@@ -231,20 +232,32 @@ func _on_Join_pressed():
     host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
     host.create_client(ip, DEFAULT_PORT)
     get_tree().set_network_peer(host)
-    
+    get_node("Lockout/Join").set_disabled(true)
+    get_node("Lockout/Host").set_disabled(true)
     get_node("Lockout/Info").text = "Connecting..."
 
 func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
 
-func _player_disconnected():
-    pass
+func _player_disconnected(id):
+    if get_tree().is_network_server():
+        get_node("Lockout/Info").text = "Client disconnected"
+        get_tree().set_network_peer(null)
+        
+        get_node("Lockout/Host").set_disabled(false)
+        get_node("Lockout/Join").set_disabled(false)
+    else:
+        get_node("Lockout/Info").text = "Server disconnected"
+        get_tree().set_network_peer(null)
+        
+        get_node("Lockout/Host").set_disabled(false)
+        get_node("Lockout/Join").set_disabled(false)
 
+# for client
 func _connected_ok():
     get_node("Lockout/Info").text = "Connected!"
-    get_node("Lockout/Host").set_disabled(false)
-    get_node("Lockout/Join").set_disabled(false)
 
+# for client
 func _connected_fail():
     get_node("Lockout/Info").text = "Couldn't connect"
     
