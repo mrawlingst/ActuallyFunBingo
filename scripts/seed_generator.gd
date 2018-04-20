@@ -17,6 +17,7 @@ func _on_generate_pressed():
     
     _on_reset_pressed()
     get_node("../.").populate_card()
+    get_node("../.").rpc("send_seed", bingo_seed)
 
 func _on_reset_pressed():
     for i in range(25):
