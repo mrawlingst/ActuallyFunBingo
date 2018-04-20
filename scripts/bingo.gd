@@ -296,12 +296,28 @@ func _server_disconnected():
     
     get_node("Lockout/Host").set_disabled(false)
     get_node("Lockout/Join").set_disabled(false)
+    get_node("Timer/Start Pause").set_disabled(false)
+    get_node("Timer/Reset").set_disabled(false)
+    get_node("Seed Generator/Reset").set_disabled(false)
+    get_node("Seed Generator/Generate").set_disabled(false)
 
 remote func send_seed(bingo_seed):
     if get_tree().is_network_server():
         rpc("send_seed", bingo_seed)
         print("SERVER")
+    else:
+        print("RPC: " + str(bingo_seed))
+        get_node("Seed Generator").bingo_seed = bingo_seed
+        populate_card()
+
+remote func start_timer():
+    if !get_tree().is_network_server():
+        get_node("Timer").start_timer()
+
+remote func pause_timer():
+    if !get_tree().is_network_server():
+        get_node("Timer").pause_timer()
     
-    print("RPC: " + str(bingo_seed))
-    get_node("Seed Generator").bingo_seed = bingo_seed
-    populate_card()
+remote func reset_timer():
+    if !get_tree().is_network_server():
+        get_node("Timer")._on_reset_pressed()

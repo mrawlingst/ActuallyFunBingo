@@ -24,8 +24,12 @@ func _process(delta):
 func _on_start_pause_pressed():
     if timer_active:
         pause_timer()
+        if get_tree().is_network_server():
+            get_node("../.").rpc("pause_timer")
     else:
         start_timer()
+        if get_tree().is_network_server():
+            get_node("../.").rpc("start_timer")
 
 func _on_reset_pressed():
     set_process(false)
@@ -35,6 +39,13 @@ func _on_reset_pressed():
     get_node("Start Pause").text = "Start"
     get_node("../Seed Generator/Generate").set_disabled(false)
     get_node("../Seed Generator/Reset").set_disabled(false)
+    
+    if get_tree().is_network_server():
+        get_node("../.").rpc("reset_timer")
+    
+    if !get_tree().is_network_server() and get_tree().has_network_peer():
+        get_node("../Seed Generator/Generate").set_disabled(true)
+        get_node("../Seed Generator/Reset").set_disabled(true)
 
 func start_timer():
     if timer_active:
