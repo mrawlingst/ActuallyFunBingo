@@ -2,6 +2,14 @@ extends Node
 
 var milestones = []
 
+# 0 - unclaimed
+# 1 - host
+# 2 - client
+var lockoutMilestones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+## NETWORKING
+const DEFAULT_PORT = 40601
+
 func _ready():
     get_node("Title").text = bingo_info.game + " Bingo"
     get_node("Seed Generator").new_seed()
@@ -9,6 +17,12 @@ func _ready():
     get_node("Modes").add_item("Standard")
     get_node("Modes").add_item("Blackout")
     get_node("Modes").add_item("Lockout")
+    
+    get_tree().connect("network_peer_connected", self, "_player_connected")
+    get_tree().connect("network_peer_disconnected",self,"_player_disconnected")
+    get_tree().connect("connected_to_server",self,"_connected_ok")
+    get_tree().connect("connection_failed",self,"_connected_fail")
+    get_tree().connect("server_disconnected",self,"_server_disconnected")
     
     populate_card()
 
@@ -107,6 +121,8 @@ func check_for_bingo():
         check_standard_bingo()
     elif bingo_info.bingoMode == "Blackout":
         check_blackout_bingo()
+    elif bingo_info.bingoMode == "Lockout":
+        check_lockout_bingo()
 
 func check_standard_bingo():
     # Col
@@ -160,6 +176,21 @@ func check_blackout_bingo():
     
     get_node("Timer").start_timer()
 
+func check_lockout_bingo():
+    var host = 0
+    var client = 0
+    for i in range(25):
+        if lockoutMilestones[i] == 1:
+            host += 1
+        elif lockoutMilestones[i] == 2:
+            client += 0
+        
+        if host == 13 or client == 13:
+            get_node("Timer").pause_timer()
+            return
+    
+    get_node("Timer").start_timer()
+
 func _on_back_pressed():
     get_tree().change_scene("res://scenes/scene_menu.tscn")
 
@@ -167,6 +198,8 @@ func _on_Modes_item_selected(ID):
     bingo_info.bingoMode = get_node("Modes").get_item_text(ID)
     if bingo_info.bingoMode == "Lockout":
         get_node("Lockout").show()
+        for i in range(25):
+            lockoutMilestones[i] = 0
     else:
         get_node("Lockout").hide()
     get_node("Seed Generator")._on_reset_pressed()
@@ -174,3 +207,55 @@ func _on_Modes_item_selected(ID):
 
 func _on_CheckBox_toggled(button_pressed):
     get_node("Lockout/IP Editbox").secret = button_pressed
+
+func _on_Host_pressed():
+    var host = NetworkedMultiplayerENet.new()
+    host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
+    var err = host.create_server(DEFAULT_PORT, 1)
+    if err != OK:
+        get_node("Lockout/Info").text = "Could not host"
+        return
+    
+    get_tree().set_network_peer(host)
+    get_node("Lockout/Join").set_disabled(true)
+    get_node("Lockout/Info").text = "Hosting"
+
+func _on_Join_pressed():
+    var ip = get_node("Lockout/IP Editbox").text
+    
+    if not ip.is_valid_ip_address():
+        get_node("Lockout/Info").text = "Invalid address"
+        return
+    
+    var host = NetworkedMultiplayerENet.new()
+    host.set_compression_mode(NetworkedMultiplayerENet.COMPRESS_RANGE_CODER)
+    host.create_client(ip, DEFAULT_PORT)
+    get_tree().set_network_peer(host)
+    
+    get_node("Lockout/Info").text = "Connecting..."
+
+func _player_connected(id):
+    get_node("Lockout/Info").text = "Someone connected!"
+
+func _player_disconnected():
+    pass
+
+func _connected_ok():
+    get_node("Lockout/Info").text = "Connected!"
+    get_node("Lockout/Host").set_disabled(false)
+    get_node("Lockout/Join").set_disabled(false)
+
+func _connected_fail():
+    get_node("Lockout/Info").text = "Couldn't connect"
+    
+    get_tree().set_network_peer(null)
+    
+    get_node("Lockout/Host").set_disabled(false)
+    get_node("Lockout/Join").set_disabled(false)
+
+func _server_disconnected():
+    get_node("Lockout/Info").text = "Server disconnected"
+    get_tree().set_network_peer(null)
+    
+    get_node("Lockout/Host").set_disabled(false)
+    get_node("Lockout/Join").set_disabled(false)
