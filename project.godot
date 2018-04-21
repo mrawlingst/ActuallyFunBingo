@@ -26,6 +26,7 @@ botw_data="*res://scripts/data/breath_of_the_wild_data.gd"
 
 window/size/width=636
 window/size/height=775
+window/size/resizable=false
 
 [rendering]
 
