@@ -17,9 +17,8 @@ First made a [web version](https://mrawlingst.github.io/wow-bingo/) of bingo for
 * Support different games
 
 Planned Features:
-* Modes for Bingo
-    * Lockout Bingo
-* Online bingo with another friend
+
+If you have any requests or ideas, please let me know by submitting an [issue](https://github.com/mrawlingst/ActuallyFunBingo/issues)!
 
 ## Games
 Games Supported:
@@ -33,6 +32,8 @@ Planned Official Game Support:
 * Super Mario 64
 * The Legend of Zelda: Ocarina of Time
 
+You can request support for a specific game by submitting an [issue](https://github.com/mrawlingst/ActuallyFunBingo/issues)
+
 
 ## Modes
 Modes Supported:
@@ -40,13 +41,13 @@ Modes Supported:
     * Standard rules for bingo applies here
 * Blackout
     * A bingo where you must fill in all 25 milestones before the timer stops
-
-Planned Bingo Modes:
 * Lockout
     * Players share same card and players can claim milestones for themselves
     * Left clicking a milestone will color the milestone and show it to other player
-    * Right clicking a milestone will star and doesn't show it to other player
-        * Useful for planning ahead
+
+Planned Modes:
+
+If you have any requests or ideas, please let me know by submitting an [issue](https://github.com/mrawlingst/ActuallyFunBingo/issues)!
 
 ## TODO
 * Implement planned games
