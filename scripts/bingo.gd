@@ -117,12 +117,14 @@ func inBL_TR(p):
     
     return [false, 0]
 
-func check_for_bingo():
+func check_for_bingo(id):
     if bingo_info.bingoMode == "Standard":
         check_standard_bingo()
     elif bingo_info.bingoMode == "Blackout":
         check_blackout_bingo()
     elif bingo_info.bingoMode == "Lockout":
+        lockoutMilestones[id - 1] =  1 if get_node("Card/Milestone_" + str(id)).pressed else 0
+        rpc("milestone_click", id)
         check_lockout_bingo()
 
 func check_standard_bingo():
@@ -188,9 +190,11 @@ func check_lockout_bingo():
         
         if host == 13 or client == 13:
             get_node("Timer").pause_timer()
+            rpc("pause_timer")
             return
     
     get_node("Timer").start_timer()
+    rpc("start_timer")
 
 func _on_back_pressed():
     get_tree().set_network_peer(null)
@@ -310,13 +314,23 @@ remote func send_seed(bingo_seed, info):
         get_node("Info").bbcode_text = info
 
 remote func start_timer():
-    if !get_tree().is_network_server():
-        get_node("Timer").start_timer()
+    #if !get_tree().is_network_server():
+    get_node("Timer").start_timer()
 
 remote func pause_timer():
-    if !get_tree().is_network_server():
-        get_node("Timer").pause_timer()
+    #if !get_tree().is_network_server():
+    get_node("Timer").pause_timer()
     
 remote func reset_timer():
-    if !get_tree().is_network_server():
-        get_node("Timer")._on_reset_pressed()
+    #if !get_tree().is_network_server():
+    get_node("Timer")._on_reset_pressed()
+
+remote func milestone_click(id):
+    var btn = get_node("Card/Milestone_" + str(id))
+    btn.pressed = !btn.pressed
+    if btn.pressed:
+        btn.texture_pressed = btn.opp_texture
+    else:
+        btn.texture_pressed = btn.comp_texture
+    lockoutMilestones[id - 1 ] = 2 if btn.pressed else 0
+    print(lockoutMilestones)

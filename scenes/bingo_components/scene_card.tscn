@@ -7,7 +7,7 @@
 [ext_resource path="res://scenes/bingo_components/scene_bl-tr.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/bingo_components/scene_milestone.tscn" type="PackedScene" id=6]
 
-[node name="Card" type="Control"]
+[node name="Card" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -262,6 +262,7 @@ margin_left = 61.0
 margin_top = 51.0
 margin_right = 171.0
 margin_bottom = 141.0
+id = 1
 
 [node name="Milestone_2" parent="." index="28" instance=ExtResource( 6 )]
 
@@ -269,6 +270,7 @@ margin_left = 174.0
 margin_top = 51.0
 margin_right = 284.0
 margin_bottom = 141.0
+id = 2
 
 [node name="Milestone_3" parent="." index="29" instance=ExtResource( 6 )]
 
@@ -276,6 +278,7 @@ margin_left = 287.0
 margin_top = 51.0
 margin_right = 397.0
 margin_bottom = 141.0
+id = 3
 
 [node name="Milestone_4" parent="." index="30" instance=ExtResource( 6 )]
 
@@ -283,6 +286,7 @@ margin_left = 400.0
 margin_top = 51.0
 margin_right = 510.0
 margin_bottom = 141.0
+id = 4
 
 [node name="Milestone_5" parent="." index="31" instance=ExtResource( 6 )]
 
@@ -290,6 +294,7 @@ margin_left = 513.0
 margin_top = 51.0
 margin_right = 623.0
 margin_bottom = 141.0
+id = 5
 
 [node name="Milestone_6" parent="." index="32" instance=ExtResource( 6 )]
 
@@ -297,6 +302,7 @@ margin_left = 61.0
 margin_top = 144.0
 margin_right = 171.0
 margin_bottom = 234.0
+id = 6
 
 [node name="Milestone_7" parent="." index="33" instance=ExtResource( 6 )]
 
@@ -304,6 +310,7 @@ margin_left = 174.0
 margin_top = 144.0
 margin_right = 284.0
 margin_bottom = 234.0
+id = 7
 
 [node name="Milestone_8" parent="." index="34" instance=ExtResource( 6 )]
 
@@ -311,6 +318,7 @@ margin_left = 287.0
 margin_top = 144.0
 margin_right = 397.0
 margin_bottom = 234.0
+id = 8
 
 [node name="Milestone_9" parent="." index="35" instance=ExtResource( 6 )]
 
@@ -318,6 +326,7 @@ margin_left = 400.0
 margin_top = 144.0
 margin_right = 510.0
 margin_bottom = 234.0
+id = 9
 
 [node name="Milestone_10" parent="." index="36" instance=ExtResource( 6 )]
 
@@ -325,6 +334,7 @@ margin_left = 513.0
 margin_top = 144.0
 margin_right = 623.0
 margin_bottom = 234.0
+id = 10
 
 [node name="Milestone_11" parent="." index="37" instance=ExtResource( 6 )]
 
@@ -332,6 +342,7 @@ margin_left = 61.0
 margin_top = 237.0
 margin_right = 171.0
 margin_bottom = 327.0
+id = 11
 
 [node name="Milestone_12" parent="." index="38" instance=ExtResource( 6 )]
 
@@ -339,6 +350,7 @@ margin_left = 174.0
 margin_top = 237.0
 margin_right = 284.0
 margin_bottom = 327.0
+id = 12
 
 [node name="Milestone_13" parent="." index="39" instance=ExtResource( 6 )]
 
@@ -346,6 +358,7 @@ margin_left = 287.0
 margin_top = 237.0
 margin_right = 397.0
 margin_bottom = 327.0
+id = 13
 
 [node name="Milestone_14" parent="." index="40" instance=ExtResource( 6 )]
 
@@ -353,6 +366,7 @@ margin_left = 400.0
 margin_top = 237.0
 margin_right = 510.0
 margin_bottom = 327.0
+id = 14
 
 [node name="Milestone_15" parent="." index="41" instance=ExtResource( 6 )]
 
@@ -360,6 +374,7 @@ margin_left = 513.0
 margin_top = 237.0
 margin_right = 623.0
 margin_bottom = 327.0
+id = 15
 
 [node name="Milestone_16" parent="." index="42" instance=ExtResource( 6 )]
 
@@ -367,6 +382,7 @@ margin_left = 61.0
 margin_top = 330.0
 margin_right = 171.0
 margin_bottom = 420.0
+id = 16
 
 [node name="Milestone_17" parent="." index="43" instance=ExtResource( 6 )]
 
@@ -374,6 +390,7 @@ margin_left = 174.0
 margin_top = 330.0
 margin_right = 284.0
 margin_bottom = 420.0
+id = 17
 
 [node name="Milestone_18" parent="." index="44" instance=ExtResource( 6 )]
 
@@ -381,6 +398,7 @@ margin_left = 287.0
 margin_top = 330.0
 margin_right = 397.0
 margin_bottom = 420.0
+id = 18
 
 [node name="Milestone_19" parent="." index="45" instance=ExtResource( 6 )]
 
@@ -388,6 +406,7 @@ margin_left = 400.0
 margin_top = 330.0
 margin_right = 510.0
 margin_bottom = 420.0
+id = 19
 
 [node name="Milestone_20" parent="." index="46" instance=ExtResource( 6 )]
 
@@ -395,6 +414,7 @@ margin_left = 513.0
 margin_top = 330.0
 margin_right = 623.0
 margin_bottom = 420.0
+id = 20
 
 [node name="Milestone_21" parent="." index="47" instance=ExtResource( 6 )]
 
@@ -402,6 +422,7 @@ margin_left = 61.0
 margin_top = 423.0
 margin_right = 171.0
 margin_bottom = 513.0
+id = 21
 
 [node name="Milestone_22" parent="." index="48" instance=ExtResource( 6 )]
 
@@ -409,6 +430,7 @@ margin_left = 174.0
 margin_top = 423.0
 margin_right = 284.0
 margin_bottom = 513.0
+id = 22
 
 [node name="Milestone_23" parent="." index="49" instance=ExtResource( 6 )]
 
@@ -416,6 +438,7 @@ margin_left = 287.0
 margin_top = 423.0
 margin_right = 397.0
 margin_bottom = 513.0
+id = 23
 
 [node name="Milestone_24" parent="." index="50" instance=ExtResource( 6 )]
 
@@ -423,6 +446,7 @@ margin_left = 400.0
 margin_top = 423.0
 margin_right = 510.0
 margin_bottom = 513.0
+id = 24
 
 [node name="Milestone_25" parent="." index="51" instance=ExtResource( 6 )]
 
@@ -430,5 +454,6 @@ margin_left = 513.0
 margin_top = 423.0
 margin_right = 623.0
 margin_bottom = 513.0
+id = 25
 
 
