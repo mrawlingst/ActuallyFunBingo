@@ -20,5 +20,8 @@ func _on_generate_pressed():
     get_node("../.").rpc("send_seed", bingo_seed, get_node("../Info").bbcode_text)
 
 func _on_reset_pressed():
+    if get_tree().is_network_server():
+        get_node("../.").rpc("reset_card")
     for i in range(25):
-        get_node(str("../Card/Milestone_", i + 1)).set_pressed(false)
+        get_node(str("../Card/Milestone_", i + 1)).pressed = false
+        get_node(str("../Card/Milestone_", i + 1)).disabled = false

@@ -313,6 +313,10 @@ remote func send_seed(bingo_seed, info):
         populate_card()
         get_node("Info").bbcode_text = info
 
+remote func reset_card():
+    get_node("Seed Generator")._on_reset_pressed()
+    print("client reset card")
+
 remote func start_timer():
     #if !get_tree().is_network_server():
     get_node("Timer").start_timer()
@@ -327,10 +331,6 @@ remote func reset_timer():
 
 remote func milestone_click(id):
     var btn = get_node("Card/Milestone_" + str(id))
-    btn.pressed = !btn.pressed
-    if btn.pressed:
-        btn.texture_pressed = btn.opp_texture
-    else:
-        btn.texture_pressed = btn.comp_texture
+    btn.disabled = !btn.disabled
     lockoutMilestones[id - 1 ] = 2 if btn.pressed else 0
     print(lockoutMilestones)
