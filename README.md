@@ -51,7 +51,6 @@ If you have any requests or ideas, please let me know by submitting an [issue](h
 
 ## TODO
 * Implement planned games
-* Support networked shared bingo for lockout bingo
 
 ## License
 Copyright &copy; 2018 Michael Rawlings. Licensed under the MIT License, see [LICENSE](LICENSE) for more information.
