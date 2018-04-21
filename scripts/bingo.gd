@@ -274,6 +274,8 @@ func _player_disconnected(id):
         get_node("Seed Generator/Reset").set_disabled(false)
         get_node("Timer/Start Pause").set_disabled(false)
         get_node("Timer/Reset").set_disabled(false)
+    
+    pause_timer()
 
 # for client
 func _connected_ok():
@@ -302,6 +304,8 @@ func _server_disconnected():
     get_node("Timer/Reset").set_disabled(false)
     get_node("Seed Generator/Reset").set_disabled(false)
     get_node("Seed Generator/Generate").set_disabled(false)
+    
+    pause_timer()
 
 remote func send_seed(bingo_seed, info):
     if get_tree().is_network_server():

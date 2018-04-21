@@ -8,7 +8,7 @@
 [ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=6]
 [ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=7]
 
-[node name="root" type="Node"]
+[node name="root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
