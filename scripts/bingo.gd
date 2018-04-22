@@ -188,7 +188,7 @@ func check_lockout_bingo():
         elif lockoutMilestones[i] == 2:
             client += 0
         
-        if host == 13 or client == 13:
+        if host >= 13 or client >= 13:
             get_node("Timer").pause_timer()
             rpc("pause_timer")
             return
