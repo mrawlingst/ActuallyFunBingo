@@ -17,10 +17,13 @@ func _on_generate_pressed():
     
     _on_reset_pressed()
     get_node("../.").populate_card()
-    get_node("../.").rpc("send_seed", bingo_seed, get_node("../Info").bbcode_text)
+    
+    if get_tree().network_peer != null:
+        get_node("../.").rpc("send_seed", bingo_seed, get_node("../Info").bbcode_text)
 
 func _on_reset_pressed():
-    if get_tree().is_network_server():
+    #if get_tree().is_network_server() and 
+    if get_tree().network_peer != null and get_tree().is_network_server():
         get_node("../.").rpc("reset_card")
     for i in range(25):
         get_node(str("../Card/Milestone_", i + 1)).pressed = false

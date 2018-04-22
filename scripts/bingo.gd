@@ -37,7 +37,7 @@ func populate_card():
     
     while milestones.size() < 25:
         var milestone = ""
-        var index = 0
+        var index = randi() % bingo_info.milestones.size()
         while curate(milestone):
             index = randi() % bingo_info.milestones.size()
             milestone = bingo_info.milestones.keys()[index]
@@ -53,6 +53,7 @@ func populate_card():
 # False if dont need new milestone
 func curate(milestone):
     if milestone == "" or milestones.has(milestone):
+        print("curateeee")
         return true
     
     var pos = milestones.size() + 1
