@@ -30,7 +30,6 @@ func _ready():
 func populate_card():
     var bingo_seed = get_node("Seed Generator").get_seed()
     
-    print(bingo_seed)
     seed(bingo_seed)
     
     milestones = []
@@ -53,7 +52,6 @@ func populate_card():
 # False if dont need new milestone
 func curate(milestone):
     if milestone == "" or milestones.has(milestone):
-        print("curateeee")
         return true
     
     var pos = milestones.size() + 1
@@ -64,7 +62,6 @@ func curate(milestone):
         if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
             if bingo_info.milestones[milestone] == 0:
                 continue
-            print("col(" + str(getRowCol(pos)[1] + 1) + "): " + milestones[n] + " vs " + milestone)
             return true
     
     # Check row
@@ -73,7 +70,6 @@ func curate(milestone):
         if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
             if bingo_info.milestones[milestone] == 0:
                 continue
-            print("row(" + str(getRowCol(pos)[0] + 1) + "): " + milestones[n] + " vs " + milestone)
             return true
     
     # Check tl-br
@@ -83,7 +79,6 @@ func curate(milestone):
             if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
                 if bingo_info.milestones[milestone] == 0:
                     continue
-                print("tl-br(" + str(inTL_BR(pos)[1]) + "):" + milestones[n] + " vs " + milestone)
                 return true
     
     # Check bl-tr
@@ -93,7 +88,6 @@ func curate(milestone):
             if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
                 if bingo_info.milestones[milestone] == 0:
                     continue
-                print("tl-br(" + str(inBL_TR(pos)[1]) + "):" + milestones[n] + " vs " + milestone)
                 return true
     
     return false
@@ -125,7 +119,8 @@ func check_for_bingo(id):
         check_blackout_bingo()
     elif bingo_info.bingoMode == "Lockout":
         lockoutMilestones[id - 1] =  1 if get_node("Card/Milestone_" + str(id)).pressed else 0
-        rpc("milestone_click", id)
+        if get_tree().network_peer != null:
+            rpc("milestone_click", id)
         check_lockout_bingo()
 
 func check_standard_bingo():
@@ -187,15 +182,17 @@ func check_lockout_bingo():
         if lockoutMilestones[i] == 1:
             host += 1
         elif lockoutMilestones[i] == 2:
-            client += 0
+            client += 1
         
         if host >= 13 or client >= 13:
             get_node("Timer").pause_timer()
-            rpc("pause_timer")
+            if get_tree().network_peer != null:
+                rpc("pause_timer")
             return
     
     get_node("Timer").start_timer()
-    rpc("start_timer")
+    if get_tree().network_peer != null:
+        rpc("start_timer")
 
 func _on_back_pressed():
     get_tree().set_network_peer(null)
@@ -254,7 +251,6 @@ func _on_Join_pressed():
 
 func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
-    print("duh")
     if get_tree().is_network_server():
         rpc("send_game", bingo_info.game)
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
@@ -319,31 +315,24 @@ remote func send_game(game):
 remote func send_seed(bingo_seed, info):
     if get_tree().is_network_server():
         rpc("send_seed", bingo_seed, info)
-        print("SERVER")
     else:
-        print("RPC: " + str(bingo_seed))
         get_node("Seed Generator").bingo_seed = bingo_seed
         populate_card()
         get_node("Info").bbcode_text = info
 
 remote func reset_card():
     get_node("Seed Generator")._on_reset_pressed()
-    print("client reset card")
 
 remote func start_timer():
-    #if !get_tree().is_network_server():
     get_node("Timer").start_timer()
 
 remote func pause_timer():
-    #if !get_tree().is_network_server():
     get_node("Timer").pause_timer()
     
 remote func reset_timer():
-    #if !get_tree().is_network_server():
     get_node("Timer")._on_reset_pressed()
 
 remote func milestone_click(id):
     var btn = get_node("Card/Milestone_" + str(id))
     btn.disabled = !btn.disabled
-    lockoutMilestones[id - 1 ] = 2 if btn.pressed else 0
-    print(lockoutMilestones)
+    lockoutMilestones[id - 1 ] = 2 if btn.disabled else 0

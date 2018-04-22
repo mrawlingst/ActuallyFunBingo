@@ -7,7 +7,7 @@
 [ext_resource path="res://scripts/milestone.gd" type="Script" id=5]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=6]
 
-[node name="Milestone" type="TextureButton"]
+[node name="Milestone" type="TextureButton" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -40,7 +40,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 110.0
+margin_left = 2.0
+margin_right = 108.0
 margin_bottom = 90.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
