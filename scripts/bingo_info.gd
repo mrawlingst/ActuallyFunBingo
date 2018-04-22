@@ -28,3 +28,20 @@ func currentGame(game):
         milestones = wow_data.milestones
         gameInfo = wow_data.info()
         gameVersion = wow_data.version
+
+func getInfo():
+    gameInfo = ""
+    
+    if game == "Dark Souls":
+        gameInfo = ds_data.info()
+    
+    elif game == "Dark Souls II":
+        gameInfo = ds2_data.info()
+        
+    elif game == "TLoZ: Breath of the Wild":
+        gameInfo = botw_data.info()
+    
+    elif game == "World of Warcraft":
+        gameInfo = wow_data.info()
+    
+    return gameInfo

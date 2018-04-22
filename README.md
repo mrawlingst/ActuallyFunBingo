@@ -29,6 +29,7 @@ Games Supported:
 
 Planned Official Game Support:
 * Dark Souls III
+* Path of Exile (?)
 * Super Mario 64
 * The Legend of Zelda: Ocarina of Time
 
