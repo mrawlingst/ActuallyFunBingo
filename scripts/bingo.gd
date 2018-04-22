@@ -11,7 +11,7 @@ var lockoutMilestones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 const DEFAULT_PORT = 40601
 
 func _ready():
-    get_node("Title").text = bingo_info.game + " Bingo"
+    get_node("Title").text = bingo_info.game # + " Bingo"
     get_node("Seed Generator").new_seed()
     
     get_node("Modes").add_item("Standard")
@@ -255,6 +255,7 @@ func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
     print("duh")
     if get_tree().is_network_server():
+        rpc("send_game", bingo_info.game)
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
 
 func _player_disconnected(id):
@@ -306,6 +307,13 @@ func _server_disconnected():
     get_node("Seed Generator/Generate").set_disabled(false)
     
     pause_timer()
+
+remote func send_game(game):
+    if get_tree().is_network_server():
+        rpc("send_game", bingo_info.game)
+    else:
+        bingo_info.currentGame(game)
+        get_node("Title").text = bingo_info.game #+ " Bingo"
 
 remote func send_seed(bingo_seed, info):
     if get_tree().is_network_server():
