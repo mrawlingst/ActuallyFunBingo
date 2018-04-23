@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-32.tres" type="DynamicFont" id=2]
@@ -11,10 +11,12 @@
 [ext_resource path="res://resources/game_icons/Dark_Souls_III_Icon_Hovered.png" type="Texture" id=9]
 [ext_resource path="res://resources/game_icons/Path_Of_Exile_Icon.png" type="Texture" id=10]
 [ext_resource path="res://resources/game_icons/Path_Of_Exile_Icon_Hovered.png" type="Texture" id=11]
-[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon.png" type="Texture" id=12]
-[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon_Hovered.png" type="Texture" id=13]
-[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon.png" type="Texture" id=14]
-[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png" type="Texture" id=15]
+[ext_resource path="res://resources/game_icons/Blank_Icon.png" type="Texture" id=12]
+[ext_resource path="res://resources/game_icons/Blank_Icon_Hovered.png" type="Texture" id=13]
+[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon.png" type="Texture" id=14]
+[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon_Hovered.png" type="Texture" id=15]
+[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon.png" type="Texture" id=16]
+[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png" type="Texture" id=17]
 
 [node name="root" type="Node" index="0"]
 
@@ -140,8 +142,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 77.0
-margin_right = 149.0
+margin_left = 159.0
+margin_right = 231.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -206,8 +208,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 159.0
-margin_right = 231.0
+margin_left = 241.0
+margin_right = 313.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -271,8 +273,8 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 241.0
-margin_right = 313.0
+margin_left = 323.0
+margin_right = 395.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -332,12 +334,13 @@ max_lines_visible = -1
 
 [node name="Path of Exile" type="VBoxContainer" parent="Games/Row 1" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 323.0
-margin_right = 395.0
+margin_left = 405.0
+margin_right = 477.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -394,14 +397,34 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Breath of the Wild" type="VBoxContainer" parent="Games/Row 1" index="4"]
+[node name="Row 2" type="HBoxContainer" parent="Games" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 405.0
-margin_right = 477.0
+margin_top = 137.0
+margin_right = 636.0
+margin_bottom = 270.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 10
+alignment = 1
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Super Mario 64" type="VBoxContainer" parent="Games/Row 2" index="0"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 159.0
+margin_right = 231.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -411,7 +434,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="TextureButton" type="TextureButton" parent="Games/Row 1/Breath of the Wild" index="0"]
+[node name="TextureButton" type="TextureButton" parent="Games/Row 2/Super Mario 64" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -426,16 +449,16 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+disabled = true
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 12 )
-texture_hover = ExtResource( 13 )
 texture_disabled = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Label" type="Label" parent="Games/Row 1/Breath of the Wild" index="1"]
+[node name="Label" type="Label" parent="Games/Row 2/Super Mario 64" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -443,7 +466,7 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 76.0
 margin_right = 72.0
-margin_bottom = 133.0
+margin_bottom = 113.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -451,22 +474,23 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
-text = "TLoZ: Breath of the Wild"
+text = "Super Mario 64"
 align = 1
 autowrap = true
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
 
-[node name="World of Warcraft" type="VBoxContainer" parent="Games/Row 1" index="5"]
+[node name="Breath of the Wild" type="VBoxContainer" parent="Games/Row 2" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_left = 487.0
-margin_right = 559.0
+margin_left = 241.0
+margin_right = 313.0
 margin_bottom = 133.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -476,7 +500,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 
-[node name="TextureButton" type="TextureButton" parent="Games/Row 1/World of Warcraft" index="0"]
+[node name="TextureButton" type="TextureButton" parent="Games/Row 2/Breath of the Wild" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -500,7 +524,138 @@ texture_hover = ExtResource( 15 )
 texture_disabled = ExtResource( 15 )
 _sections_unfolded = [ "Textures" ]
 
-[node name="Label" type="Label" parent="Games/Row 1/World of Warcraft" index="1"]
+[node name="Label" type="Label" parent="Games/Row 2/Breath of the Wild" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 72.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "TLoZ: Breath of the Wild"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Ocarina of Time" type="VBoxContainer" parent="Games/Row 2" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 323.0
+margin_right = 395.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="TextureButton" type="TextureButton" parent="Games/Row 2/Ocarina of Time" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 72.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 13 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Label" type="Label" parent="Games/Row 2/Ocarina of Time" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 76.0
+margin_right = 72.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "TLoZ: Ocarina of Time"
+align = 1
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="World of Warcraft" type="VBoxContainer" parent="Games/Row 2" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 405.0
+margin_right = 477.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="TextureButton" type="TextureButton" parent="Games/Row 2/World of Warcraft" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 72.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 16 )
+texture_hover = ExtResource( 17 )
+texture_disabled = ExtResource( 17 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Label" type="Label" parent="Games/Row 2/World of Warcraft" index="1"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -535,8 +690,8 @@ max_lines_visible = -1
 
 [connection signal="pressed" from="Games/Row 1/Path of Exile/TextureButton" to="." method="game_picked" binds= [ "Path of Exile" ]]
 
-[connection signal="pressed" from="Games/Row 1/Breath of the Wild/TextureButton" to="." method="game_picked" binds= [ "TLoZ: Breath of the Wild" ]]
+[connection signal="pressed" from="Games/Row 2/Breath of the Wild/TextureButton" to="." method="game_picked" binds= [ "TLoZ: Breath of the Wild" ]]
 
-[connection signal="pressed" from="Games/Row 1/World of Warcraft/TextureButton" to="." method="game_picked" binds= [ "World of Warcraft" ]]
+[connection signal="pressed" from="Games/Row 2/World of Warcraft/TextureButton" to="." method="game_picked" binds= [ "World of Warcraft" ]]
 
 

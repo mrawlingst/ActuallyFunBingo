@@ -7,10 +7,10 @@ path="res://.import/Path_Of_Exile_Icon_Hovered.png-d6183ae0ff1f95c3d991bfb9f1fbe
 [deps]
 
 source_file="res://resources/game_icons/Path_Of_Exile_Icon_Hovered.png"
-source_md5="4746ef735664ceb2de1c952497fe4bcb"
+source_md5="515b4979b9fc0827c07087f0cbb729be"
 
 dest_files=[ "res://.import/Path_Of_Exile_Icon_Hovered.png-d6183ae0ff1f95c3d991bfb9f1fbed4d.stex" ]
-dest_md5="30bf394add746374ad0187e436c01087"
+dest_md5="39ba8588ffebef5f50c9e2b8228c96d6"
 
 [params]
 

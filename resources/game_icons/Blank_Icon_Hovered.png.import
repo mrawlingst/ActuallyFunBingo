@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.stex"
+path="res://.import/Blank_Icon_Hovered.png-3781d4a28d9f1fa8b2cc24ddc7568038.stex"
 
 [deps]
 
-source_file="res://resources/game_icons/Path_Of_Exile_Icon.png"
-source_md5="5640b538cca845034b9a68604636c407"
+source_file="res://resources/game_icons/Blank_Icon_Hovered.png"
+source_md5="29942bfc149b90fe633c040f07754777"
 
-dest_files=[ "res://.import/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.stex" ]
-dest_md5="d803b2258903314fa21e49a08606feef"
+dest_files=[ "res://.import/Blank_Icon_Hovered.png-3781d4a28d9f1fa8b2cc24ddc7568038.stex" ]
+dest_md5="cba3f7201106dd27a41cde1a5c8a43cb"
 
 [params]
 
