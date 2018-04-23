@@ -12,6 +12,7 @@ config_version=3
 
 config/name="ActuallyFunBingo"
 run/main_scene="res://scenes/scene_menu.tscn"
+boot_splash/image="res://resources/Boot_Splash.png"
 config/icon="res://icon.png"
 
 [autoload]
