@@ -1,5 +1,8 @@
 extends Node
 
+func _ready():
+    get_node("Version").text = bingo_info.bingoVersion
+
 func _on_Contents_meta_clicked(meta):
     OS.shell_open(meta)
 

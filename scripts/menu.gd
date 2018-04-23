@@ -1,7 +1,7 @@
 extends Node
 
 func _ready():
-    pass
+    get_node("Version").text = bingo_info.bingoVersion
 
 # About
 func _on_about_pressed():

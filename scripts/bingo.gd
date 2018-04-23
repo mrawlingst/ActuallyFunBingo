@@ -11,13 +11,13 @@ var lockoutMilestones = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 const DEFAULT_PORT = 40601
 
 func _ready():
+    get_node("Version").text = bingo_info.bingoVersion
     get_node("Title").text = bingo_info.game # + " Bingo"
     get_node("Seed Generator").new_seed()
     
     get_node("Modes").add_item("Standard")
     get_node("Modes").add_item("Blackout")
     get_node("Modes").add_item("Lockout")
-    get_node("Modes").selected = 2
     
     get_tree().connect("network_peer_connected", self, "_player_connected")
     get_tree().connect("network_peer_disconnected",self,"_player_disconnected")
