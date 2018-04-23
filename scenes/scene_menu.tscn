@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scripts/menu.gd" type="Script" id=1]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-32.tres" type="DynamicFont" id=2]
@@ -9,12 +9,14 @@
 [ext_resource path="res://resources/game_icons/Dark_Souls_II_Icon_Hovered.png" type="Texture" id=7]
 [ext_resource path="res://resources/game_icons/Dark_Souls_III_Icon.png" type="Texture" id=8]
 [ext_resource path="res://resources/game_icons/Dark_Souls_III_Icon_Hovered.png" type="Texture" id=9]
-[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png" type="Texture" id=10]
-[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon.png" type="Texture" id=11]
-[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon_Hovered.png" type="Texture" id=12]
-[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon.png" type="Texture" id=13]
+[ext_resource path="res://resources/game_icons/Path_Of_Exile_Icon.png" type="Texture" id=10]
+[ext_resource path="res://resources/game_icons/Path_Of_Exile_Icon_Hovered.png" type="Texture" id=11]
+[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon.png" type="Texture" id=12]
+[ext_resource path="res://resources/game_icons/Breath_of_the_Wild_Icon_Hovered.png" type="Texture" id=13]
+[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon.png" type="Texture" id=14]
+[ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png" type="Texture" id=15]
 
-[node name="root" type="Node"]
+[node name="root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -365,6 +367,8 @@ enabled_focus_mode = 2
 shortcut = null
 group = null
 texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 11 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="Games/Row 1/Path of Exile" index="1"]
@@ -392,7 +396,6 @@ max_lines_visible = -1
 
 [node name="Breath of the Wild" type="VBoxContainer" parent="Games/Row 1" index="4"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -427,9 +430,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 11 )
-texture_hover = ExtResource( 12 )
-texture_disabled = ExtResource( 12 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+texture_disabled = ExtResource( 13 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="Games/Row 1/Breath of the Wild" index="1"]
@@ -492,9 +495,9 @@ toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 group = null
-texture_normal = ExtResource( 13 )
-texture_hover = ExtResource( 10 )
-texture_disabled = ExtResource( 10 )
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 15 )
+texture_disabled = ExtResource( 15 )
 _sections_unfolded = [ "Textures" ]
 
 [node name="Label" type="Label" parent="Games/Row 1/World of Warcraft" index="1"]
