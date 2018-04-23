@@ -30,7 +30,10 @@ func _ready():
 func populate_card():
     var bingo_seed = get_node("Seed Generator").get_seed()
     
-    seed(bingo_seed)
+    if str(bingo_seed).is_valid_integer():
+        seed(bingo_seed)
+    else:
+        seed(hash(bingo_seed))
     
     milestones = []
     
