@@ -1,1 +1,0 @@
-lockout - update timer label when timer is paused on join

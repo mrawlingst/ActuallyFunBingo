@@ -5,6 +5,7 @@ var timer_start = 0
 var time_now = 0
 var elapsed = 0
 var paused_elapsed = 0
+var str_elapsed = ""
 
 func _process(delta):
     if !timer_active:
@@ -18,7 +19,7 @@ func _process(delta):
         minutes = minutes % 60
     var seconds = elapsed % 60
     var milliseconds = OS.get_ticks_msec() % 1000
-    var str_elapsed = "%02d:%02d:%02d.%03d" % [hours, minutes, seconds, milliseconds]
+    str_elapsed = "%02d:%02d:%02d.%03d" % [hours, minutes, seconds, milliseconds]
     get_node("Current Time").text = str_elapsed
 
 func _on_start_pause_pressed():

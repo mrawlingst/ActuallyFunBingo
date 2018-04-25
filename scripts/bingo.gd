@@ -265,7 +265,7 @@ func _player_connected(id):
         rpc("send_game", bingo_info.game)
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
         var timer = get_node("Timer")
-        rpc("send_time", timer.timer_active, timer.timer_start, timer.elapsed, timer.paused_elapsed)
+        rpc("send_time", timer.timer_active, timer.timer_start, timer.elapsed, timer.paused_elapsed, timer.str_elapsed)
         rpc("send_milestones", lockoutMilestones)
 
 func _player_disconnected(id):
@@ -337,26 +337,29 @@ remote func send_seed(bingo_seed, info):
         populate_card()
         get_node("Info").bbcode_text = info
 
-remote func send_time(timer_active, timer_start, elapsed, paused_elapsed):
+remote func send_time(timer_active, timer_start, elapsed, paused_elapsed, str_elapsed):
     if get_tree().is_network_server():
         rpc("send_time", timer_active, timer_start, elapsed, paused_elapsed)
     else:
-        print(str(timer_active) + " " + str(timer_start) + " " + str(elapsed) + " " + str(paused_elapsed))
+#        print(str(timer_active) + " " + str(timer_start) + " " + str(elapsed) + " " + str(paused_elapsed))
         var timer = get_node("Timer")
         timer.timer_start = timer_start
         timer.elapsed = elapsed
         timer.paused_elapsed = paused_elapsed
         timer.timer_active = timer_active
-        timer.set_process(true)
+        timer.str_elapsed = str_elapsed
+        timer.get_node("Current Time").text = str_elapsed
+        if timer_active:
+            timer.set_process(true)
+        else:
+            timer.set_process(false)
 
 remote func send_milestones(lkMilestones):
     if get_tree().is_network_server():
         rpc("send_milestones", lkMilestones)
     else:
-        print(lkMilestones)
         lockoutMilestones = lkMilestones
         for i in 25:
-            print(i)
             var btn = get_node("Card/Milestone_" + str(i+1))
             btn.pressed = false
             btn.disabled = false
