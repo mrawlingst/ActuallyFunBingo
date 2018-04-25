@@ -25,6 +25,11 @@ func currentGame(game):
         gameInfo = poe_data.info()
         gameVersion = poe_data.version
     
+    elif game == "TES V: Skyrim":
+        milestones = skyrim_data.milestones
+        gameInfo = skyrim_data.info()
+        gameVersion = skyrim_data.version
+    
     elif game == "TLoZ: Breath of the Wild":
         milestones = botw_data.milestones
         gameInfo = botw_data.info()
@@ -46,6 +51,9 @@ func getInfo():
     
     elif game == "Path of Exile":
         gameInfo = poe_data.info()
+    
+    elif game == "TES V: Skyrim":
+        gameInfo = skyrim_data.info()
         
     elif game == "TLoZ: Breath of the Wild":
         gameInfo = botw_data.info()

@@ -23,6 +23,7 @@ ds2_data="*res://scripts/data/dark_souls_2_data.gd"
 wow_data="*res://scripts/data/wow_data.gd"
 botw_data="*res://scripts/data/breath_of_the_wild_data.gd"
 poe_data="*res://scripts/data/path_of_exile_data.gd"
+skyrim_data="*res://scripts/data/skyrim_data.gd"
 
 [display]
 

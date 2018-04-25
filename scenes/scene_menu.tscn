@@ -778,7 +778,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [connection signal="pressed" from="Games/Row 1/Path of Exile/TextureButton" to="." method="game_picked" binds= [ "Path of Exile" ]]
 
-[connection signal="pressed" from="Games/Row 1/TESV Skyrim/TextureButton" to="." method="game_picked" binds= [ "Dark Souls III" ]]
+[connection signal="pressed" from="Games/Row 1/TESV Skyrim/TextureButton" to="." method="game_picked" binds= [ "TES V: Skyrim" ]]
 
 [connection signal="pressed" from="Games/Row 2/Breath of the Wild/TextureButton" to="." method="game_picked" binds= [ "TLoZ: Breath of the Wild" ]]
 
