@@ -1,2 +1,1 @@
-version checking for network - disallow if not same version
-lockout - sync time and completed milestone
+lockout - sync completed milestone

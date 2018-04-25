@@ -264,6 +264,8 @@ func _player_connected(id):
 #        rpc("send_version", bingo_info.bingoVersion)
         rpc("send_game", bingo_info.game)
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
+        var timer = get_node("Timer")
+        rpc("send_time", timer.timer_active, timer.timer_start, timer.elapsed, timer.paused_elapsed)
 
 func _player_disconnected(id):
     if get_tree().is_network_server():
@@ -333,6 +335,18 @@ remote func send_seed(bingo_seed, info):
         get_node("Seed Generator").bingo_seed = bingo_seed
         populate_card()
         get_node("Info").bbcode_text = info
+
+remote func send_time(timer_active, timer_start, elapsed, paused_elapsed):
+    if get_tree().is_network_server():
+        rpc("send_time", timer_active, timer_start, elapsed, paused_elapsed)
+    else:
+        print(str(timer_active) + " " + str(timer_start) + " " + str(elapsed) + " " + str(paused_elapsed))
+        var timer = get_node("Timer")
+        timer.timer_start = timer_start
+        timer.elapsed = elapsed
+        timer.paused_elapsed = paused_elapsed
+        timer.timer_active = timer_active
+        timer.set_process(true)
 
 remote func reset_card():
     get_node("Seed Generator")._on_reset_pressed()
