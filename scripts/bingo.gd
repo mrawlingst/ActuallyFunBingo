@@ -254,17 +254,24 @@ func _on_Join_pressed():
 
 func _player_connected(id):
     get_node("Lockout/Info").text = "Someone connected!"
+    rpc("send_version", bingo_info.bingoVersion)
+    
+    if get_tree().network_peer == null:
+        emit_signal("_player_disconnected")
+        return
+    
     if get_tree().is_network_server():
+#        rpc("send_version", bingo_info.bingoVersion)
         rpc("send_game", bingo_info.game)
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
 
 func _player_disconnected(id):
     if get_tree().is_network_server():
         get_node("Lockout/Info").text = "Client disconnected"
-        get_tree().set_network_peer(null)
-        
-        get_node("Lockout/Host").set_disabled(false)
-        get_node("Lockout/Join").set_disabled(false)
+#        get_tree().set_network_peer(null)
+#
+#        get_node("Lockout/Host").set_disabled(false)
+#        get_node("Lockout/Join").set_disabled(false)
     else:
         get_node("Lockout/Info").text = "Server disconnected"
         get_tree().set_network_peer(null)
@@ -307,6 +314,10 @@ func _server_disconnected():
     get_node("Seed Generator/Generate").set_disabled(false)
     
     pause_timer()
+
+remote func send_version(version):
+    if !get_tree().is_network_server() and version != bingo_info.bingoVersion:
+        _player_disconnected(0)
 
 remote func send_game(game):
     if get_tree().is_network_server():
