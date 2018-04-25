@@ -266,6 +266,7 @@ func _player_connected(id):
         rpc("send_seed", get_node("Seed Generator").get_seed(), get_node("Info").bbcode_text)
         var timer = get_node("Timer")
         rpc("send_time", timer.timer_active, timer.timer_start, timer.elapsed, timer.paused_elapsed)
+        rpc("send_milestones", lockoutMilestones)
 
 func _player_disconnected(id):
     if get_tree().is_network_server():
@@ -347,6 +348,25 @@ remote func send_time(timer_active, timer_start, elapsed, paused_elapsed):
         timer.paused_elapsed = paused_elapsed
         timer.timer_active = timer_active
         timer.set_process(true)
+
+remote func send_milestones(lkMilestones):
+    if get_tree().is_network_server():
+        rpc("send_milestones", lkMilestones)
+    else:
+        print(lkMilestones)
+        lockoutMilestones = lkMilestones
+        for i in 25:
+            print(i)
+            var btn = get_node("Card/Milestone_" + str(i+1))
+            btn.pressed = false
+            btn.disabled = false
+            if lockoutMilestones[i] == 1:
+                lockoutMilestones[i] = 2
+                btn.disabled = true
+            elif lockoutMilestones[i] == 2:
+                lockoutMilestones[i] = 1
+                btn.pressed = true
+    
 
 remote func reset_card():
     get_node("Seed Generator")._on_reset_pressed()

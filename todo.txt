@@ -1,1 +1,1 @@
-lockout - sync completed milestone
+lockout - update timer label when timer is paused on join
