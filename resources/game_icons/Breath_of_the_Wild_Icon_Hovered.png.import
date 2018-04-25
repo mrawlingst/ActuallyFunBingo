@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Breath_of_the_Wild_Icon_Hovered.png"
 source_md5="e5297b963f1c246fb025d37dc4cfe29a"
 
 dest_files=[ "res://.import/Breath_of_the_Wild_Icon_Hovered.png-f31a1949f28cea0dda3c8264408e83d7.stex" ]
-dest_md5="5c587197c89bd1027c7d07fabdbcc9dd"
+dest_md5="6e345fd8a1281b43c563dad739b19c4e"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

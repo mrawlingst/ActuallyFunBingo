@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/milestone-hover.png-3ae9be5f2115a8d51e1c7964ad2fb48d.stex"
+path="res://.import/TESV_Skyrim_Icon_Hovered.png-6ab23d6167d392fb33b37fbf5acc2b87.stex"
 
 [deps]
 
-source_file="res://resources/milestone/milestone-hover.png"
-source_md5="79334961695d9d3b50208969b33b2022"
+source_file="res://resources/game_icons/TESV_Skyrim_Icon_Hovered.png"
+source_md5="f3e771e35dc1ca1b1422bde142a58994"
 
-dest_files=[ "res://.import/milestone-hover.png-3ae9be5f2115a8d51e1c7964ad2fb48d.stex" ]
-dest_md5="17a96c2fcd7156d933476325faa4c94b"
+dest_files=[ "res://.import/TESV_Skyrim_Icon_Hovered.png-6ab23d6167d392fb33b37fbf5acc2b87.stex" ]
+dest_md5="bc3161e1fd41e31f0c39de45a6717791"
 
 [params]
 

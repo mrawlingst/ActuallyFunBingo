@@ -10,7 +10,7 @@ source_file="res://resources/milestone/milestone-normal.png"
 source_md5="a27342f530a50b1f88712ff894a05f19"
 
 dest_files=[ "res://.import/milestone-normal.png-9bb02d55cee6da05f0fefcc6328b588b.stex" ]
-dest_md5="b432dd1594a92d08a0f8956f69b81153"
+dest_md5="bce4eac20fe44b376c3572fac9b4c240"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

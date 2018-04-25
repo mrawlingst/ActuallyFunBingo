@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Dark_Souls_Icon_Hovered.png"
 source_md5="b9768d94c446098371b685ce425c5bc3"
 
 dest_files=[ "res://.import/Dark_Souls_Icon_Hovered.png-11f2683c45bec11db583ca16dd6c55ae.stex" ]
-dest_md5="39e10583ae1822a9d6cb1ebe7b4a3e16"
+dest_md5="73686967276d45e6d141a8b372108253"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

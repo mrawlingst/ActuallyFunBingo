@@ -10,7 +10,7 @@ source_file="res://resources/headers/horizontal-header-normal.png"
 source_md5="d85a77d80ad1f2e50099a0a814eb3aa6"
 
 dest_files=[ "res://.import/horizontal-header-normal.png-21f74dab46e638275ba71b14ca0d751e.stex" ]
-dest_md5="7e794e16f82f405855bfe49af5c926a6"
+dest_md5="0b2429b21dce8b71cfbc26517fe05a83"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

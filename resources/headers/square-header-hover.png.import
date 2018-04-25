@@ -10,7 +10,7 @@ source_file="res://resources/headers/square-header-hover.png"
 source_md5="61e83a90571a20011f1f21b617e85fdc"
 
 dest_files=[ "res://.import/square-header-hover.png-77ce145d1fe1082385c8cfc6829be212.stex" ]
-dest_md5="4718ce7cc9e0bd4cd2a2f64efbdb3ab9"
+dest_md5="94f2ee5e2e872553d520bbc03858b6de"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

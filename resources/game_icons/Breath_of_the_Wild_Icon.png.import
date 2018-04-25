@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Breath_of_the_Wild_Icon.png"
 source_md5="5d50d820c7fe94bda2f840667ae585c8"
 
 dest_files=[ "res://.import/Breath_of_the_Wild_Icon.png-382ba4e546712375896e1ee408cab60b.stex" ]
-dest_md5="eeb117175c7212bee2bfe5838d658025"
+dest_md5="beec4b92460a23b2d6ffe3cd45c8d410"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

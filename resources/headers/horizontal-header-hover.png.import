@@ -10,7 +10,7 @@ source_file="res://resources/headers/horizontal-header-hover.png"
 source_md5="d609cdb6c6e69033b898d63edb584214"
 
 dest_files=[ "res://.import/horizontal-header-hover.png-63153a47eae34a8403b41b904fe3dc3a.stex" ]
-dest_md5="d209780597cd5e7dd6242079427f273d"
+dest_md5="50b61ffc22a8e375fe3b1b8a01a233f3"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

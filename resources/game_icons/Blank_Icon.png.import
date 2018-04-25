@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Blank_Icon.png"
 source_md5="9537fbab0137ba9e066bcea77bf5e353"
 
 dest_files=[ "res://.import/Blank_Icon.png-cd5a6e67670a2c1ccb779bbbb62128a1.stex" ]
-dest_md5="39d31d25f1cdac356b66326a9f3396b9"
+dest_md5="d446efc34d21f5cf63372c1c4cd59d61"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

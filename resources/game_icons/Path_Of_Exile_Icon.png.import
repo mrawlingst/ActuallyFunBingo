@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Path_Of_Exile_Icon.png"
 source_md5="5640b538cca845034b9a68604636c407"
 
 dest_files=[ "res://.import/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.stex" ]
-dest_md5="d803b2258903314fa21e49a08606feef"
+dest_md5="dee86800716eef78e9f02777bceafe76"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

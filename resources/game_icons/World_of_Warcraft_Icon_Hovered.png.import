@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png"
 source_md5="cb1df82e8ae1622174b26b8eeccd6b32"
 
 dest_files=[ "res://.import/World_of_Warcraft_Icon_Hovered.png-67d6e5c6e95b6fe327d73223fd6f01b0.stex" ]
-dest_md5="ff23b174a08c044f20f4ce8e4d7603f5"
+dest_md5="a93368f65af1da0c54c2fcbf7442dfe0"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

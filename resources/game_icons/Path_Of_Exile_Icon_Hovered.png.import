@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Path_Of_Exile_Icon_Hovered.png"
 source_md5="515b4979b9fc0827c07087f0cbb729be"
 
 dest_files=[ "res://.import/Path_Of_Exile_Icon_Hovered.png-d6183ae0ff1f95c3d991bfb9f1fbed4d.stex" ]
-dest_md5="39ba8588ffebef5f50c9e2b8228c96d6"
+dest_md5="9d377ec8d91293375e98ed13fff0a83f"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

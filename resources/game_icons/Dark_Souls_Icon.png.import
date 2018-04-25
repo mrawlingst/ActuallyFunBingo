@@ -10,7 +10,7 @@ source_file="res://resources/game_icons/Dark_Souls_Icon.png"
 source_md5="92e02faabd8b88dda0c995279e6ede7c"
 
 dest_files=[ "res://.import/Dark_Souls_Icon.png-72c2722acdd059e7423adb75bd9bd275.stex" ]
-dest_md5="5b574aa4eeddfa3b972fb31562e836cc"
+dest_md5="91637879b8dc6615cb5ba7bcd80bbd84"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

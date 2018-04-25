@@ -10,7 +10,7 @@ source_file="res://resources/headers/square-header-normal.png"
 source_md5="2cda3032be0560ecb9efa1464f04f820"
 
 dest_files=[ "res://.import/square-header-normal.png-60b88bcbd88fe6c1714c90935fd71921.stex" ]
-dest_md5="ebc33cfa1f9ff732160cc2a89dd55184"
+dest_md5="6b7b6d249ed7e8190c59d17b223217b8"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0

@@ -10,7 +10,7 @@ source_file="res://resources/headers/border.png"
 source_md5="bbfc0962495f07c3f31b35c4524e9163"
 
 dest_files=[ "res://.import/border.png-7c44c125bf2dd049d7b82535fd37ace1.stex" ]
-dest_md5="85efb0d2e14c73f639739d2ae2d97da7"
+dest_md5="ee42b444af96ff1ee92a76740e392212"
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -28,5 +28,5 @@ process/premult_alpha=false
 process/HDR_as_SRGB=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
