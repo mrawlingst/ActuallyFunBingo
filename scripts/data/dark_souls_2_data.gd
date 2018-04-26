@@ -2,6 +2,7 @@ extends Node
 
 # Version of game data
 var version = "1.0.0"
+var helpLink = "http://darksouls2.wiki.fextralife.com/Dark+Souls+2+Wiki"
 
 var milestones = {
     # BONFIRES

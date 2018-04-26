@@ -21,6 +21,7 @@ func currentGame(game):
         milestones = ds2_data.milestones
         gameInfo = ds2_data.info()
         gameVersion = ds_data.version
+        helpLink = ds2_data.helpLink
     
     elif game == "Path of Exile":
         milestones = poe_data.milestones
