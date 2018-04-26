@@ -42,6 +42,7 @@ func currentGame(game):
         milestones = wow_data.milestones
         gameInfo = wow_data.info()
         gameVersion = wow_data.version
+        helpLink = wow_data.helpLink
 
 func getInfo():
     gameInfo = ""

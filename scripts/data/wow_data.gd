@@ -1,6 +1,7 @@
 extends Node
 
 var version = "1.0.0"
+var helpLink = "http://www.wowhead.com/"
 
 var milestones = {
     # Non-exclusive
