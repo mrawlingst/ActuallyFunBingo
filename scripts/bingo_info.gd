@@ -37,6 +37,7 @@ func currentGame(game):
         milestones = botw_data.milestones
         gameInfo = botw_data.info()
         gameVersion = botw_data.version
+        helpLink = botw_data.helpLink
     
     elif game == "World of Warcraft":
         milestones = wow_data.milestones
