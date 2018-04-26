@@ -20,7 +20,7 @@ func currentGame(game):
     elif game == "Dark Souls II":
         milestones = ds2_data.milestones
         gameInfo = ds2_data.info()
-        gameVersion = ds_data.version
+        gameVersion = ds2_data.version
         helpLink = ds2_data.helpLink
     
     elif game == "Path of Exile":
