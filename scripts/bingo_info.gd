@@ -25,6 +25,7 @@ func currentGame(game):
         milestones = poe_data.milestones
         gameInfo = poe_data.info()
         gameVersion = poe_data.version
+        helpLink = poe_data.helpLink
     
     elif game == "TES V: Skyrim":
         milestones = skyrim_data.milestones

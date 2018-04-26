@@ -2,6 +2,7 @@ extends Node
 
 # Version of game data
 var version = "1.0.0"
+var helpLink = "https://pathofexile.gamepedia.com/Path_of_Exile_Wiki"
 
 var milestones = {
     # Non-exclusive
