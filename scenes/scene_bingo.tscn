@@ -324,6 +324,36 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
+[node name="GameHelp" type="RichTextLabel" parent="." index="9"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 104.0
+margin_right = 171.0
+margin_bottom = 122.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = ExtResource( 3 )
+bbcode_enabled = true
+bbcode_text = "Game Help"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Game Help"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "custom_fonts" ]
+
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 
 [connection signal="pressed" from="Lockout/Host" to="." method="_on_Host_pressed"]
@@ -333,5 +363,7 @@ _sections_unfolded = [ "custom_fonts" ]
 [connection signal="toggled" from="Lockout/CheckBox" to="." method="_on_CheckBox_toggled"]
 
 [connection signal="item_selected" from="Modes" to="." method="_on_Modes_item_selected"]
+
+[connection signal="meta_clicked" from="GameHelp" to="." method="_on_GameHelp_meta_clicked"]
 
 

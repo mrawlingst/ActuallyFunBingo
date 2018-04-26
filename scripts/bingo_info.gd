@@ -6,6 +6,7 @@ var gameInfo
 var gameVersion = "1.0.0"
 var bingoMode = "Standard"
 var milestones = {}
+var helpLink = ""
 
 func currentGame(game):
     self.game = game
@@ -29,6 +30,7 @@ func currentGame(game):
         milestones = skyrim_data.milestones
         gameInfo = skyrim_data.info()
         gameVersion = skyrim_data.version
+        helpLink = skyrim_data.helpLink
     
     elif game == "TLoZ: Breath of the Wild":
         milestones = botw_data.milestones

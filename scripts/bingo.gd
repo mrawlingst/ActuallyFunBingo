@@ -14,6 +14,7 @@ func _ready():
     get_node("Version").text = bingo_info.bingoVersion
     get_node("Title").text = bingo_info.game # + " Bingo"
     get_node("Seed Generator").new_seed()
+    get_node("GameHelp").bbcode_text = "[color=blue][url=" + bingo_info.helpLink + "]Game Help[/url][/color]"
     print(bingo_info.game + ": " + str(bingo_info.milestones.size()))
     
     get_node("Modes").add_item("Standard")
@@ -388,3 +389,6 @@ remote func milestone_click(id):
     var btn = get_node("Card/Milestone_" + str(id))
     btn.disabled = !btn.disabled
     lockoutMilestones[id - 1 ] = 2 if btn.disabled else 0
+
+func _on_GameHelp_meta_clicked(meta):
+    OS.shell_open(meta)
