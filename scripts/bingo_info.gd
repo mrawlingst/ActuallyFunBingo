@@ -15,6 +15,7 @@ func currentGame(game):
         milestones = ds_data.milestones
         gameInfo = ds_data.info()
         gameVersion = ds_data.version
+        helpLink = ds_data.helpLink
     
     elif game == "Dark Souls II":
         milestones = ds2_data.milestones

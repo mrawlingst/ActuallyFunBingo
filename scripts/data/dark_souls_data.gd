@@ -6,6 +6,7 @@ extends Node
 # B = New milestones (more than removal)
 # C = Removed milestones (more than additions)
 var version = "1.1.1"
+var helpLink = "https://darksouls.wiki.fextralife.com/Dark+Souls+Wiki"
 
 var milestones = {
     # NON-EXCLUSIVE
