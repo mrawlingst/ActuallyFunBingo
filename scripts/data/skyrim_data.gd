@@ -2,7 +2,7 @@ extends Node
 
 # Version of game data
 var version = "1.0.0"
-var helpLink = "http://en.uesp.net/wiki/"
+var helpLink = "http://en.uesp.net/wiki/Skyrim:Skyrim"
 
 var milestones = {
     # Non-exclusive
