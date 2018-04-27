@@ -393,3 +393,7 @@ remote func milestone_click(id):
 
 func _on_GameHelp_meta_clicked(meta):
     OS.shell_open(meta)
+
+func _on_BackgroundButton_pressed():
+    $"Seed Generator".release_focus()
+    get_node("Lockout/IP Editbox").release_focus()
