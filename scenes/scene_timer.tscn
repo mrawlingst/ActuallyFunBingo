@@ -12,7 +12,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Timer" type="Control"]
+[node name="Timer" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -99,7 +99,7 @@ toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
 group = null
-text = "Reset"
+text = "Restart"
 flat = false
 align = 1
 _sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
