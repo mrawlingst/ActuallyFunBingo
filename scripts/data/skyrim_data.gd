@@ -1790,17 +1790,8 @@ var races = [
     "Redguard",
 ]
 
-var difficulty = [
-    "Novice",
-    "Apprentice",
-    "Adept",
-    "Expert",
-    "Master",
-]
-
 # Return game specfic info for info label
 func info():
     randomize()
     var current_race = races[randi() % races.size()]
-    var current_diffculty = difficulty[randi() % difficulty.size()]
-    return "Race: [b]" + current_race + "[/b]\t" + "Difficulty: [b]" + current_diffculty + "[/b]"
+    return "Race: [b]" + current_race + "[/b]"

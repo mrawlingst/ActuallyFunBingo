@@ -1,6 +1,5 @@
-swap place with timer and timer's buttons
 host pressing reset to reset time
-timer somehow disappears - timer
+timer somehow disappears - timer ###### SOMEHOW BRENNON FUCKS IT UP
 change race names
 steal specific items
 buy horse
