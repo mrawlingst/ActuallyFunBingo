@@ -836,17 +836,13 @@ var milestones = {
     "Complete \"Drowned Sorrows\" (Quest)": 0,
     "Complete \"Thane of Winterhold\" (Quest)": 0,
     
-    # Spells
+    # Alteration
     "Learn \"Candlelight\" (Spell)": 0,
     "Learn \"Oakflesh\" (Spell)": 0,
     "Learn \"Magelight\" (Spell)": 0,
     "Learn \"Stoneflesh\" (Spell)": 0,
-    "Learn \"Detect Life\" (Spell)": 0,
-    "Learn \"Ironflesh\" (Spell)": 0,
-    "Learn \"Telekinesis\" (Spell)": 0,
-    "Learn \"Transmute\" (Spell)": 0,
-    "Learn \"Waterbreathing\" (Spell)": 0,
-    "Learn \"Equilibrium\" (Spell)": 0,
+
+    # Conjuration
     "Learn \"Bound Sword\" (Spell)": 0,
     "Learn \"Conjure Familiar\" (Spell)": 0,
     "Learn \"Raise Zombie\" (Spell)": 0,
@@ -855,12 +851,8 @@ var milestones = {
     "Learn \"Flaming Familiar\" (Spell)": 0,
     "Learn \"Reanimate Corpse\" (Spell)": 0,
     "Learn \"Soul Trap\" (Spell)": 0,
-    "Learn \"Banish Daedra\" (Spell)": 0,
-    "Learn \"Bound Bow\" (Spell)": 0,
-    "Learn \"Conjure Frost Atronach\" (Spell)": 0,
-    "Learn \"Revenant\" (Spell)": 0,
-    "Learn \"Summon Arniel's Shade\" (Spell)": 0,
-    "Learn \"Summon Unbound Dremora\" (Spell)": 0,
+
+    # Destruction
     "Learn \"Frostbite\" (Spell)": 0,
     "Learn \"Sparks\" (Spell)": 0,
     "Learn \"Fire Rune\" (Spell)": 0,
@@ -869,32 +861,21 @@ var milestones = {
     "Learn \"Ice Spike\" (Spell)": 0,
     "Learn \"Lightning Bolt\" (Spell)": 0,
     "Learn \"Lightning Rune\" (Spell)": 0,
-    "Learn \"Chain Lightning\" (Spell)": 0,
-    "Learn \"Fireball\" (Spell)": 0,
-    "Learn \"Flame Cloak\" (Spell)": 0,
-    "Learn \"Frost Cloak\" (Spell)": 0,
-    "Learn \"Ice Storm\" (Spell)": 0,
-    "Learn \"Lightning CLoak\" (Spell)": 0,
-    "Learn \"Arniel's Convection\" (Spell)": 0,
+
+    # Illusion
     "Learn \"Clairvoyance\" (Spell)": 0,
     "Learn \"Courage\" (Spell)": 0,
     "Learn \"Fury\" (Spell)": 0,
     "Learn \"Calm\" (Spell)": 0,
     "Learn \"Fear\" (Spell)": 0,
     "Learn \"Muffle\" (Spell)": 0,
-    "Learn \"Frenzy\" (Spell)": 0,
-    "Learn \"Rally\" (Spell)": 0,
-    "Learn \"Vision of the Tenth Eye\" (Spell)": 0,
+
+    # Restoration
     "Learn \"Lesser Ward\" (Spell)": 0,
     "Learn \"Fast Healing\" (Spell)": 0,
     "Learn \"Healing Hands\" (Spell)": 0,
     "Learn \"Steadfast Ward\" (Spell)": 0,
     "Learn \"Turn Lesser Undead\" (Spell)": 0,
-    "Learn \"Close Wounds\" (Spell)": 0,
-    "Learn \"Greater Ward\" (Spell)": 0,
-    "Learn \"Heal Other\" (Spell)": 0,
-    "Learn \"Repel Lesser Undead\" (Spell)": 0,
-    "Learn \"Turn Undead\" (Spell)": 0,
     
     # Armors
     "Hide Armor (1)": 0,
