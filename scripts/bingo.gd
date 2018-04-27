@@ -238,7 +238,11 @@ func _on_Host_pressed():
 func _on_Join_pressed():
     var ip = get_node("Lockout/IP Editbox").text
     
-    if not ip.is_valid_ip_address():
+    if ip.to_lower() == "mike" or ip.to_lower() == "zoids":
+        ip = bingo_info.zoidsIP
+    elif ip.to_lower() == "dylan" or ip.to_lower() == "d" or ip.to_lower() == "cursedshadow":
+        ip = bingo_info.shadoIP
+    elif not ip.is_valid_ip_address():
         get_node("Lockout/Info").text = "Invalid address"
         return
     

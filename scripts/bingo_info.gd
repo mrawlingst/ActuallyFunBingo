@@ -8,6 +8,10 @@ var bingoMode = "Standard"
 var milestones = {}
 var helpLink = ""
 
+# SHORTCUTS
+var zoidsIP = "198.37.211.75"
+var shadoIP = "73.124.75.247"
+
 func currentGame(game):
     self.game = game
     
