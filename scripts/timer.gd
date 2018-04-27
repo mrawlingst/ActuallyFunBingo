@@ -5,7 +5,7 @@ var timer_start = 0
 var time_now = 0
 var elapsed = 0
 var paused_elapsed = 0
-var str_elapsed = ""
+var str_elapsed = "00:00:00.000"
 
 func _process(delta):
     if !timer_active:

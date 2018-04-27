@@ -1,8 +1,4 @@
-host pressing reset to reset time
-timer somehow disappears - timer ###### SOMEHOW BRENNON FUCKS IT UP
-steal specific items
-buy property
-reword temper
+rename reset to restart for timer
 
 CHAT LOGS WHEN I WAS ABSENT (OUT OF HOUSE)
 Dylan - Yesterday at 6:36 PM

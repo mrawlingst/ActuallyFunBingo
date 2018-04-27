@@ -341,7 +341,7 @@ remote func send_seed(bingo_seed, info):
 
 remote func send_time(timer_active, timer_start, elapsed, paused_elapsed, str_elapsed):
     if get_tree().is_network_server():
-        rpc("send_time", timer_active, timer_start, elapsed, paused_elapsed)
+        rpc("send_time", timer_active, timer_start, elapsed, paused_elapsed, str_elapsed)
     else:
 #        print(str(timer_active) + " " + str(timer_start) + " " + str(elapsed) + " " + str(paused_elapsed))
         var timer = get_node("Timer")
@@ -350,6 +350,7 @@ remote func send_time(timer_active, timer_start, elapsed, paused_elapsed, str_el
         timer.paused_elapsed = paused_elapsed
         timer.timer_active = timer_active
         timer.str_elapsed = str_elapsed
+        print("TEST: " + str_elapsed)
         timer.get_node("Current Time").text = str_elapsed
         if timer_active:
             timer.set_process(true)
