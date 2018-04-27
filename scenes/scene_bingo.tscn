@@ -8,7 +8,7 @@
 [ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=6]
 [ext_resource path="res://scenes/scene_seed_generator.tscn" type="PackedScene" id=7]
 
-[node name="root" type="Node" index="0"]
+[node name="root" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -46,14 +46,13 @@ margin_right = 60.0
 margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "Back"
@@ -109,7 +108,6 @@ margin_bottom = 770.0
 
 [node name="Lockout" type="Control" parent="." index="6"]
 
-editor/display_folded = true
 visible = false
 anchor_left = 0.0
 anchor_top = 0.0
@@ -134,14 +132,13 @@ margin_right = 626.0
 margin_bottom = 77.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 1
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 3 )
 text = "127.0.0.1"
-focus_mode = 2
+focus_mode = 0
 context_menu_enabled = true
 placeholder_alpha = 0.6
 caret_blink = false
@@ -161,14 +158,13 @@ margin_right = 569.0
 margin_bottom = 109.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "Host"
@@ -188,14 +184,13 @@ margin_right = 624.0
 margin_bottom = 109.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "Join"
@@ -215,13 +210,12 @@ margin_right = 517.0
 margin_bottom = 75.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 toggle_mode = true
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 flat = false
@@ -286,7 +280,6 @@ margin_right = 626.0
 margin_bottom = 35.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
@@ -294,7 +287,7 @@ size_flags_vertical = 1
 custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 action_mode = 0
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 flat = false

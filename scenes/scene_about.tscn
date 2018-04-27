@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=3]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=4]
 
-[node name="root" type="Node"]
+[node name="root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -101,14 +101,13 @@ margin_right = 393.0
 margin_bottom = 708.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
-focus_mode = 2
 mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 4 )
 toggle_mode = false
-enabled_focus_mode = 2
+enabled_focus_mode = 0
 shortcut = null
 group = null
 text = "Back"
