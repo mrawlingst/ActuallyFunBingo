@@ -1778,15 +1778,15 @@ var milestones = {
 }
 
 var races = [
-    "Altmer",
+    "High Elf",
     "Argonian",
-    "Bosmer",
+    "Wood Elf",
     "Breton",
-    "Dunmer",
+    "Dark Elf",
     "Imperial",
     "Khajiit",
     "Nord",
-    "Orsimer",
+    "Orc",
     "Redguard",
 ]
 
