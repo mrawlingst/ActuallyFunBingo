@@ -1511,6 +1511,9 @@ var milestones = {
     "Haggling 1 (Perk)": 0,
     "Haggling 2 (Perk)": 0,
 
+    # HORSES
+    "Buy a horse": 0,
+
     # --------------------------------------------------------------------------------------------------------
 
     # Joining a side of the war - 1
