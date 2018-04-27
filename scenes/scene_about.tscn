@@ -5,7 +5,7 @@
 [ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=3]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=4]
 
-[node name="root" type="Node"]
+[node name="root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -41,7 +41,7 @@ anchor_bottom = 0.0
 margin_left = 10.0
 margin_top = 67.0
 margin_right = 626.0
-margin_bottom = 461.0
+margin_bottom = 665.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -51,25 +51,31 @@ size_flags_vertical = 1
 custom_fonts/bold_font = ExtResource( 3 )
 custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center]Created by Michael Rawlings © 2017
+bbcode_text = "[center]Created by Michael Rawlings © 2017 - 2018
 
-[color=blue][url]https://github.com/mrawlingst/ActuallyFunBingo[/url][/color]
+[color=aqua][url]https://github.com/mrawlingst/ActuallyFunBingo[/url][/color]
 
-If you have encountered any issues or want to request new game support, please report [color=blue][url=https://github.com/mrawlingst/ActuallyFunBingo/issues]here[/url][/color].
+If you have encountered any issues or want to request new game support, please report [color=aqua][url=https://github.com/mrawlingst/ActuallyFunBingo/issues]here[/url][/color].
 
-To check for latest release, please go [color=blue][url=https://github.com/mrawlingst/ActuallyFunBingo/releases]here[/url][/color].
+To check for latest release, please go [color=aqua][url=https://github.com/mrawlingst/ActuallyFunBingo/releases]here[/url][/color].
 
 
 [font=res://resources/fonts/roboto/roboto-regular-24.tres][u]Special Thanks[/u][/font]
 
-[font=res://resources/fonts/roboto/roboto-regular-18.tres][color=green]CursedShadow[/color][/font]
-for playing Dark Souls 1 Bingo extensively to test general features and goal timing.
+[font=res://resources/fonts/roboto/roboto-regular-18.tres][color=green]Dylan Barrett[/color][/font]
+- playing Dark Souls 1 Bingo extensively to test general features and goal timing
+- playing Skyrim Bingo to test goal timing
+- testing Lockout mode extensively
+
+[font=res://resources/fonts/roboto/roboto-regular-18.tres][color=#fcca35]JaceyPenny[/color][/font]
+- playing Skyrim Bingo to test goal timing
+- testing Lockout mode extensively
 [/center]"
 visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "Created by Michael Rawlings © 2017
+text = "Created by Michael Rawlings © 2017 - 2018
 
 https://github.com/mrawlingst/ActuallyFunBingo
 
@@ -80,8 +86,14 @@ To check for latest release, please go here.
 
 Special Thanks
 
-CursedShadow
-for playing Dark Souls 1 Bingo extensively to test general features and goal timing.
+Dylan Barrett
+- playing Dark Souls 1 Bingo extensively to test general features and goal timing
+- playing Skyrim Bingo to test goal timing
+- testing Lockout mode extensively
+
+JaceyPenny
+- playing Skyrim Bingo to test goal timing
+- testing Lockout mode extensively
 "
 scroll_active = true
 scroll_following = false
