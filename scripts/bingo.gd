@@ -14,7 +14,7 @@ func _ready():
     get_node("Version").text = bingo_info.bingoVersion
     get_node("Title").text = bingo_info.game # + " Bingo"
     get_node("Seed Generator").new_seed()
-    get_node("GameHelp").bbcode_text = "[color=blue][url=" + bingo_info.helpLink + "]Game Help[/url][/color]"
+    get_node("GameHelp").bbcode_text = "[color=aqua][url=" + bingo_info.helpLink + "]Game Help[/url][/color]"
     print(bingo_info.game + ": " + str(bingo_info.milestones.size()))
     
     get_node("Modes").add_item("Standard")
