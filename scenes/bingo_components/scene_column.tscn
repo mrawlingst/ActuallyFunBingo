@@ -5,7 +5,7 @@
 [ext_resource path="res://scripts/column_header.gd" type="Script" id=3]
 [ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=4]
 
-[node name="Column" type="TextureButton"]
+[node name="Column" type="TextureButton" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
