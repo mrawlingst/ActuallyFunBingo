@@ -114,6 +114,7 @@ var milestones = {
     "Steal 25 jewelries": 0,
     "Steal an enchanted item": 0,
     "Steal 50 food": 0,
+    "Pickpocket a Jarl": 0,
     "Equip a stolen item in every equipment slot": 0,
     "Lockpick an apprentice lock": 0,
     "Lockpick an adept lock": 0,
@@ -161,6 +162,7 @@ var milestones = {
     "Murder someone in the Companions": 0,
     "Murder someone in the Dark Brotherhood": 0,
     "Murder someone in the Thieves Guild": 0,
+    "Murder a merchant": 0,
     
     # Books
     "Read \"A Game At Dinner\" (Book)": 0,
