@@ -26,6 +26,12 @@ func currentGame(game):
         gameInfo = ds2_data.info()
         gameVersion = ds2_data.version
         helpLink = ds2_data.helpLink
+
+    elif game == "Dark Souls III":
+        milestones = ds3_data.milestones
+        gameInfo = ds3_data.info()
+        gameVersion = ds3_data.version
+        helpLink = ds3_data.helpLink
     
     elif game == "Path of Exile":
         milestones = poe_data.milestones
@@ -59,6 +65,9 @@ func getInfo():
     
     elif game == "Dark Souls II":
         gameInfo = ds2_data.info()
+    
+    elif game == "Dark Souls III":
+        gameInfo = ds3_data.info()
     
     elif game == "Path of Exile":
         gameInfo = poe_data.info()

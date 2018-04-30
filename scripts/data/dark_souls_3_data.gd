@@ -6,16 +6,14 @@ var helpLink = "http://darksouls3.wiki.fextralife.com/Dark+Souls+3+Wiki"
 
 var milestones = {
     # Non-exclusive
-	
-	# Bonfires
-	"Light bonfire (Firelink Shrine)": 0,
-	"Light bonfire (Cemetary of Ash)": 0,
-	"Light bonfire (Iudex of Gundyr)": 0,
-	"Light bonfire (Untended Graves)": 0,
+    
+    # Bonfires
+    "Light bonfire (Firelink Shrine)": 0,
+    "Light bonfire (Cemetary of Ash)": 0,
+    "Light bonfire (Iudex of Gundyr)": 0,
+    "Light bonfire (Untended Graves)": 0,
     "Light bonfire (Champion Gundyr)": 0,
     
-    
-	
 }
 
 var ds3_classes = [

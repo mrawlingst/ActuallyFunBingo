@@ -265,7 +265,6 @@ max_lines_visible = -1
 
 [node name="Dark Souls III" type="VBoxContainer" parent="Games/Row 1" index="2"]
 
-editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -296,7 +295,6 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-disabled = true
 toggle_mode = false
 enabled_focus_mode = 0
 shortcut = null
