@@ -20,7 +20,7 @@
 [ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon.png" type="Texture" id=18]
 [ext_resource path="res://resources/game_icons/World_of_Warcraft_Icon_Hovered.png" type="Texture" id=19]
 
-[node name="root" type="Node"]
+[node name="root" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
