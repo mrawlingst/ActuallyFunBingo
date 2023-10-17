@@ -17,8 +17,8 @@ func _on_generate_pressed():
     if n_editbox.text.is_empty():
         new_seed()
     else:
-        var input =  n_editbox.text
-        if input.is_valid_integer():
+        var input: String =  n_editbox.text
+        if input.is_valid_int():
             bingo_seed = int(input)
             bingo_text = ""
         else:

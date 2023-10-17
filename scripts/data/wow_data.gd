@@ -1,9 +1,13 @@
 extends Node
 
-var version = "1.0.0"
+var version = "2.0"
 var helpLink = "http://www.wowhead.com/"
 
 var milestones = {
+    #--------------------------------------
+    # Shared
+    #--------------------------------------
+
     # Non-exclusive
     "6 slots bag (1)": 0,
     "8 slots bag (1)": 0,
@@ -76,86 +80,56 @@ var milestones = {
     "Inscription (5)": 2,
     "Jewelcrafting (5)": 2,
     "Leatherworking (5)": 2,
+
+    #--------------------------------------
+    # Vanilla - 100
+    #--------------------------------------
+    #--------------------------------------
+    # Burning Crusade - 200
+    #--------------------------------------
+    #--------------------------------------
+    # Wrath of the Lich King - 300
+    #--------------------------------------
+    #--------------------------------------
+    # Cataclysm - 400
+    #--------------------------------------
+    #--------------------------------------
+    # Mists of Pandaria - 500
+    #--------------------------------------
+    #--------------------------------------
+    # Legion - 600
+    #--------------------------------------
+    #--------------------------------------
+    # Battle for Azeroth - 700
+    #--------------------------------------
+    #--------------------------------------
+    # Shadowlands - 800
+    #--------------------------------------
 }
 
-# WoW Race/Class available combos
-var race_class = [
-    "Draenei Hunter",
-    "Draenei Mage",
-    "Draenei Paladin",
-    "Draenei Priest",
-    "Draenei Shaman",
-    "Draenei Warrior",
-    "Dwarf Hunter",
-    "Dwarf Mage",
-    "Dwarf Paladin",
-    "Dwarf Priest",
-    "Dwarf Rogue",
-    "Dwarf Shaman",
-    "Dwarf Warlock",
-    "Dwarf Warrior",
-    "Gnome Hunter",
-    "Gnome Mage",
-    "Gnome Priest",
-    "Gnome Rogue",
-    "Gnome Warlock",
-    "Gnome Warrior",
-    "Human Hunter",
-    "Human Mage",
-    "Human Paladin",
-    "Human Priest",
-    "Human Rogue",
-    "Human Warlock",
-    "Human Warrior",
-    "Night Elf Druid",
-    "Night Elf Hunter",
-    "Night Elf Mage",
-    "Night Elf Priest",
-    "Night Elf Rogue",
-    "Night Elf Warrior",
-    "Blood Elf Hunter",
-    "Blood Elf Mage",
-    "Blood Elf Paladin",
-    "Blood Elf Priest",
-    "Blood Elf Rogue",
-    "Blood Elf Warlock",
-    "Blood Elf Warrior",
-    "Orc Hunter",
-    "Orc Mage",
-    "Orc Rogue",
-    "Orc Shaman",
-    "Orc Warlock",
-    "Orc Warrior",
-    "Tauren Druid",
-    "Tauren Hunter",
-    "Tauren Paladin",
-    "Tauren Priest",
-    "Tauren Shaman",
-    "Tauren Warrior",
-    "Troll Druid",
-    "Troll Hunter",
-    "Troll Mage",
-    "Troll Priest",
-    "Troll Rogue",
-    "Troll Shaman",
-    "Troll Warlock",
-    "Troll Warrior",
-    "Undead Hunter",
-    "Undead Mage",
-    "Undead Priest",
-    "Undead Rogue",
-    "Undead Warlock",
-    "Undead Warrior"
-]
+var RaceClassTable: Dictionary = {
+    "Human"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",                    "Monk"],
+    "Dwarf"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",          "Shaman", "Monk"],
+    "Night Elf" = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",                    "Monk"],
+    "Gnome"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                               "Monk"],
+    "Draenei"   = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",          "Shaman", "Monk"],
+    "Worgen"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
 
-func info():
+    "Orc"       = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                     "Shaman", "Monk"],
+    "Undead"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                               "Monk"],
+    "Tauren"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin", "Druid", "Shaman", "Monk"],
+    "Troll"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid", "Shaman", "Monk"],
+    "Blood Elf" = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",                    "Monk"],
+    "Goblin"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                     "Shaman", "Monk"],
+
+    "Pandaren"  = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
+}
+
+func info() -> String:
     randomize()
-    var current_combo = race_class[randi() % race_class.size()]
-    var combo = current_combo.split(" ")
-    var txt = ""
-    if combo.size() == 3:
-        txt = "Race: [b]" + combo[0] + " " + combo[1] + "[/b]  " + "Class: [b]" + combo[2] + "[/b]"
-    else:
-        txt = "Race: [b]" + combo[0] + "[/b]  " + "Class: [b]" + combo[1] + "[/b]"
 
+    var race: String = RaceClassTable.keys().pick_random()
+    var cls: String = RaceClassTable[race].pick_random()
+
+    var txt: String = "Race: [b]%s[/b]  Class: [b]%s[/b]" % [race, cls]
     return txt
