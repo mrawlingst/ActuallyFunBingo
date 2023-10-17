@@ -154,8 +154,8 @@ func info():
     var combo = current_combo.split(" ")
     var txt = ""
     if combo.size() == 3:
-        txt = "Race: [b]" + combo[0] + " " + combo[1] + "[/b]\t" + "Class: [b]" + combo[2] + "[/b]"
+        txt = "Race: [b]" + combo[0] + " " + combo[1] + "[/b]  " + "Class: [b]" + combo[2] + "[/b]"
     else:
-        txt = "Race: [b]" + combo[0] + "[/b]\t" + "Class: [b]" + combo[1] + "[/b]"
-    
+        txt = "Race: [b]" + combo[0] + "[/b]  " + "Class: [b]" + combo[1] + "[/b]"
+
     return txt

@@ -1,32 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/World_of_Warcraft_Icon.png-c9b0466800c0552fba9de44c9c2a6f94.stex"
+type="CompressedTexture2D"
+uid="uid://c4l7x1ohfro2r"
+path="res://.godot/imported/World_of_Warcraft_Icon.png-c9b0466800c0552fba9de44c9c2a6f94.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://resources/game_icons/World_of_Warcraft_Icon.png"
-source_md5="3b08bc6fa8f87161f30bbe218d113fa1"
-
-dest_files=[ "res://.import/World_of_Warcraft_Icon.png-c9b0466800c0552fba9de44c9c2a6f94.stex" ]
-dest_md5="5f611c718ac3a586b11250415b031974"
+dest_files=["res://.godot/imported/World_of_Warcraft_Icon.png-c9b0466800c0552fba9de44c9c2a6f94.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

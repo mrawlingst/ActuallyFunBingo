@@ -1,6 +1,16 @@
+@tool
 extends TextureButton
 
-export var row_num = 0
+@export var row_num = 0:
+    get:
+        return row_num
+    set(value):
+        row_num = value
+        if !is_node_ready():
+            await ready
+        n_label.text = "ROW %d" % row_num
+
+@onready var n_label: Label = $Label
 
 func _ready():
     get_node("Label").text = "ROW " + str(row_num)

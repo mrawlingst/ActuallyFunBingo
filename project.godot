@@ -6,12 +6,13 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=3
+config_version=5
 
 [application]
 
 config/name="ActuallyFunBingo"
 run/main_scene="res://scenes/scene_menu.tscn"
+config/features=PackedStringArray("4.1")
 boot_splash/image="res://resources/Boot_Splash.png"
 config/icon="res://icon.png"
 
@@ -28,9 +29,15 @@ ds3_data="*res://scripts/data/dark_souls_3_data.gd"
 
 [display]
 
+window/size/viewport_width=636
+window/size/viewport_height=775
+window/size/resizable=false
 window/size/width=636
 window/size/height=775
-window/size/resizable=false
+
+[dotnet]
+
+project/assembly_name="ActuallyFunBingo"
 
 [importer_defaults]
 
@@ -55,5 +62,4 @@ texture={
 
 [rendering]
 
-environment/default_clear_color=Color( 0.184314, 0.192157, 0.211765, 1 )
-environment/default_environment="res://default_env.tres"
+environment/defaults/default_clear_color=Color(0.184314, 0.192157, 0.211765, 1)

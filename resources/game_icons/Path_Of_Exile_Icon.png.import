@@ -1,32 +1,34 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
-path="res://.import/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.stex"
+type="CompressedTexture2D"
+uid="uid://b7pw7pyvdwqn"
+path="res://.godot/imported/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
 source_file="res://resources/game_icons/Path_Of_Exile_Icon.png"
-source_md5="5640b538cca845034b9a68604636c407"
-
-dest_files=[ "res://.import/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.stex" ]
-dest_md5="dee86800716eef78e9f02777bceafe76"
+dest_files=["res://.godot/imported/Path_Of_Exile_Icon.png-e2a5e2de9f127b0500a84e5f07b44906.ctex"]
 
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/normal_map=0
-flags/repeat=0
-flags/filter=false
-flags/mipmaps=false
-flags/anisotropic=false
-flags/srgb=2
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
-process/HDR_as_SRGB=false
-stream=false
-size_limit=0
-detect_3d=false
-svg/scale=1.0
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

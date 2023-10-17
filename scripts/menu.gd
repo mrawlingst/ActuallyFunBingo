@@ -5,7 +5,7 @@ func _ready():
 
 # About
 func _on_about_pressed():
-    get_tree().change_scene("res://scenes/scene_about.tscn")
+    get_tree().change_scene_to_file("res://scenes/scene_about.tscn")
 
 # Quit
 func _on_quit_pressed():
@@ -13,4 +13,4 @@ func _on_quit_pressed():
 
 func game_picked(game):
     bingo_info.currentGame(game)
-    get_tree().change_scene("res://scenes/scene_bingo.tscn")
+    get_tree().change_scene_to_file("res://scenes/scene_bingo.tscn")

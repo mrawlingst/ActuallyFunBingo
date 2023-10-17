@@ -1,109 +1,38 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://bscn0b14nkvy3"]
 
-[ext_resource path="res://scripts/timer.gd" type="Script" id=1]
-[ext_resource path="res://resources/fonts/vt323/VT323-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=3]
+[ext_resource type="Script" path="res://scripts/timer.gd" id="1"]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="LabelSettings" id="LabelSettings_ltf2a"]
+font_size = 24
 
-size = 32
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 2 )
-_sections_unfolded = [ "Font", "Settings" ]
+[node name="Timer" type="HBoxContainer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+script = ExtResource("1")
 
-[node name="Timer" type="Control"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-script = ExtResource( 1 )
-_sections_unfolded = [ "Rect" ]
-
-[node name="Current Time" type="Label" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 42.0
-margin_right = 636.0
-margin_bottom = 75.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
-text = "00:00:00.000"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
-
-[node name="Start Pause" type="Button" parent="." index="1"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 205.0
-margin_top = 7.0
-margin_right = 280.0
-margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
+[node name="Start Pause" type="Button" parent="."]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_vertical = 8
+focus_mode = 0
 text = "Start"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
-[node name="Reset" type="Button" parent="." index="2"]
+[node name="Current Time" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00:00:00.000"
+label_settings = SubResource("LabelSettings_ltf2a")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 355.0
-margin_top = 7.0
-margin_right = 430.0
-margin_bottom = 32.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 3 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
-text = "Restart"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+[node name="Reset" type="Button" parent="."]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_vertical = 8
+focus_mode = 0
+text = "Reset"
 
 [connection signal="pressed" from="Start Pause" to="." method="_on_start_pause_pressed"]
-
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
-
-

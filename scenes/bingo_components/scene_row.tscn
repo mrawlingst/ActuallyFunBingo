@@ -1,60 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=5 format=3 uid="uid://cbpvqc4h7j0rr"]
 
-[ext_resource path="res://resources/headers/vertical-header-normal.png" type="Texture" id=1]
-[ext_resource path="res://resources/headers/vertical-header-hover.png" type="Texture" id=2]
-[ext_resource path="res://scripts/row.gd" type="Script" id=3]
-[ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=4]
+[ext_resource type="Texture2D" uid="uid://c8gb0crx7jsc5" path="res://resources/headers/vertical-header-normal.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://brpap5oieav80" path="res://resources/headers/vertical-header-hover.png" id="2"]
+[ext_resource type="Script" path="res://scripts/row.gd" id="3"]
 
-[node name="Row" type="TextureButton" index="0"]
+[sub_resource type="LabelSettings" id="LabelSettings_ykyik"]
+font_size = 13
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 40.0
-margin_bottom = 40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 1 )
-texture_hover = ExtResource( 2 )
-script = ExtResource( 3 )
-_sections_unfolded = [ "Textures" ]
-row_num = 0
+[node name="Row" type="TextureButton"]
+texture_normal = ExtResource("1")
+texture_hover = ExtResource("2")
+script = ExtResource("3")
 
-[node name="Label" type="Label" parent="." index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_right = 45.0
-margin_bottom = 90.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 text = "ROW 0"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+label_settings = SubResource("LabelSettings_ykyik")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="mouse_entered" from="." to="." method="_on_Row_mouse_entered"]
-
 [connection signal="mouse_exited" from="." to="." method="_on_Row_mouse_exited"]
-
-
