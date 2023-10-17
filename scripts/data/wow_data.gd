@@ -125,6 +125,57 @@ var RaceClassTable: Dictionary = {
     "Pandaren"  = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
 }
 
+var picked_milestones: Array[String] = []
+
+# If true, add milestone
+func _curate(milestone: String, pos: int) -> bool:
+    if !milestones.has(milestone) || picked_milestones.has(milestone):
+        return false
+
+    if milestones[milestone] == 0:
+        return true
+
+    # Vertical check
+    for i in range(pos, 0, -5):
+        if i == pos:
+            continue
+        if milestones[picked_milestones[i]] == milestones[milestone]:
+            return false
+
+    # Horizontal check
+    for i in range(pos, pos - (pos % 5), -1):
+        if i == pos:
+            continue
+        if milestones[picked_milestones[i]] == milestones[milestone]:
+            return false
+
+    # TLBR check - brute check lol
+    if pos == 6 || pos == 12 || pos == 18 || pos == 24:
+        for i in range(pos, 0, -6):
+            if i == pos:
+                continue
+            if milestones[picked_milestones[i]] == milestones[milestone]:
+                return false
+
+    # BLTR check - brute check lol
+    if pos == 8 || pos == 12 || pos == 16 || pos == 20:
+        for i in range(pos, 4, -4):
+            if i == pos:
+                continue
+            if milestones[picked_milestones[i]] == milestones[milestone]:
+                return false
+
+    return true;
+
+func generate_milestones() -> Array[String]:
+    picked_milestones.clear()
+    while picked_milestones.size() < 25:
+        var pick: String = milestones.keys().pick_random()
+        if !picked_milestones.has(pick) && _curate(pick, picked_milestones.size()):
+            picked_milestones.append(pick)
+
+    return picked_milestones
+
 func info() -> String:
     randomize()
 

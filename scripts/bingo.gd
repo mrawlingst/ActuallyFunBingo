@@ -34,85 +34,12 @@ func populate_card():
     else:
         seed(hash(bingo_seed))
 
-    milestones = []
-
-    while milestones.size() < 25:
-        var milestone = ""
-        var index = randi() % bingo_info.milestones.size()
-        while curate(milestone):
-            index = randi() % bingo_info.milestones.size()
-            milestone = bingo_info.milestones.keys()[index]
-
-        milestones.append(milestone)
+    milestones = bingo_info.getMilestones()
 
     for i in range(25):
         get_node("VBoxContainer/Card/Milestone_" + str(i + 1) + "/Label").text = milestones[i]
 
     n_info.text = "[right]" + bingo_info.getInfo() + "  Seed: [b]" + str(bingo_seed) + "[/b]  Game Version: [b]v" + bingo_info.gameVersion + "[/b][/right]"
-
-# True if need new milestone
-# False if dont need new milestone
-func curate(milestone):
-    if milestone == "" or milestones.has(milestone):
-        return true
-
-    var pos = milestones.size() + 1
-
-    # Check col
-    for row in range(getRowCol(pos)[0]):
-        var n = (row * 5) + getRowCol(pos)[1]
-        if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
-            if bingo_info.milestones[milestone] == 0:
-                continue
-            return true
-
-    # Check row
-    for col in range(getRowCol(pos)[1]):
-        var n = (getRowCol(pos)[0] * 5) + col
-        if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
-            if bingo_info.milestones[milestone] == 0:
-                continue
-            return true
-
-    # Check tl-br
-    if inTL_BR(pos)[0]:
-        for i in range(inTL_BR(pos)[1]):
-            var n = (5 * i) + i
-            if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
-                if bingo_info.milestones[milestone] == 0:
-                    continue
-                return true
-
-    # Check bl-tr
-    if inBL_TR(pos)[0]:
-        for i in range(inBL_TR(pos)[1]):
-            var n = (5 * i) -  i
-            if bingo_info.milestones[milestones[n]] == bingo_info.milestones[milestone]:
-                if bingo_info.milestones[milestone] == 0:
-                    continue
-                return true
-
-    return false
-
-func getRowCol(p):
-    for col in range(5):
-        for row in range(5):
-            if (row * 5) + col + 1 == p:
-                return [row, col]
-
-func inTL_BR(p):
-    for i in range(5):
-        if p == (i * 5) + i + 1:
-            return [true, i]
-
-    return [false, 0]
-
-func inBL_TR(p):
-    for i in range(5):
-        if p == (i * 5) - i + 5:
-            return [true, i]
-
-    return [false, 0]
 
 func check_for_bingo(id):
     if bingo_info.bingoMode == "Standard":

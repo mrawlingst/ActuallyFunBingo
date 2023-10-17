@@ -78,3 +78,11 @@ func getInfo():
         gameInfo = wow_data.info()
 
     return gameInfo
+
+func getMilestones():
+    var _milestones: Array[String] = []
+
+    if game == "World of Warcraft":
+        _milestones = wow_data.generate_milestones()
+
+    return _milestones
