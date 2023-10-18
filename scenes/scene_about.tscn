@@ -1,155 +1,94 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dn8elgit4rx5a"]
 
-[ext_resource path="res://scripts/about.gd" type="Script" id=1]
-[ext_resource path="res://resources/fonts/roboto/roboto-regular-32.tres" type="DynamicFont" id=2]
-[ext_resource path="res://resources/fonts/roboto/roboto-bold-14.tres" type="DynamicFont" id=3]
-[ext_resource path="res://resources/fonts/roboto/roboto-regular-14.tres" type="DynamicFont" id=4]
+[ext_resource type="Script" path="res://scripts/about.gd" id="1"]
 
-[node name="root" type="Node" index="0"]
+[sub_resource type="LabelSettings" id="LabelSettings_3q7ji"]
+font_size = 32
 
-script = ExtResource( 1 )
+[sub_resource type="LabelSettings" id="LabelSettings_m2ltg"]
+font_size = 12
+font_color = Color(0.568627, 0.568627, 0.568627, 0.545098)
 
-[node name="About" type="Label" parent="." index="0"]
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_top = 30.0
-margin_right = 636.0
-margin_bottom = 68.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 2 )
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="About" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
 text = "About"
-align = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
+label_settings = SubResource("LabelSettings_3q7ji")
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Contents" type="RichTextLabel" parent="." index="1"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_right = 25
 
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 10.0
-margin_top = 67.0
-margin_right = 626.0
-margin_bottom = 665.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = true
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/bold_font = ExtResource( 3 )
-custom_fonts/normal_font = ExtResource( 4 )
+[node name="Contents" type="RichTextLabel" parent="MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 6
 bbcode_enabled = true
-bbcode_text = "[center]Created by Michael Rawlings © 2017 - 2018
+text = "[center]Created by Michael Rawlings © 2017 - 2023[/center]
 
-[color=aqua][url]https://github.com/mrawlingst/ActuallyFunBingo[/url][/color]
+[center][color=aqua][url]https://github.com/mrawlingst/ActuallyFunBingo[/url][/color][/center]
 
 If you have encountered any issues or want to request new game support, please report [color=aqua][url=https://github.com/mrawlingst/ActuallyFunBingo/issues]here[/url][/color].
 
 To check for latest release, please go [color=aqua][url=https://github.com/mrawlingst/ActuallyFunBingo/releases]here[/url][/color].
 
-
-[font=res://resources/fonts/roboto/roboto-regular-24.tres][u]Special Thanks[/u][/font]
-
-[font=res://resources/fonts/roboto/roboto-regular-18.tres][color=green]Dylan Barrett[/color][/font]
-- playing Dark Souls 1 Bingo extensively to test general features and goal timing
-- playing Skyrim Bingo to test goal timing
-- testing Lockout mode extensively
-
-[font=res://resources/fonts/roboto/roboto-regular-18.tres][color=#fcca35]JaceyPenny[/color][/font]
-- playing Skyrim Bingo to test goal timing
-- testing Lockout mode extensively
-[/center]"
-visible_characters = -1
-percent_visible = 1.0
-meta_underlined = true
-tab_size = 4
-text = "Created by Michael Rawlings © 2017 - 2018
-
-https://github.com/mrawlingst/ActuallyFunBingo
-
-If you have encountered any issues or want to request new game support, please report here.
-
-To check for latest release, please go here.
+ActuallyFunBingo can also be run [color=aqua][url=https://mrawlingst.itch.io/actuallyfunbingo]here[/url][/color] on itch.io
 
 
-Special Thanks
+[center][font_size=24][u]Special Thanks[/u][/font_size][/center]
 
-Dylan Barrett
-- playing Dark Souls 1 Bingo extensively to test general features and goal timing
-- playing Skyrim Bingo to test goal timing
-- testing Lockout mode extensively
+[color=darkgreen]CursedShadow[/color]
+[ul]playing Dark Souls 1 Bingo extensively to test general features and goal timing[/ul]
+[ul]playing Skyrim Bingo to test goal timing[/ul]
+[ul]testing Lockout mode extensively[/ul]
 
-JaceyPenny
-- playing Skyrim Bingo to test goal timing
-- testing Lockout mode extensively
-"
-scroll_active = true
-scroll_following = false
-selection_enabled = false
-override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Rect", "custom_fonts" ]
+[color=yellow]JaceyPenny[/color]
+[ul]playing Skyrim Bingo to test goal timing[/ul]
+[ul]testing Lockout mode extensively[/ul]"
+fit_content = true
+scroll_active = false
 
-[node name="Back" type="Button" parent="." index="2"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 243.0
-margin_top = 678.0
-margin_right = 393.0
-margin_bottom = 708.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-custom_fonts/font = ExtResource( 4 )
-toggle_mode = false
-enabled_focus_mode = 0
-shortcut = null
-group = null
+[node name="Back" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_horizontal = 4
 text = "Back"
-flat = false
-align = 1
-_sections_unfolded = [ "Rect", "custom_fonts" ]
 
-[node name="Version" type="Label" parent="." index="3"]
-
-anchor_left = 0.0
+[node name="Version" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.0
 anchor_bottom = 1.0
-margin_top = -17.0
-margin_right = 47.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 4 )
-text = "Version"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_fonts" ]
+offset_top = -20.0
+offset_right = 43.0
+grow_vertical = 0
+text = "version"
+label_settings = SubResource("LabelSettings_m2ltg")
+vertical_alignment = 2
 
-[connection signal="meta_clicked" from="Contents" to="." method="_on_Contents_meta_clicked"]
-
-[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
-
-
+[connection signal="meta_clicked" from="MarginContainer/VBoxContainer/MarginContainer/Contents" to="." method="_on_Contents_meta_clicked"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back" to="." method="_on_Back_pressed"]
