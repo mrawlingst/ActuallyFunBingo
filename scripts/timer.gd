@@ -13,12 +13,7 @@ func _process(delta):
 
     time_elapsed += delta
 
-    var hours := time_elapsed / 360
-    var minutes := time_elapsed / 60
-    var seconds := fmod(time_elapsed, 60)
-    var milliseconds := fmod(time_elapsed, 1) * 100
-
-    n_time_label.text = elapsed_fmt % [hours, minutes, seconds, milliseconds]
+    n_time_label.text = get_formatted_elapsed_time()
 
 func _on_start_pause_pressed():
     if timer_active:
@@ -55,3 +50,41 @@ func pause_timer():
     timer_active = false
     get_node("../Seed Generator/HBoxContainer/Generate").set_disabled(false)
     get_node("../Seed Generator/HBoxContainer/Reset").set_disabled(false)
+
+func get_formatted_elapsed_time(f_hours = "%02d:", f_minutes = "%02d:", f_seconds = "%02d.", f_millis = "%03d", millis_precision = 3) -> String:
+    # Get the current elapsed time.
+    var time = time_elapsed
+
+    # Break the elapsed time into seconds and milliseconds.
+    var part_seconds = 0
+    var part_milliseconds = 0
+    var time_split = str(time).split(".")
+    if time_split.size() == 2:
+        part_seconds = int(time_split[0])
+        part_milliseconds = int(time_split[1].substr(0, millis_precision))
+
+    # Break the total seconds into their respective time parts.
+    var hours = floor(part_seconds / 3600)
+    var minutes = fmod(floor(part_seconds / 60), 60)
+    var seconds = fmod(part_seconds, 60)
+    var millis = part_milliseconds
+
+    # Prepare output formatting.
+    var format_string = ""
+    var format_values = Array()
+    if f_hours != null and f_hours != "":
+        format_string += f_hours
+        format_values.append(hours)
+    if f_minutes != null and f_minutes != "":
+        format_string += f_minutes
+        format_values.append(minutes)
+    if f_seconds != null and f_seconds != "":
+        format_string += f_seconds
+        format_values.append(seconds)
+    if f_millis != null and f_millis != "":
+        format_string += f_millis
+        format_values.append(millis)
+
+    # Return the formatted output.
+    return format_string % format_values
+
