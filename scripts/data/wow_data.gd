@@ -357,6 +357,19 @@ var ClassSpecsTable: Dictionary = {
     "Warrior": ["Arms", "Fury", "Protection"],
 }
 
+var ClassColorsTable: Dictionary = {
+    "Druid": "#FF7C0A",
+    "Hunter": "#AAD372",
+    "Mage": "#3FC7EB",
+    "Monk": "#00FF98",
+    "Paladin": "#F48CBA",
+    "Priest": "#FFFFFF",
+    "Rogue": "#FFF468",
+    "Shaman": "#0070DD",
+    "Warlock": "#8788EE",
+    "Warrior": "#C69B6D",
+}
+
 var picked_milestones: Array[String] = []
 
 # If true, add milestone
@@ -415,5 +428,5 @@ func info() -> String:
     var cls: String = RaceClassTable[race].pick_random()
     var spec: String = ClassSpecsTable[cls].pick_random()
 
-    var txt: String = "Race: [b]%s[/b]  Class: [b]%s[/b]  Spec: [b]%s[/b]" % [race, cls, spec]
+    var txt: String = "Race: [b]%s[/b]  Class: [color=%s][b]%s[/b][/color]  Spec: [b]%s[/b]" % [race, ClassColorsTable[cls], cls, spec]
     return txt
