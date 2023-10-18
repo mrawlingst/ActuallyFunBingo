@@ -31,8 +31,11 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 size_flags_vertical = 8
+tooltip_text = "Restarts the timer to 0.
+
+If you want to clear the board, click on Clear button below the board."
 focus_mode = 0
-text = "Reset"
+text = "Restart"
 
 [connection signal="pressed" from="Start Pause" to="." method="_on_start_pause_pressed"]
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
