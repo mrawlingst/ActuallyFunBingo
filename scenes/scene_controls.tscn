@@ -1,0 +1,88 @@
+[gd_scene load_steps=4 format=3 uid="uid://7ihqmgm6bphg"]
+
+[ext_resource type="Script" path="res://scripts/controls.gd" id="1_m1xqo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ea8tn"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_wg0ah"]
+font_size = 12
+font_color = Color(0.568627, 0.568627, 0.568627, 0.545098)
+
+[node name="Controls" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m1xqo")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+label_settings = SubResource("LabelSettings_ea8tn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_right = 25
+
+[node name="Contents" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+bbcode_enabled = true
+text = "[font_size=24][center][u]General[/u][/center][/font_size]
+
+[ul]Press `Start` button to start the stopwatch[/ul]
+[ul]Click on a milestone to turn green to indicate you have achieved that milestone[/ul]
+        [b]Note:[/b] If the stopwatch has not been stopped/paused, performing this action will start/resume the stopwatch
+[ul][color=purple][b][i]Right click[/i][/b][/color] a milestone will toggle on/off a [color=yellow]star[/color] in upper right corner of the milestone - the main purpose is planning in advance[/ul]
+
+[font_size=24][center][u]Standard[/u][/center][/font_size]
+
+The goal is to cover 5 milestones in a vertical, horizontal, or diagonal row to achieve [rainbow]bingo[/rainbow]!
+
+[font_size=24][center][u]Blackout[/u][/center][/font_size]
+
+The goal is to cover [b][u]all[/u][/b] milestones before the timer stops.
+
+Essentially a speedrun to complete everything."
+fit_content = true
+scroll_active = false
+
+[node name="Back" type="Button" parent="MarginContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Back"
+
+[node name="Version" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+offset_right = 43.0
+grow_vertical = 0
+text = "version"
+label_settings = SubResource("LabelSettings_wg0ah")
+vertical_alignment = 2
+
+[connection signal="pressed" from="MarginContainer2/VBoxContainer/Back" to="." method="_on_back_pressed"]

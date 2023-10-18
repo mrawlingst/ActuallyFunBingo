@@ -252,6 +252,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
+[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_mode = 0
+text = "Controls"
+
 [node name="About" type="Button" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
@@ -287,5 +295,6 @@ vertical_alignment = 2
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Games/Row 1/TESV Skyrim/TextureButton" to="." method="game_picked"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Games/Row 2/Breath of the Wild/TextureButton" to="." method="game_picked"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Games/Row 2/World of Warcraft/TextureButton" to="." method="game_picked" binds= ["World of Warcraft"]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls" to="." method="_on_controls_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/About" to="." method="_on_about_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

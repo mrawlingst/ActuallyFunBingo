@@ -14,3 +14,7 @@ func _on_quit_pressed():
 func game_picked(game):
     bingo_info.currentGame(game)
     get_tree().change_scene_to_file("res://scenes/scene_bingo.tscn")
+
+
+func _on_controls_pressed() -> void:
+    get_tree().change_scene_to_file("res://scenes/scene_controls.tscn")
