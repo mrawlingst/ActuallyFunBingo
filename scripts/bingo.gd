@@ -113,3 +113,8 @@ func _on_GameHelp_meta_clicked(meta):
 
 func _on_BackgroundButton_pressed():
     n_seed_generator.release_focus()
+
+
+func _on_info_gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton && event.pressed && event.button_index == MOUSE_BUTTON_RIGHT:
+        n_info.text = "[right]" + bingo_info.getInfo() + "  Seed: [b]" + str(n_seed_generator.get_seed()) + "[/b]  Game Version: [b]v" + bingo_info.gameVersion + "[/b][/right]"

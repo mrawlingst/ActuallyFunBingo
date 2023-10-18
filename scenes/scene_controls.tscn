@@ -54,6 +54,7 @@ text = "[font_size=24][center][u]General[/u][/center][/font_size]
 [ul]Click on a milestone to turn green to indicate you have achieved that milestone[/ul]
         [b]Note:[/b] If the stopwatch has not been stopped/paused, performing this action will start/resume the stopwatch
 [ul][color=purple][b][i]Right click[/i][/b][/color] a milestone will toggle on/off a [color=yellow]star[/color] in upper right corner of the milestone - the main purpose is planning in advance[/ul]
+[ul]Right click on game info (seed, game version, etc.) will regenerate the randomized game element (i.e. race and class for World of Warcraft) without randomizing the milestones[/ul]
 
 [font_size=24][center][u]Standard[/u][/center][/font_size]
 

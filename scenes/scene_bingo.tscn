@@ -99,6 +99,7 @@ text = "version"
 label_settings = SubResource("LabelSettings_ldkyy")
 vertical_alignment = 2
 
+[connection signal="gui_input" from="Info" to="." method="_on_info_gui_input"]
 [connection signal="pressed" from="BackgroundButton" to="." method="_on_BackgroundButton_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="item_selected" from="Modes" to="." method="_on_Modes_item_selected"]
