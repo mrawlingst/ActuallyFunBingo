@@ -33,3 +33,4 @@ func _on_reset_pressed():
         var milestone: TextureButton = get_node("../Card/Milestone_%d" % (i + 1))
         (milestone as TextureButton).button_pressed = false
         (milestone as TextureButton).disabled = false
+        (milestone as Milestone).set_star(false)
