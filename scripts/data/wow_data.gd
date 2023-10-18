@@ -344,6 +344,19 @@ var RaceClassTable: Dictionary = {
     "Pandaren"  = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
 }
 
+var ClassSpecsTable: Dictionary = {
+    "Druid": ["Balance", "Feral", "Guardian", "Restoration"],
+    "Hunter": ["Beast Mastery", "Marksmanship", "Survival"],
+    "Mage": ["Fire", "Frost", "Arcane"],
+    "Monk": ["Brewmaster", "Misweaver", "Windwalker"],
+    "Paladin": ["Holy", "Protection", "Retribution"],
+    "Priest": ["Discipline", "Holy", "Shadow"],
+    "Rogue": ["Assassination", "Outlaw", "Subtlety"],
+    "Shaman": ["Elemental", "Enhancement", "Restoration"],
+    "Warlock": ["Affliction", "Demonology", "Destruction"],
+    "Warrior": ["Arms", "Fury", "Protection"],
+}
+
 var picked_milestones: Array[String] = []
 
 # If true, add milestone
@@ -400,6 +413,7 @@ func info() -> String:
 
     var race: String = RaceClassTable.keys().pick_random()
     var cls: String = RaceClassTable[race].pick_random()
+    var spec: String = ClassSpecsTable[cls].pick_random()
 
-    var txt: String = "Race: [b]%s[/b]  Class: [b]%s[/b]" % [race, cls]
+    var txt: String = "Race: [b]%s[/b]  Class: [b]%s[/b]  Spec: [b]%s[/b]" % [race, cls, spec]
     return txt
