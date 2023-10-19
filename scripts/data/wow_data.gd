@@ -596,11 +596,30 @@ var milestones = {
     # Chapters
     #---------------------------------------
     "Complete a chapter (Jade Forest)": 0,
-    # "Complete a chapter (Valley of the Four Winds)": 0,
-    # "Complete a chapter (Krasarang Wilds)": 0,
-    # "Complete a chapter (Kun-Lai Summit)": 0,
-    # "Complete a chapter (Townlong Steppes)": 0,
-    # "Complete a chapter (Dread Wastes)": 0,
+    "Complete a chapter (Valley of the Four Winds)": 0,
+    "Complete a chapter (Krasarang Wilds)": 0,
+    "Complete a chapter (Kun-Lai Summit)": 0,
+    # "Complete a chapter (Townlong Steppes)": 0, #!: requires level 30+
+    # "Complete a chapter (Dread Wastes)": 0, #!: requires level 30+
+
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Template of the Jade Serpent": 0,
+    "Stormstout Brewery": 0,
+    "Shado-Pan Monastery": 0,
+    "Mogu'shan Palace": 0,
+    "Gate of the Setting Sun": 0,
+    "Siege of Niuzao Temple": 0,
+
+    # Raids
+    "Mogu'shan Vaults": 0,
+    "Heart of Fear": 0,
+    "Terrace of Endless Spring": 0,
+    "Throne of Thunder": 0, #?: is this accessible at level 20?
+    "Siege of Orgrimmar": 0,
 
     #-------------------------------------------------------------------------------
     # Warlords of Draenor - 600
