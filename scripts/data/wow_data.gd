@@ -665,6 +665,24 @@ var milestones = {
     # "Complete a chapter (Spires of Arak)": 0,
     # "Complete a chapter (Nagrand WoD)": 0,
 
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Discover Upper Blackrock Spire": EXCLUSIVE_DUNGEONS,
+    "Discover Iron Docks": EXCLUSIVE_DUNGEONS,
+    "Discover Skyreach": EXCLUSIVE_DUNGEONS,
+    "Discover Auchindoun": EXCLUSIVE_DUNGEONS,
+    "Discover Grimrail Depot": EXCLUSIVE_DUNGEONS,
+    "Discover Shadowmoon Burial Grounds": EXCLUSIVE_DUNGEONS,
+    "Discover The Everbloom": EXCLUSIVE_DUNGEONS,
+
+    # Raids
+    "Discover Highmaul": EXCLUSIVE_RAIDS,
+    "Discover Blackrock Foundry": EXCLUSIVE_RAIDS,
+    "Discover Hellfire Citadel": EXCLUSIVE_RAIDS,
+
     #-------------------------------------------------------------------------------
     # Legion - 700
     #-------------------------------------------------------------------------------
