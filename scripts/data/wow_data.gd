@@ -546,11 +546,18 @@ var milestones = {
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Vashj'ir)": 0,
-    "Complete a chapter (Mount Hyjal)": 0,
+    #!: Cata zones requires level 30+
+    # "Complete a chapter (Vashj'ir)": 0,
+    # "Complete a chapter (Mount Hyjal)": 0,
     # "Complete a chapter (Deepholm)": 0,
     # "Complete a chapter (Uldum)": 0,
     # "Complete a chapter (Twilight Highlands)": 0,
+
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    #?: Are any of cata dungeons accesible at level 20?
 
     #-------------------------------------------------------------------------------
     # Mists of Pandaria - 500
