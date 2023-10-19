@@ -472,12 +472,44 @@ var milestones = {
     #---------------------------------------
     "Complete a chapter (Borean Tundra)": 0,
     "Complete a chapter (Howling Fjord)": 0,
-    # "Complete a chapter (Dragonblight)": 0,
-    # "Complete a chapter (Grizzly Hills)": 0,
-    # "Complete a chapter (Zul'Drak)": 0,
-    # "Complete a chapter (Sholazar Basin)": 0,
-    # "Complete a chapter (Icecrown)": 0,
-    # "Complete a chapter (Storm Peaks)": 0,
+    "Complete a chapter (Dragonblight)": 0,
+    "Complete a chapter (Grizzly Hills)": 0,
+    "Complete a chapter (Zul'Drak)": 0,
+    "Complete a chapter (Sholazar Basin)": 0,
+    # "Complete a chapter (Icecrown)": 0, #?: quests req level 25+
+    # "Complete a chapter (Storm Peaks)": 0, #?: quests req level 25+
+
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Utgarde Keep": 0,
+    "The Nexus": 0,
+    "Azjol-Nerub": 0,
+    "Ahn'Kahet: The Old Kingdom": 0,
+    "Drak'Tharon Keep": 0,
+    "The Violet Hold": 0,
+    "Gundrak": 0,
+    "Halls of Stone": 0,
+    "Utgarde Pinnacle": 0,
+    "The Oculus": 0, #?: Does this require flying to reach?
+    "Halls of Lightning": 0,
+    "Trial of the Champion": 0,
+    "The Forge of Souls": 0,
+    "Pit of Saron": 0,
+    "Halls of Reflection": 0,
+
+    # Raids
+    "Naxxramas": 0, #?: is this reachable without flying?
+    "The Obsidian Sanctum": 0,
+    "The Eye of Eternity": 0,
+    "Vault of Archavon": 0,
+    "Ulduar": 0,
+    "Trial of the Crusader": 0,
+    "Trial of the Grand Crusader": 0,
+    "Ruby Sanctum": 0,
+    "Icecrown Citadel": 0,
 
     #-------------------------------------------------------------------------------
     # Cataclysm - 400
