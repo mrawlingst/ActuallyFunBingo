@@ -316,9 +316,16 @@ var milestones = {
     # General
     #-------------------
 
-    #-------------------
-    # General
-    #-------------------
+    "Glowcap (5)": 0,
+    "Clam Bar (1)": 0,
+    "Marsh Lichen (20)": 0,
+    "Mote of Water (1)": 0,
+    "Mote of Air (1)": 0,
+    "Mote of Earth (1)": 0,
+    "Mote of Fire (1)": 0,
+    "Mote of Life (1)": 0,
+    "Mote of Mana (1)": 0,
+    "Mote of Shadow (1)": 0,
 
     # Craftable
     "Netherweave Bag": 0,
@@ -333,39 +340,36 @@ var milestones = {
     "Terocone (20)": 0,
     "Ancient Lichen (20)": 0,
     "Netherbloom (20)": 0,
-    "Nightmare (5)": 0,
+    "Nightmare Vine (5)": 0,
     "Mana Thistle (5)": 0,
     "Fel Lotus (1)": 0,
 
     #-------------------
     # Skinning
     #-------------------
+    "Knothide Leather Scraps (20)": 0,
+    "Knothide Leather (20)": 0,
+    "Heavy Knothide Leather (20)": 0, #?: can starter account obtain this?
+    "Thick Clefthoof Leather (20)": 0,
     "Crystal Infused Leather (20)": 0,
     "Fel Scales (20)": 0,
-    "Knothide Leather (20)": 0,
-    "Knothide Leather Scraps (20)": 0,
 
     #-------------------
     # Mining
     #-------------------
     "Fel Iron Ore (20)": 0,
     "Adamantite Ore (20)": 0,
-    "Khorium Ore (5)": 0,
+    "Khorium Ore (1)": 0,
     "Eternium Ore (1)": 0,
 
     #-------------------
-    # General
+    # Tailoring
     #-------------------
-    "Glowcap (5)": 0,
-    "Clam Bar (1)": 0,
-    "Marsh Lichen (20)": 0,
-    "Mote of Water (1)": 0,
-    "Mote of Air (1)": 0,
-    "Mote of Earth (1)": 0,
-    "Mote of Fire (1)": 0,
-    "Mote of Life (1)": 0,
-    "Mote of Mana (1)": 0,
-    "Mote of Shadow (1)": 0,
+    "Netherweave Cloth (20)": 0,
+    "Netherweb Spider Silk (1)": 0,
+    "Primal Mooncloth (1)": 1001, #?: might be too difficult to obtain in a timely manner
+    "Shadowcloth (1)": 1001, #?: might be too difficult to obtain in a timely manner
+    "Spellweave (1)": 1001, #?: might be too difficult to obtain in a timely manner
 
     #---------------------------------------
     # Professions
@@ -387,11 +391,43 @@ var milestones = {
     #---------------------------------------
     "Complete a chapter (Hellfire Peninsula)": 0,
     "Complete a chapter (Zangarmarsh)": 0,
-    # "Complete a chapter (Terokkar Forest)": 0,
-    # "Complete a chapter (Nagrand)": 0,
-    # "Complete a chapter (Blade's Edge Mountains)": 0,
-    # "Complete a chapter (Shadowmoon Valley)": 0,
-    # "Complete a chapter (Netherstorm)": 0,
+    "Complete a chapter (Terokkar Forest)": 0,
+    "Complete a chapter (Nagrand)": 0,
+    "Complete a chapter (Blade's Edge Mountains)": 0,
+    # "Complete a chapter (Shadowmoon Valley)": 0, #?: requires level 25+ for quests
+    # "Complete a chapter (Netherstorm)": 0, #?: requires level 25+ for quests
+
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Hellfire Ramparts": 0,
+    "Blood Furance": 0,
+    "The Slave Pens": 0,
+    "The Underbog": 0,
+    "Mana-Tombs": 0,
+    "Auchenai Crypts": 0,
+    "Sethekk Halls": 0,
+    "The Steamvault": 0,
+    "Shaodw Labyrinth": 0,
+    "The Mechanar": 0, #?: Can this be reachable without flying?
+    "The Botanica": 0, #?: Can this be reachable without flying?
+    "Shattered Halls": 0,
+    "The Arcatraz": 0, #?: Can this be reachable without flying?
+    "Magisters' Terrace": 0,
+    "Escape from Durnholde Keep": 0,
+    "Black Morass": 0,
+
+    # Raids
+    "Gruul's Lair": 0,
+    "Magtheridon's Lair": 0,
+    "Serpentshrine Cavern": 0,
+    "The Eye": 0, #?: Can this be reachable without flying?
+    "The Black Temple": 0,
+    "Karazhan": 0,
+    "Sunwell Plateau": 0,
+    "Battle for Mount Hyjal": 0,
 
     #-------------------------------------------------------------------------------
     # Wrath of the Lich King - 300
