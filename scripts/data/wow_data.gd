@@ -3,6 +3,12 @@ extends Node
 var version = "2.0"
 var helpLink = "http://www.wowhead.com/"
 
+const EXCLUSIVE_DROP_BAGS := 1000
+const EXCLUSIVE_CLOTH_CRAFT := 1001
+const EXCLUSIVE_DUNGEONS := 101
+const EXCLUSIVE_RAIDS := 102
+const EXCLUSIVE_COVENANTS := 103
+
 var milestones = {
     #-------------------------------------------------------------------------------
     # Shared
@@ -124,14 +130,14 @@ var milestones = {
     "Explorer's Pack (1)": 0,
 
     # Rare drop
-    "Small Black Pouch (1)": 1000,
-    "Small Blue Pouch (1)": 1000,
-    "Small Green Pouch (1)": 1000,
-    "Small Red Pouch (1)": 1000,
-    "Blue Leather Bag (1)": 1000,
-    "Green Leather Bag (1)": 1000,
-    "Red Leather Bag (1)": 1000,
-    "White Leather Bag (1)": 1000,
+    "Small Black Pouch (1)": EXCLUSIVE_DROP_BAGS,
+    "Small Blue Pouch (1)": EXCLUSIVE_DROP_BAGS,
+    "Small Green Pouch (1)": EXCLUSIVE_DROP_BAGS,
+    "Small Red Pouch (1)": EXCLUSIVE_DROP_BAGS,
+    "Blue Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
+    "Green Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
+    "Red Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
+    "White Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
 
     #-------------------
     # Herbalism
@@ -229,35 +235,35 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Stormwind Stockades / Ragefire Chasm": 0,
-    "The Deadmines": 0,
-    "Shadowfang Keep": 0,
-    "Gnomeregan": 0,
-    "Scarlet Halls": 0,
-    "Scarlet Monastery": 0,
-    "Uldaman": 0,
-    "Scholomance": 0,
-    "Stratholme Main Gate": 0,
-    "Stratholme Service Entrance": 0,
-    "Blackrock Depths": 0,
-    "Sunken Temple": 0,
-    "Lower Blackrock Spire": 0,
-    "Wailing Caverns": 0,
-    "Blackfathom Deeps": 0,
-    "Razorfen Kraul": 0,
-    "Maraudon": 0,
-    "Warpwood Quarter": 0,
-    "Captial Gardens": 0,
-    "Gordok Commons": 0,
-    "Razorfen Downs": 0,
-    "Zul'Farrak": 0,
+    "Stormwind Stockades / Ragefire Chasm": EXCLUSIVE_DUNGEONS,
+    "The Deadmines": EXCLUSIVE_DUNGEONS,
+    "Shadowfang Keep": EXCLUSIVE_DUNGEONS,
+    "Gnomeregan": EXCLUSIVE_DUNGEONS,
+    "Scarlet Halls": EXCLUSIVE_DUNGEONS,
+    "Scarlet Monastery": EXCLUSIVE_DUNGEONS,
+    "Uldaman": EXCLUSIVE_DUNGEONS,
+    "Scholomance": EXCLUSIVE_DUNGEONS,
+    "Stratholme Main Gate": EXCLUSIVE_DUNGEONS,
+    "Stratholme Service Entrance": EXCLUSIVE_DUNGEONS,
+    "Blackrock Depths": EXCLUSIVE_DUNGEONS,
+    "Sunken Temple": EXCLUSIVE_DUNGEONS,
+    "Lower Blackrock Spire": EXCLUSIVE_DUNGEONS,
+    "Wailing Caverns": EXCLUSIVE_DUNGEONS,
+    "Blackfathom Deeps": EXCLUSIVE_DUNGEONS,
+    "Razorfen Kraul": EXCLUSIVE_DUNGEONS,
+    "Maraudon": EXCLUSIVE_DUNGEONS,
+    "Warpwood Quarter": EXCLUSIVE_DUNGEONS,
+    "Captial Gardens": EXCLUSIVE_DUNGEONS,
+    "Gordok Commons": EXCLUSIVE_DUNGEONS,
+    "Razorfen Downs": EXCLUSIVE_DUNGEONS,
+    "Zul'Farrak": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Molten Core": 0,
-    "Blackwing Lair": 0,
-    "Ruins of Ahn'Qiraj": 0,
-    "Temple of Ahn'Qiraj": 0,
-    "Onyxia's Lair": 0,
+    "Molten Core": EXCLUSIVE_RAIDS,
+    "Blackwing Lair": EXCLUSIVE_RAIDS,
+    "Ruins of Ahn'Qiraj": EXCLUSIVE_RAIDS,
+    "Temple of Ahn'Qiraj": EXCLUSIVE_RAIDS,
+    "Onyxia's Lair": EXCLUSIVE_RAIDS,
 
     #---------------------------------------
     # Chapters
@@ -367,9 +373,9 @@ var milestones = {
     #-------------------
     "Netherweave Cloth (20)": 0,
     "Netherweb Spider Silk (1)": 0,
-    "Primal Mooncloth (1)": 1001, #?: might be too difficult to obtain in a timely manner
-    "Shadowcloth (1)": 1001, #?: might be too difficult to obtain in a timely manner
-    "Spellweave (1)": 1001, #?: might be too difficult to obtain in a timely manner
+    "Primal Mooncloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
+    "Shadowcloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
+    "Spellweave (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
 
     #---------------------------------------
     # Professions
@@ -402,32 +408,32 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Hellfire Ramparts": 0,
-    "Blood Furance": 0,
-    "The Slave Pens": 0,
-    "The Underbog": 0,
-    "Mana-Tombs": 0,
-    "Auchenai Crypts": 0,
-    "Sethekk Halls": 0,
-    "The Steamvault": 0,
-    "Shaodw Labyrinth": 0,
-    "The Mechanar": 0, #?: Can this be reachable without flying?
-    "The Botanica": 0, #?: Can this be reachable without flying?
-    "Shattered Halls": 0,
-    "The Arcatraz": 0, #?: Can this be reachable without flying?
-    "Magisters' Terrace": 0,
-    "Escape from Durnholde Keep": 0,
-    "Black Morass": 0,
+    "Hellfire Ramparts": EXCLUSIVE_DUNGEONS,
+    "Blood Furance": EXCLUSIVE_DUNGEONS,
+    "The Slave Pens": EXCLUSIVE_DUNGEONS,
+    "The Underbog": EXCLUSIVE_DUNGEONS,
+    "Mana-Tombs": EXCLUSIVE_DUNGEONS,
+    "Auchenai Crypts": EXCLUSIVE_DUNGEONS,
+    "Sethekk Halls": EXCLUSIVE_DUNGEONS,
+    "The Steamvault": EXCLUSIVE_DUNGEONS,
+    "Shaodw Labyrinth": EXCLUSIVE_DUNGEONS,
+    "The Mechanar": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "The Botanica": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "Shattered Halls": EXCLUSIVE_DUNGEONS,
+    "The Arcatraz": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "Magisters' Terrace": EXCLUSIVE_DUNGEONS,
+    "Escape from Durnholde Keep": EXCLUSIVE_DUNGEONS,
+    "Black Morass": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Gruul's Lair": 0,
-    "Magtheridon's Lair": 0,
-    "Serpentshrine Cavern": 0,
-    "The Eye": 0, #?: Can this be reachable without flying?
-    "The Black Temple": 0,
-    "Karazhan": 0,
-    "Sunwell Plateau": 0,
-    "Battle for Mount Hyjal": 0,
+    "Gruul's Lair": EXCLUSIVE_RAIDS,
+    "Magtheridon's Lair": EXCLUSIVE_RAIDS,
+    "Serpentshrine Cavern": EXCLUSIVE_RAIDS,
+    "The Eye": EXCLUSIVE_RAIDS, #?: Can this be reachable without flying?
+    "The Black Temple": EXCLUSIVE_RAIDS,
+    "Karazhan": EXCLUSIVE_RAIDS,
+    "Sunwell Plateau": EXCLUSIVE_RAIDS,
+    "Battle for Mount Hyjal": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Wrath of the Lich King - 300
@@ -484,32 +490,32 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Utgarde Keep": 0,
-    "The Nexus": 0,
-    "Azjol-Nerub": 0,
-    "Ahn'Kahet: The Old Kingdom": 0,
-    "Drak'Tharon Keep": 0,
-    "The Violet Hold": 0,
-    "Gundrak": 0,
-    "Halls of Stone": 0,
-    "Utgarde Pinnacle": 0,
-    "The Oculus": 0, #?: Does this require flying to reach?
-    "Halls of Lightning": 0,
-    "Trial of the Champion": 0,
-    "The Forge of Souls": 0,
-    "Pit of Saron": 0,
-    "Halls of Reflection": 0,
+    "Utgarde Keep": EXCLUSIVE_DUNGEONS,
+    "The Nexus": EXCLUSIVE_DUNGEONS,
+    "Azjol-Nerub": EXCLUSIVE_DUNGEONS,
+    "Ahn'Kahet: The Old Kingdom": EXCLUSIVE_DUNGEONS,
+    "Drak'Tharon Keep": EXCLUSIVE_DUNGEONS,
+    "The Violet Hold": EXCLUSIVE_DUNGEONS,
+    "Gundrak": EXCLUSIVE_DUNGEONS,
+    "Halls of Stone": EXCLUSIVE_DUNGEONS,
+    "Utgarde Pinnacle": EXCLUSIVE_DUNGEONS,
+    "The Oculus": EXCLUSIVE_DUNGEONS, #?: Does this require flying to reach?
+    "Halls of Lightning": EXCLUSIVE_DUNGEONS,
+    "Trial of the Champion": EXCLUSIVE_DUNGEONS,
+    "The Forge of Souls": EXCLUSIVE_DUNGEONS,
+    "Pit of Saron": EXCLUSIVE_DUNGEONS,
+    "Halls of Reflection": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Naxxramas": 0, #?: is this reachable without flying?
-    "The Obsidian Sanctum": 0,
-    "The Eye of Eternity": 0,
-    "Vault of Archavon": 0,
-    "Ulduar": 0,
-    "Trial of the Crusader": 0,
-    "Trial of the Grand Crusader": 0,
-    "Ruby Sanctum": 0,
-    "Icecrown Citadel": 0,
+    "Naxxramas": EXCLUSIVE_RAIDS, #?: is this reachable without flying?
+    "The Obsidian Sanctum": EXCLUSIVE_RAIDS,
+    "The Eye of Eternity": EXCLUSIVE_RAIDS,
+    "Vault of Archavon": EXCLUSIVE_RAIDS,
+    "Ulduar": EXCLUSIVE_RAIDS,
+    "Trial of the Crusader": EXCLUSIVE_RAIDS,
+    "Trial of the Grand Crusader": EXCLUSIVE_RAIDS,
+    "Ruby Sanctum": EXCLUSIVE_RAIDS,
+    "Icecrown Citadel": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Cataclysm - 400
@@ -607,19 +613,19 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Template of the Jade Serpent": 0,
-    "Stormstout Brewery": 0,
-    "Shado-Pan Monastery": 0,
-    "Mogu'shan Palace": 0,
-    "Gate of the Setting Sun": 0,
-    "Siege of Niuzao Temple": 0,
+    "Template of the Jade Serpent": EXCLUSIVE_DUNGEONS,
+    "Stormstout Brewery": EXCLUSIVE_DUNGEONS,
+    "Shado-Pan Monastery": EXCLUSIVE_DUNGEONS,
+    "Mogu'shan Palace": EXCLUSIVE_DUNGEONS,
+    "Gate of the Setting Sun": EXCLUSIVE_DUNGEONS,
+    "Siege of Niuzao Temple": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Mogu'shan Vaults": 0,
-    "Heart of Fear": 0,
-    "Terrace of Endless Spring": 0,
-    "Throne of Thunder": 0, #?: is this accessible at level 20?
-    "Siege of Orgrimmar": 0,
+    "Mogu'shan Vaults": EXCLUSIVE_RAIDS,
+    "Heart of Fear": EXCLUSIVE_RAIDS,
+    "Terrace of Endless Spring": EXCLUSIVE_RAIDS,
+    "Throne of Thunder": EXCLUSIVE_RAIDS, #?: is this accessible at level 20?
+    "Siege of Orgrimmar": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Warlords of Draenor - 600
@@ -726,7 +732,7 @@ var milestones = {
     "Complete a chapter (Stormsong Valley / Vol'dun)": 0,
 
     #-------------------------------------------------------------------------------
-    # Shadowlands - 900
+    # Shadowlands
     #-------------------------------------------------------------------------------
 
     #---------------------------------------
@@ -739,10 +745,10 @@ var milestones = {
     #---------------------------------------
     # Covenants
     #---------------------------------------
-    "Join Kyrian": 900,
-    "Join Necrolords": 900,
-    "Join Night Fae": 900,
-    "Join Venthyr": 900,
+    "Join Kyrian": EXCLUSIVE_COVENANTS,
+    "Join Necrolords": EXCLUSIVE_COVENANTS,
+    "Join Night Fae": EXCLUSIVE_COVENANTS,
+    "Join Venthyr": EXCLUSIVE_COVENANTS,
 
     #---------------------------------------
     # Professions
