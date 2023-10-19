@@ -717,6 +717,30 @@ var milestones = {
     "Complete a chapter (Stormhiem)": 0,
     "Complete a chapter (Val'sharah)": 0,
 
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Discover Darkheart Thicket": EXCLUSIVE_DUNGEONS,
+    "Discover Eye of Azshara": EXCLUSIVE_DUNGEONS,
+    "Discover Halls of Valor": EXCLUSIVE_DUNGEONS,
+    "Discover Neltharion's Lair": EXCLUSIVE_DUNGEONS,
+    "Discover Assault on Violet Hold": EXCLUSIVE_DUNGEONS,
+    "Discover Black Rook Hold": EXCLUSIVE_DUNGEONS,
+    "Discover Maw of Souls": EXCLUSIVE_DUNGEONS,
+    "Discover Vault of the Wardens": EXCLUSIVE_DUNGEONS,
+    "Discover The Arcway": EXCLUSIVE_DUNGEONS,
+    "Discover Court of Stars": EXCLUSIVE_DUNGEONS,
+    "Discover Cathedral of Eternal Night": EXCLUSIVE_DUNGEONS,
+    "Discover Return to Karazhan": EXCLUSIVE_DUNGEONS,
+
+    # Raids
+    "Discover The Emerald Nightmare": EXCLUSIVE_RAIDS,
+    "Discover Trial of Valor": EXCLUSIVE_RAIDS,
+    "Discover The Nighthold": EXCLUSIVE_RAIDS,
+    "Discover Tomb of Sargeras": EXCLUSIVE_RAIDS,
+
     #-------------------------------------------------------------------------------
     # Battle for Azeroth - 800
     #-------------------------------------------------------------------------------
