@@ -773,6 +773,27 @@ var milestones = {
     "Complete a chapter (Drustvar / Nazmir)": 0,
     "Complete a chapter (Stormsong Valley / Vol'dun)": 0,
 
+    #---------------------------------------
+    # Instances
+    #---------------------------------------
+
+    # Dungeons
+    "Discover Freehold": EXCLUSIVE_DUNGEONS,
+    "Discover Siege of Boralus": EXCLUSIVE_DUNGEONS,
+    "Discover Tol Dagor": EXCLUSIVE_DUNGEONS,
+    "Discover Waycrest Manor": EXCLUSIVE_DUNGEONS,
+    "Discover Shrine of the Storm": EXCLUSIVE_DUNGEONS,
+    "Discover Operation: Mechagon": EXCLUSIVE_DUNGEONS,
+    "Discover Atal'Dazar": EXCLUSIVE_DUNGEONS,
+    "Discover Kings' Rest": EXCLUSIVE_DUNGEONS,
+    "Discover Temple of Selthraliss": EXCLUSIVE_DUNGEONS,
+    "Discover The Underrot": EXCLUSIVE_DUNGEONS,
+
+    # Raids
+    "Discover Crucible of Storms": EXCLUSIVE_RAIDS,
+    "Discover Uldir": EXCLUSIVE_RAIDS,
+    "Discover Battle of Dazar'alor": EXCLUSIVE_RAIDS,
+
     #-------------------------------------------------------------------------------
     # Shadowlands
     #-------------------------------------------------------------------------------
