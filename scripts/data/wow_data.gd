@@ -31,6 +31,10 @@ var milestones = {
     "Complete chapters (7)": 0,
     "Complete a chapter in a zone": 0,
 
+    "Complete quests (50)": 0,
+    "Complete quests (75)": 0,
+    "Complete quests (100)": 0,
+
     "Two honored reputations": 0,
 
     "Learn Journeyman riding": 0,
