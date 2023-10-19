@@ -16,6 +16,8 @@ const DEFAULT_PORT = 40601
 @onready var n_gamehelp = $GameHelp
 @onready var n_timer = $VBoxContainer/Timer
 @onready var n_info: RichTextLabel = $Info
+@onready var n_rules_panel: PanelContainer = $RulesPanel
+@onready var n_rules_content: RichTextLabel = $RulesPanel/MarginContainer/VBoxContainer/Content
 
 func _ready():
     n_version.text = bingo_info.bingoVersion
@@ -23,6 +25,9 @@ func _ready():
     n_seed_generator.new_seed()
     n_gamehelp.bbcode_text = "[color=aqua][url=" + bingo_info.helpLink + "]Game Help[/url][/color]"
     print(bingo_info.game + ": " + str(bingo_info.milestones.size()))
+
+    n_rules_panel.visible = true
+    n_rules_content.text = bingo_info.getRules()
 
     populate_card()
 
@@ -118,3 +123,11 @@ func _on_BackgroundButton_pressed():
 func _on_info_gui_input(event: InputEvent) -> void:
     if event is InputEventMouseButton && event.pressed && event.button_index == MOUSE_BUTTON_RIGHT:
         n_info.text = "[right]" + bingo_info.getInfo() + "  Seed: [b]" + str(n_seed_generator.get_seed()) + "[/b]  Game Version: [b]v" + bingo_info.gameVersion + "[/b][/right]"
+
+
+
+func _on_rules_button_pressed() -> void:
+    n_rules_panel.visible = !n_rules_panel.visible
+
+func _on_rules_close_button_pressed() -> void:
+    n_rules_panel.visible = false

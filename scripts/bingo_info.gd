@@ -7,6 +7,7 @@ var gameVersion = "1.0.0"
 var bingoMode = "Standard"
 var milestones = {}
 var helpLink = ""
+var rules = ""
 
 func currentGame(game):
     self.game = game
@@ -86,3 +87,9 @@ func getMilestones():
         _milestones = wow_data.generate_milestones()
 
     return _milestones
+
+func getRules() -> String:
+    if game == "World of Warcraft":
+        return wow_data.get_rules()
+
+    return ""

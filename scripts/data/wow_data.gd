@@ -780,3 +780,21 @@ func info() -> String:
 
     var txt: String = "Race: [b]%s[/b]  Class: [color=%s][b]%s[/b][/color]  Spec: [b]%s[/b]" % [race, ClassColorsTable[cls], cls, spec]
     return txt
+
+func get_rules() -> String:
+    var rules: String = """
+    The rules are optional. The milestones are up to your interpretation.
+
+    [color=yellow]Do be aware that the bingo is curated to allow starter accounts (lapsed sub) to fully participate.[/color]
+
+    Here are some suggested rules that you may or may not adopt:
+    -If a milestone has two options (i.e. Stormwind City / Orgrimmar), this usually means faction-specific which you can only do one of either (if you're human, Stormwind City)
+    -Milestones requiring items must be present in inventory/bank at completion of bingo
+    -Instance milestones requires you to travel to the entrance before you can mark it completed
+    -Hearthstone milestones requires you to bind to that location at least once but you may change afterward
+    -Heirlooms are allowed but not really encouraged as it may diminish the fun factor
+    -Allied races are allowed but maybe only encouraged if you wish to skip the first half of leveling
+
+    It is encouraged to come up with your own house rules especially if you are racing with another player.
+    """
+    return rules
