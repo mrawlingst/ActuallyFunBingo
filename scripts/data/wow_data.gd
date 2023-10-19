@@ -724,6 +724,12 @@ func _curate(milestone: String, pos: int) -> bool:
     if milestones[milestone] == 0:
         return true
 
+    # If it's 1000 or above - means exclusive to the board
+    if milestones[milestone] >= 1000:
+        for i in picked_milestones:
+            if milestones[i] == milestones[milestone]:
+                return false
+
     # Vertical check
     for i in range(pos, 0, -5):
         if i == pos:
