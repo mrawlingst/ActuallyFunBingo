@@ -235,35 +235,35 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Stormwind Stockades / Ragefire Chasm": EXCLUSIVE_DUNGEONS,
-    "The Deadmines": EXCLUSIVE_DUNGEONS,
-    "Shadowfang Keep": EXCLUSIVE_DUNGEONS,
-    "Gnomeregan": EXCLUSIVE_DUNGEONS,
-    "Scarlet Halls": EXCLUSIVE_DUNGEONS,
-    "Scarlet Monastery": EXCLUSIVE_DUNGEONS,
-    "Uldaman": EXCLUSIVE_DUNGEONS,
-    "Scholomance": EXCLUSIVE_DUNGEONS,
-    "Stratholme Main Gate": EXCLUSIVE_DUNGEONS,
-    "Stratholme Service Entrance": EXCLUSIVE_DUNGEONS,
-    "Blackrock Depths": EXCLUSIVE_DUNGEONS,
-    "Sunken Temple": EXCLUSIVE_DUNGEONS,
-    "Lower Blackrock Spire": EXCLUSIVE_DUNGEONS,
-    "Wailing Caverns": EXCLUSIVE_DUNGEONS,
-    "Blackfathom Deeps": EXCLUSIVE_DUNGEONS,
-    "Razorfen Kraul": EXCLUSIVE_DUNGEONS,
-    "Maraudon": EXCLUSIVE_DUNGEONS,
-    "Warpwood Quarter": EXCLUSIVE_DUNGEONS,
-    "Captial Gardens": EXCLUSIVE_DUNGEONS,
-    "Gordok Commons": EXCLUSIVE_DUNGEONS,
-    "Razorfen Downs": EXCLUSIVE_DUNGEONS,
-    "Zul'Farrak": EXCLUSIVE_DUNGEONS,
+    "Discover Stormwind Stockades / Ragefire Chasm": EXCLUSIVE_DUNGEONS,
+    "Discover The Deadmines": EXCLUSIVE_DUNGEONS,
+    "Discover Shadowfang Keep": EXCLUSIVE_DUNGEONS,
+    "Discover Gnomeregan": EXCLUSIVE_DUNGEONS,
+    "Discover Scarlet Halls": EXCLUSIVE_DUNGEONS,
+    "Discover Scarlet Monastery": EXCLUSIVE_DUNGEONS,
+    "Discover Uldaman": EXCLUSIVE_DUNGEONS,
+    "Discover Scholomance": EXCLUSIVE_DUNGEONS,
+    "Discover Stratholme Main Gate": EXCLUSIVE_DUNGEONS,
+    "Discover Stratholme Service Entrance": EXCLUSIVE_DUNGEONS,
+    "Discover Blackrock Depths": EXCLUSIVE_DUNGEONS,
+    "Discover Sunken Temple": EXCLUSIVE_DUNGEONS,
+    "Discover Lower Blackrock Spire": EXCLUSIVE_DUNGEONS,
+    "Discover Wailing Caverns": EXCLUSIVE_DUNGEONS,
+    "Discover Blackfathom Deeps": EXCLUSIVE_DUNGEONS,
+    "Discover Razorfen Kraul": EXCLUSIVE_DUNGEONS,
+    "Discover Maraudon": EXCLUSIVE_DUNGEONS,
+    "Discover Warpwood Quarter": EXCLUSIVE_DUNGEONS,
+    "Discover Captial Gardens": EXCLUSIVE_DUNGEONS,
+    "Discover Gordok Commons": EXCLUSIVE_DUNGEONS,
+    "Discover Razorfen Downs": EXCLUSIVE_DUNGEONS,
+    "Discover Zul'Farrak": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Molten Core": EXCLUSIVE_RAIDS,
-    "Blackwing Lair": EXCLUSIVE_RAIDS,
-    "Ruins of Ahn'Qiraj": EXCLUSIVE_RAIDS,
-    "Temple of Ahn'Qiraj": EXCLUSIVE_RAIDS,
-    "Onyxia's Lair": EXCLUSIVE_RAIDS,
+    "Discover Molten Core": EXCLUSIVE_RAIDS,
+    "Discover Blackwing Lair": EXCLUSIVE_RAIDS,
+    "Discover Ruins of Ahn'Qiraj": EXCLUSIVE_RAIDS,
+    "Discover Temple of Ahn'Qiraj": EXCLUSIVE_RAIDS,
+    "Discover Onyxia's Lair": EXCLUSIVE_RAIDS,
 
     #---------------------------------------
     # Chapters
@@ -408,32 +408,32 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Hellfire Ramparts": EXCLUSIVE_DUNGEONS,
-    "Blood Furance": EXCLUSIVE_DUNGEONS,
-    "The Slave Pens": EXCLUSIVE_DUNGEONS,
-    "The Underbog": EXCLUSIVE_DUNGEONS,
-    "Mana-Tombs": EXCLUSIVE_DUNGEONS,
-    "Auchenai Crypts": EXCLUSIVE_DUNGEONS,
-    "Sethekk Halls": EXCLUSIVE_DUNGEONS,
-    "The Steamvault": EXCLUSIVE_DUNGEONS,
-    "Shaodw Labyrinth": EXCLUSIVE_DUNGEONS,
-    "The Mechanar": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
-    "The Botanica": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
-    "Shattered Halls": EXCLUSIVE_DUNGEONS,
-    "The Arcatraz": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
-    "Magisters' Terrace": EXCLUSIVE_DUNGEONS,
-    "Escape from Durnholde Keep": EXCLUSIVE_DUNGEONS,
-    "Black Morass": EXCLUSIVE_DUNGEONS,
+    "Discover Hellfire Ramparts": EXCLUSIVE_DUNGEONS,
+    "Discover Blood Furance": EXCLUSIVE_DUNGEONS,
+    "Discover The Slave Pens": EXCLUSIVE_DUNGEONS,
+    "Discover The Underbog": EXCLUSIVE_DUNGEONS,
+    "Discover Mana-Tombs": EXCLUSIVE_DUNGEONS,
+    "Discover Auchenai Crypts": EXCLUSIVE_DUNGEONS,
+    "Discover Sethekk Halls": EXCLUSIVE_DUNGEONS,
+    "Discover The Steamvault": EXCLUSIVE_DUNGEONS,
+    "Discover Shaodw Labyrinth": EXCLUSIVE_DUNGEONS,
+    "Discover The Mechanar": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "Discover The Botanica": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "Discover Shattered Halls": EXCLUSIVE_DUNGEONS,
+    "Discover The Arcatraz": EXCLUSIVE_DUNGEONS, #?: Can this be reachable without flying?
+    "Discover Magisters' Terrace": EXCLUSIVE_DUNGEONS,
+    "Discover Escape from Durnholde Keep": EXCLUSIVE_DUNGEONS,
+    "Discover Black Morass": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Gruul's Lair": EXCLUSIVE_RAIDS,
-    "Magtheridon's Lair": EXCLUSIVE_RAIDS,
-    "Serpentshrine Cavern": EXCLUSIVE_RAIDS,
-    "The Eye": EXCLUSIVE_RAIDS, #?: Can this be reachable without flying?
-    "The Black Temple": EXCLUSIVE_RAIDS,
-    "Karazhan": EXCLUSIVE_RAIDS,
-    "Sunwell Plateau": EXCLUSIVE_RAIDS,
-    "Battle for Mount Hyjal": EXCLUSIVE_RAIDS,
+    "Discover Gruul's Lair": EXCLUSIVE_RAIDS,
+    "Discover Magtheridon's Lair": EXCLUSIVE_RAIDS,
+    "Discover Serpentshrine Cavern": EXCLUSIVE_RAIDS,
+    "Discover The Eye": EXCLUSIVE_RAIDS, #?: Can this be reachable without flying?
+    "Discover The Black Temple": EXCLUSIVE_RAIDS,
+    "Discover Karazhan": EXCLUSIVE_RAIDS,
+    "Discover Sunwell Plateau": EXCLUSIVE_RAIDS,
+    "Discover Battle for Mount Hyjal": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Wrath of the Lich King - 300
@@ -490,32 +490,32 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Utgarde Keep": EXCLUSIVE_DUNGEONS,
-    "The Nexus": EXCLUSIVE_DUNGEONS,
-    "Azjol-Nerub": EXCLUSIVE_DUNGEONS,
-    "Ahn'Kahet: The Old Kingdom": EXCLUSIVE_DUNGEONS,
-    "Drak'Tharon Keep": EXCLUSIVE_DUNGEONS,
-    "The Violet Hold": EXCLUSIVE_DUNGEONS,
-    "Gundrak": EXCLUSIVE_DUNGEONS,
-    "Halls of Stone": EXCLUSIVE_DUNGEONS,
-    "Utgarde Pinnacle": EXCLUSIVE_DUNGEONS,
-    "The Oculus": EXCLUSIVE_DUNGEONS, #?: Does this require flying to reach?
-    "Halls of Lightning": EXCLUSIVE_DUNGEONS,
-    "Trial of the Champion": EXCLUSIVE_DUNGEONS,
-    "The Forge of Souls": EXCLUSIVE_DUNGEONS,
-    "Pit of Saron": EXCLUSIVE_DUNGEONS,
-    "Halls of Reflection": EXCLUSIVE_DUNGEONS,
+    "Discover Utgarde Keep": EXCLUSIVE_DUNGEONS,
+    "Discover The Nexus": EXCLUSIVE_DUNGEONS,
+    "Discover Azjol-Nerub": EXCLUSIVE_DUNGEONS,
+    "Discover Ahn'Kahet: The Old Kingdom": EXCLUSIVE_DUNGEONS,
+    "Discover Drak'Tharon Keep": EXCLUSIVE_DUNGEONS,
+    "Discover The Violet Hold": EXCLUSIVE_DUNGEONS,
+    "Discover Gundrak": EXCLUSIVE_DUNGEONS,
+    "Discover Halls of Stone": EXCLUSIVE_DUNGEONS,
+    "Discover Utgarde Pinnacle": EXCLUSIVE_DUNGEONS,
+    "Discover The Oculus": EXCLUSIVE_DUNGEONS, #?: Does this require flying to reach?
+    "Discover Halls of Lightning": EXCLUSIVE_DUNGEONS,
+    "Discover Trial of the Champion": EXCLUSIVE_DUNGEONS,
+    "Discover The Forge of Souls": EXCLUSIVE_DUNGEONS,
+    "Discover Pit of Saron": EXCLUSIVE_DUNGEONS,
+    "Discover Halls of Reflection": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Naxxramas": EXCLUSIVE_RAIDS, #?: is this reachable without flying?
-    "The Obsidian Sanctum": EXCLUSIVE_RAIDS,
-    "The Eye of Eternity": EXCLUSIVE_RAIDS,
-    "Vault of Archavon": EXCLUSIVE_RAIDS,
-    "Ulduar": EXCLUSIVE_RAIDS,
-    "Trial of the Crusader": EXCLUSIVE_RAIDS,
-    "Trial of the Grand Crusader": EXCLUSIVE_RAIDS,
-    "Ruby Sanctum": EXCLUSIVE_RAIDS,
-    "Icecrown Citadel": EXCLUSIVE_RAIDS,
+    "Discover Naxxramas": EXCLUSIVE_RAIDS, #?: is this reachable without flying?
+    "Discover The Obsidian Sanctum": EXCLUSIVE_RAIDS,
+    "Discover The Eye of Eternity": EXCLUSIVE_RAIDS,
+    "Discover Vault of Archavon": EXCLUSIVE_RAIDS,
+    "Discover Ulduar": EXCLUSIVE_RAIDS,
+    "Discover Trial of the Crusader": EXCLUSIVE_RAIDS,
+    "Discover Trial of the Grand Crusader": EXCLUSIVE_RAIDS,
+    "Discover Ruby Sanctum": EXCLUSIVE_RAIDS,
+    "Discover Icecrown Citadel": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Cataclysm - 400
@@ -613,19 +613,19 @@ var milestones = {
     #---------------------------------------
 
     # Dungeons
-    "Template of the Jade Serpent": EXCLUSIVE_DUNGEONS,
-    "Stormstout Brewery": EXCLUSIVE_DUNGEONS,
-    "Shado-Pan Monastery": EXCLUSIVE_DUNGEONS,
-    "Mogu'shan Palace": EXCLUSIVE_DUNGEONS,
-    "Gate of the Setting Sun": EXCLUSIVE_DUNGEONS,
-    "Siege of Niuzao Temple": EXCLUSIVE_DUNGEONS,
+    "Discover Template of the Jade Serpent": EXCLUSIVE_DUNGEONS,
+    "Discover Stormstout Brewery": EXCLUSIVE_DUNGEONS,
+    "Discover Shado-Pan Monastery": EXCLUSIVE_DUNGEONS,
+    "Discover Mogu'shan Palace": EXCLUSIVE_DUNGEONS,
+    "Discover Gate of the Setting Sun": EXCLUSIVE_DUNGEONS,
+    "Discover Siege of Niuzao Temple": EXCLUSIVE_DUNGEONS,
 
     # Raids
-    "Mogu'shan Vaults": EXCLUSIVE_RAIDS,
-    "Heart of Fear": EXCLUSIVE_RAIDS,
-    "Terrace of Endless Spring": EXCLUSIVE_RAIDS,
-    "Throne of Thunder": EXCLUSIVE_RAIDS, #?: is this accessible at level 20?
-    "Siege of Orgrimmar": EXCLUSIVE_RAIDS,
+    "Discover Mogu'shan Vaults": EXCLUSIVE_RAIDS,
+    "Discover Heart of Fear": EXCLUSIVE_RAIDS,
+    "Discover Terrace of Endless Spring": EXCLUSIVE_RAIDS,
+    "Discover Throne of Thunder": EXCLUSIVE_RAIDS, #?: is this accessible at level 20?
+    "Discover Siege of Orgrimmar": EXCLUSIVE_RAIDS,
 
     #-------------------------------------------------------------------------------
     # Warlords of Draenor - 600
