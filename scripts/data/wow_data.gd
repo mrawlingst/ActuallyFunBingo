@@ -671,24 +671,38 @@ var milestones = {
 }
 
 var RaceClassTable: Dictionary = {
-    "Human"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",                    "Monk"],
-    "Dwarf"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",          "Shaman", "Monk"],
-    "Night Elf" = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                               "Monk"],
-    "Gnome"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                               "Monk"],
-    "Draenei"   = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",          "Shaman", "Monk"],
-    "Worgen"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
+    # Alliance
+    "Human"                 = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",                                  ],
+    "Dwarf"                 = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",          "Shaman",               ],
+    "Night Elf"             = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                               "Demon Hunter"],
+    "Gnome"                 = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                                             ],
+    "Draenei"               = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",          "Shaman",               ],
+    "Worgen"                = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid",                         ],
+    "Void Elf"              = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                                             ],
+    "Lightforged Draenei"   = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",                                  ],
+    "Dark Iron Dwarf"       = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",          "Shaman",               ],
+    "Kul Tiran"             = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid", "Shaman",               ],
+    "Mechagnome"            = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                                             ],
 
-    "Orc"       = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                     "Shaman", "Monk"],
-    "Undead"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                               "Monk"],
-    "Tauren"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin", "Druid", "Shaman", "Monk"],
-    "Troll"     = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid", "Shaman", "Monk"],
-    "Blood Elf" = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Paladin",                    "Monk"],
-    "Goblin"    = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",                     "Shaman", "Monk"],
+    # Horde
+    "Orc"                   = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
+    "Undead"                = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                                             ],
+    "Tauren"                = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin", "Druid", "Shaman"                ],
+    "Troll"                 = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid", "Shaman",               ],
+    "Blood Elf"             = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin",                    "Demon Hunter"],
+    "Goblin"                = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
+    "Nightborne"            = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                                             ],
+    "Highmountain Tauren"   = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid", "Shaman",               ],
+    "Mag'har Orc"           = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
+    "Zandalari Troll"       = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin", "Druid", "Shaman",               ],
+    "Vulpera"               = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
 
-    "Pandaren"  = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock",            "Druid",           "Monk"],
+    "Pandaren"              = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid",                         ],
 }
 
 var ClassSpecsTable: Dictionary = {
+    "Death Knight": ["Blood", "Unholy", "Frost"],
+    "Demon Hunter": ["Havoc", "Vengeance"],
     "Druid": ["Balance", "Feral", "Guardian", "Restoration"],
     "Hunter": ["Beast Mastery", "Marksmanship", "Survival"],
     "Mage": ["Fire", "Frost", "Arcane"],
@@ -702,6 +716,8 @@ var ClassSpecsTable: Dictionary = {
 }
 
 var ClassColorsTable: Dictionary = {
+    "Death Knight": "#C41E3A",
+    "Demon Hunter": "#A330C9",
     "Druid": "#FF7C0A",
     "Hunter": "#AAD372",
     "Mage": "#3FC7EB",

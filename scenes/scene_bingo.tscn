@@ -86,10 +86,10 @@ popup/item_1/text = "Blackout"
 popup/item_1/id = 1
 
 [node name="GameHelp" type="RichTextLabel" parent="."]
-offset_left = 63.0
-offset_top = 623.0
-offset_right = 127.0
-offset_bottom = 640.0
+offset_left = 10.0
+offset_top = 657.0
+offset_right = 74.0
+offset_bottom = 674.0
 theme_override_font_sizes/normal_font_size = 12
 bbcode_enabled = true
 text = "Game Help"
