@@ -835,6 +835,25 @@ var milestones = {
     "Complete a chapter (Maldraxxus)": 0,
     "Complete a chapter (Ardenweald)": 0,
     "Complete a chapter (Revendreth)": 0,
+
+    #---------------------------------------
+    # Chapters
+    #---------------------------------------
+
+    # Dungeons
+    "Discover The Necrotic Wake": EXCLUSIVE_DUNGEONS,
+    "Discover Plaguefall": EXCLUSIVE_DUNGEONS,
+    "Discover Mists of Tirna Scithe": EXCLUSIVE_DUNGEONS,
+    "Discover Halls of Atonement": EXCLUSIVE_DUNGEONS,
+    "Discover Spires of Ascension": EXCLUSIVE_DUNGEONS,
+    "Discover Theater of Pain": EXCLUSIVE_DUNGEONS,
+    "Discover De Other Side": EXCLUSIVE_DUNGEONS,
+    "Discover Sanguine Depths": EXCLUSIVE_DUNGEONS,
+    "Discover Tazavesh, the Veiled Market": EXCLUSIVE_DUNGEONS,
+
+    # Raids
+    "Discover Castle Nathria": EXCLUSIVE_RAIDS,
+    "Discover Sanctum of Domination": EXCLUSIVE_RAIDS,
 }
 
 var RaceClassTable: Dictionary = {
