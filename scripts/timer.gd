@@ -4,6 +4,7 @@ var timer_active = false
 
 var elapsed_fmt: String = "%02d:%02d:%02d.%03d"
 @onready var n_time_label: Label = $"Current Time"
+signal TimerClicked
 
 var time_elapsed: float = 0
 
@@ -53,7 +54,7 @@ func pause_timer():
 
 func get_formatted_elapsed_time(f_hours = "%02d:", f_minutes = "%02d:", f_seconds = "%02d.", f_millis = "%03d", millis_precision = 3) -> String:
     # Get the current elapsed time.
-    var time = time_elapsed
+    var time = float(time_elapsed)
 
     # Break the elapsed time into seconds and milliseconds.
     var part_seconds = 0
@@ -62,6 +63,8 @@ func get_formatted_elapsed_time(f_hours = "%02d:", f_minutes = "%02d:", f_second
     if time_split.size() == 2:
         part_seconds = int(time_split[0])
         part_milliseconds = int(time_split[1].substr(0, millis_precision))
+    else:
+        part_seconds = int(time)
 
     # Break the total seconds into their respective time parts.
     var hours = floor(part_seconds / 3600)
@@ -88,3 +91,13 @@ func get_formatted_elapsed_time(f_hours = "%02d:", f_minutes = "%02d:", f_second
     # Return the formatted output.
     return format_string % format_values
 
+func set_time_elapsed(value: float) -> void:
+    if value < 0:
+        return
+
+    time_elapsed = value
+    n_time_label.text = get_formatted_elapsed_time()
+
+func _on_current_time_gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton && event.pressed && event.button_index == MOUSE_BUTTON_RIGHT:
+        TimerClicked.emit()

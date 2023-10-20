@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dn1yevaaexcsu"]
+[gd_scene load_steps=10 format=3 uid="uid://dn1yevaaexcsu"]
 
 [ext_resource type="Script" path="res://scripts/bingo.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bscn0b14nkvy3" path="res://scenes/scene_timer.tscn" id="5"]
@@ -17,6 +17,9 @@ bg_color = Color(0.133333, 0.137255, 0.145098, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wwuc1"]
 font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkgub"]
+bg_color = Color(0.184314, 0.192157, 0.211765, 1)
 
 [node name="root" type="Node"]
 script = ExtResource("1")
@@ -165,6 +168,108 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Close"
 
+[node name="TimeEditPanel" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="TimeEditPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TimeEditPanel" type="PanelContainer" parent="TimeEditPanel/MarginContainer"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mkgub")
+
+[node name="MarginContainer" type="MarginContainer" parent="TimeEditPanel/MarginContainer/TimeEditPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hours"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Minutes"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Seconds"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Millisecs"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HoursEdit" type="SpinBox" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+rounded = true
+alignment = 1
+select_all_on_focus = true
+
+[node name="MinutesEdit" type="SpinBox" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+max_value = 59.0
+rounded = true
+alignment = 1
+select_all_on_focus = true
+
+[node name="SecondsEdit" type="SpinBox" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+max_value = 59.0
+rounded = true
+alignment = 1
+select_all_on_focus = true
+
+[node name="MillisecondsEdit" type="SpinBox" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+max_value = 999.0
+rounded = true
+alignment = 1
+select_all_on_focus = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Confirm"
+
+[node name="CancelButton" type="Button" parent="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cancel"
+
+[connection signal="TimerClicked" from="VBoxContainer/Timer" to="." method="_on_timer_timer_clicked"]
 [connection signal="gui_input" from="Info" to="." method="_on_info_gui_input"]
 [connection signal="pressed" from="BackgroundButton" to="." method="_on_BackgroundButton_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
@@ -172,3 +277,6 @@ text = "Close"
 [connection signal="meta_clicked" from="GameHelp" to="." method="_on_GameHelp_meta_clicked"]
 [connection signal="pressed" from="RulesButton" to="." method="_on_rules_button_pressed"]
 [connection signal="pressed" from="RulesPanel/MarginContainer/VBoxContainer/RulesCloseButton" to="." method="_on_rules_close_button_pressed"]
+[connection signal="gui_input" from="TimeEditPanel" to="." method="_on_time_edit_panel_gui_input"]
+[connection signal="pressed" from="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]

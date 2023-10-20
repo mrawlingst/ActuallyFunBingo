@@ -18,6 +18,7 @@ const DEFAULT_PORT = 40601
 @onready var n_info: RichTextLabel = $Info
 @onready var n_rules_panel: PanelContainer = $RulesPanel
 @onready var n_rules_content: RichTextLabel = $RulesPanel/MarginContainer/VBoxContainer/Content
+@onready var n_time_edit_panel: PanelContainer = $TimeEditPanel
 
 func _ready():
     n_version.text = bingo_info.bingoVersion
@@ -28,6 +29,8 @@ func _ready():
 
     n_rules_panel.visible = true
     n_rules_content.text = bingo_info.getRules()
+
+    n_time_edit_panel.visible = false
 
     populate_card()
 
@@ -128,6 +131,66 @@ func _on_info_gui_input(event: InputEvent) -> void:
 
 func _on_rules_button_pressed() -> void:
     n_rules_panel.visible = !n_rules_panel.visible
+    n_time_edit_panel.visible = false
 
 func _on_rules_close_button_pressed() -> void:
     n_rules_panel.visible = false
+
+
+@onready var n_timer_hour_edit: SpinBox = $TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2/HoursEdit
+@onready var n_timer_minutes_edit: SpinBox = $TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2/MinutesEdit
+@onready var n_timer_seconds_edit: SpinBox = $TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2/SecondsEdit
+@onready var n_timer_milliseconds_edit: SpinBox = $TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer2/MillisecondsEdit
+@onready var n_timer_edit_confirm_button: Button = $TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton
+
+func _on_timer_timer_clicked() -> void:
+    n_time_edit_panel.visible = true
+    n_rules_panel.visible = false
+
+    var time = n_timer.time_elapsed
+
+    # Break the elapsed time into seconds and milliseconds.
+    var part_seconds = 0
+    var part_milliseconds = 0
+    var time_split = str(time).split(".")
+    if time_split.size() == 2:
+        part_seconds = int(time_split[0])
+        part_milliseconds = int(time_split[1].substr(0, 3))
+    else:
+        part_seconds = int(time)
+
+    # Break the total seconds into their respective time parts.
+    var hours = floor(part_seconds / 3600)
+    var minutes = fmod(floor(part_seconds / 60), 60)
+    var seconds = fmod(part_seconds, 60)
+    var millis = part_milliseconds
+
+    n_timer_hour_edit.value = hours
+    n_timer_minutes_edit.value = minutes
+    n_timer_seconds_edit.value = seconds
+    n_timer_milliseconds_edit.value = millis
+
+func _on_confirm_button_pressed() -> void:
+    n_time_edit_panel.visible = false
+
+    var total: float = 0
+    total += n_timer_hour_edit.value * 3600
+    total += n_timer_minutes_edit.value * 60
+    total += n_timer_seconds_edit.value
+    total += n_timer_milliseconds_edit.value / 1000
+
+    n_timer.set_time_elapsed(total)
+    n_timer.get_node("Start Pause").text = "Resume"
+
+func _on_cancel_button_pressed() -> void:
+    n_time_edit_panel.visible = false
+
+    n_timer_hour_edit.value = 0
+    n_timer_minutes_edit.value = 0
+    n_timer_seconds_edit.value = 0
+    n_timer_milliseconds_edit.value = 0
+
+
+func _on_time_edit_panel_gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton && event.pressed && (event.button_index == MOUSE_BUTTON_LEFT || event.button_index == MOUSE_BUTTON_RIGHT):
+        _on_cancel_button_pressed()
