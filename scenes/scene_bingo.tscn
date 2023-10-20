@@ -12,14 +12,14 @@ font_size = 32
 font_size = 12
 font_color = Color(0.568627, 0.568627, 0.568627, 0.545098)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkgub"]
+bg_color = Color(0.184314, 0.192157, 0.211765, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwdut"]
 bg_color = Color(0.133333, 0.137255, 0.145098, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_wwuc1"]
 font_size = 32
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkgub"]
-bg_color = Color(0.184314, 0.192157, 0.211765, 1)
 
 [node name="root" type="Node"]
 script = ExtResource("1")
@@ -119,56 +119,12 @@ offset_top = -31.0
 offset_right = -10.0
 grow_horizontal = 0
 grow_vertical = 0
+focus_mode = 0
 theme_override_font_sizes/font_size = 0
 text = "Rules"
 
-[node name="RulesPanel" type="PanelContainer" parent="."]
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -293.0
-offset_top = -302.0
-offset_right = 293.0
-offset_bottom = 302.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_fwdut")
-
-[node name="MarginContainer" type="MarginContainer" parent="RulesPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="RulesPanel/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="RulesPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Rules"
-label_settings = SubResource("LabelSettings_wwuc1")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Content" type="RichTextLabel" parent="RulesPanel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_font_sizes/normal_font_size = 14
-bbcode_enabled = true
-fit_content = true
-
-[node name="RulesCloseButton" type="Button" parent="RulesPanel/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Close"
-
 [node name="TimeEditPanel" type="PanelContainer" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -269,6 +225,54 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "Cancel"
 
+[node name="RulesPanel" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="RulesPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="RulesPanel" type="PanelContainer" parent="RulesPanel/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fwdut")
+
+[node name="MarginContainer" type="MarginContainer" parent="RulesPanel/MarginContainer/RulesPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="RulesPanel/MarginContainer/RulesPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RulesPanel/MarginContainer/RulesPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Rules"
+label_settings = SubResource("LabelSettings_wwuc1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Content" type="RichTextLabel" parent="RulesPanel/MarginContainer/RulesPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 14
+bbcode_enabled = true
+
+[node name="RulesCloseButton" type="Button" parent="RulesPanel/MarginContainer/RulesPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Close"
+
 [connection signal="TimerClicked" from="VBoxContainer/Timer" to="." method="_on_timer_timer_clicked"]
 [connection signal="gui_input" from="Info" to="." method="_on_info_gui_input"]
 [connection signal="pressed" from="BackgroundButton" to="." method="_on_BackgroundButton_pressed"]
@@ -276,7 +280,8 @@ text = "Cancel"
 [connection signal="item_selected" from="Modes" to="." method="_on_Modes_item_selected"]
 [connection signal="meta_clicked" from="GameHelp" to="." method="_on_GameHelp_meta_clicked"]
 [connection signal="pressed" from="RulesButton" to="." method="_on_rules_button_pressed"]
-[connection signal="pressed" from="RulesPanel/MarginContainer/VBoxContainer/RulesCloseButton" to="." method="_on_rules_close_button_pressed"]
 [connection signal="gui_input" from="TimeEditPanel" to="." method="_on_time_edit_panel_gui_input"]
 [connection signal="pressed" from="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer/ConfirmButton" to="." method="_on_confirm_button_pressed"]
 [connection signal="pressed" from="TimeEditPanel/MarginContainer/TimeEditPanel/MarginContainer/VBoxContainer/HBoxContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="gui_input" from="RulesPanel" to="." method="_on_rules_panel_gui_input"]
+[connection signal="pressed" from="RulesPanel/MarginContainer/RulesPanel/MarginContainer/VBoxContainer/RulesCloseButton" to="." method="_on_rules_close_button_pressed"]

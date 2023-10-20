@@ -17,7 +17,7 @@ const DEFAULT_PORT = 40601
 @onready var n_timer = $VBoxContainer/Timer
 @onready var n_info: RichTextLabel = $Info
 @onready var n_rules_panel: PanelContainer = $RulesPanel
-@onready var n_rules_content: RichTextLabel = $RulesPanel/MarginContainer/VBoxContainer/Content
+@onready var n_rules_content: RichTextLabel = $RulesPanel/MarginContainer/RulesPanel/MarginContainer/VBoxContainer/Content
 @onready var n_time_edit_panel: PanelContainer = $TimeEditPanel
 
 func _ready():
@@ -194,3 +194,8 @@ func _on_cancel_button_pressed() -> void:
 func _on_time_edit_panel_gui_input(event: InputEvent) -> void:
     if event is InputEventMouseButton && event.pressed && (event.button_index == MOUSE_BUTTON_LEFT || event.button_index == MOUSE_BUTTON_RIGHT):
         _on_cancel_button_pressed()
+
+
+func _on_rules_panel_gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton && event.pressed && (event.button_index == MOUSE_BUTTON_LEFT || event.button_index == MOUSE_BUTTON_RIGHT):
+        _on_rules_close_button_pressed()
