@@ -952,7 +952,7 @@ var milestones = {
     #---------------------------------------
     "Complete a chapter (Tiragarde Sound / Zuldazar)": EXCLUSIVE_BFA_CHAPTERS,
     "Complete a chapter (Drustvar / Nazmir)": EXCLUSIVE_BFA_CHAPTERS,
-    "Complete a chapter (Stormsong Valley / Vol'dun)": EXCLUSIVE_BFA_CHAPTERS,
+    # "Complete a chapter (Stormsong Valley / Vol'dun)": EXCLUSIVE_BFA_CHAPTERS, #!: requires level 30
 
     #---------------------------------------
     # Instances
