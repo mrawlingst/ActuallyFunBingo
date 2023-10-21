@@ -233,10 +233,20 @@ var milestones = {
     #-------------------
     # Mining
     #-------------------
-    "Copper Ores (20)": EXCLUSIVE_VANILLA_ITEMS,
-    "Copper Bars (20)": EXCLUSIVE_VANILLA_ITEMS,
-    "Rough Stones (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Copper Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
     "Tin Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Iron Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Mithril Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Thorium Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Silver Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Gold Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Truesilver Stones (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Coal (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Rough Stone (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Coarse Stone (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Heavy Stone (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Solid Stone (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Dense Stone (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Tailoring
@@ -527,6 +537,13 @@ var milestones = {
     "Icethorn (20)": EXCLUSIVE_NORTHREND_ITEMS,
     "Frost Lotus (1)": EXCLUSIVE_NORTHREND_ITEMS,
 
+    #-------------------
+    # Mining
+    #-------------------
+    "Cobalt Ore (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Saronite Ore (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Titanium Ore (1)": EXCLUSIVE_NORTHREND_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -668,6 +685,14 @@ var milestones = {
     "Fool's Cap (20)": EXCLUSIVE_PANDARIA_ITEMS,
     "Golden Lotus (1)": EXCLUSIVE_PANDARIA_ITEMS,
 
+    #-------------------
+    # Mining
+    #-------------------
+    "Ghost Iron Ore (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Kyparite (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Black Trillium Ore (1)": EXCLUSIVE_PANDARIA_ITEMS,
+    "White Trillium Ore (1)": EXCLUSIVE_PANDARIA_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -741,6 +766,13 @@ var milestones = {
     "Talador Orchid (20)": EXCLUSIVE_DRANEOR_ITEMS,
     "Nagrand Arrowbloom (20)": EXCLUSIVE_DRANEOR_ITEMS,
 
+    #-------------------
+    # Mining
+    #-------------------
+    "Blackrock Ore (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "True Iron Ore (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Draenic Stone (20)": EXCLUSIVE_DRANEOR_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -810,6 +842,12 @@ var milestones = {
     "Foxflower (20)": EXCLUSIVE_LEGION_ITEMS,
     "Starlight Rose (20)": EXCLUSIVE_LEGION_ITEMS,
     "Felwort (1)": EXCLUSIVE_LEGION_ITEMS,
+
+    #-------------------
+    # Mining
+    #-------------------
+    "Felslate Ore (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Leystone Ore (20)": EXCLUSIVE_LEGION_ITEMS,
 
     #---------------------------------------
     # Professions
@@ -885,6 +923,13 @@ var milestones = {
     "Winter's Kiss (20)": EXCLUSIVE_BFA_ITEMS,
     "Anchor Weed (20)": EXCLUSIVE_BFA_ITEMS,
 
+    #-------------------
+    # Mining
+    #-------------------
+    "Monelite Ore (20)": EXCLUSIVE_BFA_ITEMS,
+    "Storm Silver Ore (20)": EXCLUSIVE_BFA_ITEMS,
+    "Platinum Ore (1)": EXCLUSIVE_BFA_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -954,6 +999,16 @@ var milestones = {
     "Vigil's Torch (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
     "Widowbloom (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
     "Nightshade (1)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+
+    #-------------------
+    # Mining
+    #-------------------
+    "Laestrite Ore (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Oxxein Ore (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Phaedrum Ore (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Sinvyr Ore (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Solenium Ore (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Elethium Ore (1)": EXCLUSIVE_SHADOWLANDS_ITEMS,
 
     #---------------------------------------
     # Covenants
