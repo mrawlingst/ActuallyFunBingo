@@ -3,11 +3,56 @@ extends Node
 var version = "2.0"
 var helpLink = "http://www.wowhead.com/"
 
+const EXCLUSIVE_ONE_START := 1000
+const EXCLUSIVE_ONE_END := 1999
+
+const EXCLUSIVE_TWO_START := 2000
+const EXCLUSIVE_TWO_END := 2999
+
+const EXCLUSIVE_THREE_START := 3000
+const EXCLUSIVE_THREE_END := 3999
+
+const EXCLUSIVE_FOUR_START := 4000
+const EXCLUSIVE_FOUR_END := 4999
+
+const EXCLUSIVE_FIVE_START := 5000
+const EXCLUSIVE_FIVE_END := 5999
+
+# No exclusives - just cannot intersect in board (row/col/dia)
+const EXCLUSIVE_COVENANTS := 103
+
+# 1 exclusive
 const EXCLUSIVE_DROP_BAGS := 1000
 const EXCLUSIVE_CLOTH_CRAFT := 1001
-const EXCLUSIVE_DUNGEONS := 1002
-const EXCLUSIVE_RAIDS := 1002
-const EXCLUSIVE_COVENANTS := 103
+
+# 2 exclusives
+const EXCLUSIVE_HEARTHSTONE := 2000
+const EXCLUSIVE_DUNGEONS := 2001
+const EXCLUSIVE_RAIDS := 2002
+const EXCLUSIVE_VANILLA_ITEMS := 2003
+const EXCLUSIVE_OUTLANDS_ITEMS := 2004
+const EXCLUSIVE_NORTHREND_ITEMS := 2006
+const EXCLUSIVE_CATACLYSM_ITEMS := 2007
+const EXCLUSIVE_PANDARIA_ITEMS := 2008
+const EXCLUSIVE_DRANEOR_ITEMS := 2009
+const EXCLUSIVE_LEGION_ITEMS := 2010
+const EXCLUSIVE_BFA_ITEMS := 2011
+const EXCLUSIVE_SHADOWLANDS_ITEMS := 2012
+
+# 3 exclusives
+const EXCLUSIVE_CRAFT_UNIQUE_ITEMS := 3000
+const EXCLUSIVE_PROFESSIONS := 3002
+
+# 5 exclusives
+const EXCLUSIVE_CLASSIC_CHAPTERS := 5000
+const EXCLUSIVE_OUTLANDS_CHAPTERS := 5000
+const EXCLUSIVE_NORTHREND_CHAPTERS := 5000
+const EXCLUSIVE_CATACLYSM_CHAPTERS := 5000
+const EXCLUSIVE_PANDARIA_CHAPTERS := 5000
+const EXCLUSIVE_DRANEOR_CHAPTERS := 5000
+const EXCLUSIVE_LEGION_CHAPTERS := 5000
+const EXCLUSIVE_BFA_CHAPTERS := 5000
+const EXCLUSIVE_SHADOWLANDS_CHAPTERS := 5000
 
 var milestones = {
     #-------------------------------------------------------------------------------
@@ -81,12 +126,14 @@ var milestones = {
     "Archaeology (5)": 0,
     "Cooking (25)": 0,
     "Fishing (25)": 0,
-    "Craft unique Tailoring items (5)": 0,
-    "Craft unique Engineering items (5)": 0,
-    "Craft unique Blacksmith items (5)": 0,
-    "Craft unique Leatherworking items (5)": 0,
-    "Craft unique Alchemy items (5)": 0,
-    "Craft unique Inscription items (5)": 0,
+
+    "Craft unique Tailoring items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+    "Craft unique Engineering items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+    "Craft unique Blacksmith items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+    "Craft unique Leatherworking items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+    "Craft unique Alchemy items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+    "Craft unique Inscription items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
+
     "Craft a Runed Copper Rod": 0,
     "Enchant a piece of armor": 0,
 
@@ -102,9 +149,9 @@ var milestones = {
     #---------------------------------------
     # Hearthstone
     #---------------------------------------
-    "Hearthstone Orgrimmar / Stormwind": 0,
-    "Hearthstone Ironforge / Undercity": 0,
-    "Hearthstone Darnassus / Thunderbluff": 0,
+    "Hearthstone Orgrimmar / Stormwind": EXCLUSIVE_HEARTHSTONE,
+    "Hearthstone Ironforge / Undercity": EXCLUSIVE_HEARTHSTONE,
+    "Hearthstone Darnassus / Thunderbluff": EXCLUSIVE_HEARTHSTONE,
 
     #---------------------------------------
     # Items
@@ -149,93 +196,93 @@ var milestones = {
     #-------------------
     # Herbalism
     #-------------------
-    "Silverleaf (20)": 0,
-    "Peacebloom (20)": 0,
-    "Earthroot (20)": 0,
-    "Mageroyal (20)": 0,
-    "Briarthorn (20)": 0,
-    "Stranglekelp (20)": 0,
-    "Bruiseweed (20)": 0,
-    "Grave Moss (20)": 0,
-    "Wild Steelbloom (20)": 0,
-    "Kingsblood (20)": 0,
-    "Liferoot (20)": 0,
-    "Fadeleaf (20)": 0,
-    "Goldthorn (20)": 0,
-    "Khadgar's Whisker (20)": 0,
-    "Firebloom (20)": 0,
-    "Purple Lotus (20)": 0,
-    "Sungrass (20)": 0,
-    "Blindweed (20)": 0,
-    "Ghost Mushroom (20)": 0,
-    "Gromsblood (20)": 0,
-    "Golden Sansam (20)": 0,
-    "Dreamfoil (20)": 0,
-    "Mountain Silversage (20)": 0,
-    "Black Lotus (1)": 0,
+    "Silverleaf (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Peacebloom (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Earthroot (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Mageroyal (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Briarthorn (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Stranglekelp (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Bruiseweed (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Grave Moss (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Wild Steelbloom (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Kingsblood (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Liferoot (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Fadeleaf (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Goldthorn (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Khadgar's Whisker (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Firebloom (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Purple Lotus (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Sungrass (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Blindweed (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Ghost Mushroom (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Gromsblood (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Golden Sansam (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Dreamfoil (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Mountain Silversage (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Black Lotus (1)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Skinning
     #-------------------
-    "Ruined Leather Scraps (20)": 0,
-    "Light Leather (20)": 0,
-    "Medium Leather (20)": 0,
-    "Heavy Leather (20)": 0,
-    "Light Hide (3)": 0,
-    "Medium Hide (3)": 0,
-    "Heavy Hide (3)": 0,
+    "Ruined Leather Scraps (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Light Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Medium Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Heavy Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Light Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
+    "Medium Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
+    "Heavy Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Mining
     #-------------------
-    "Copper Ores (20)": 0,
-    "Copper Bars (20)": 0,
-    "Rough Stones (20)": 0,
-    "Tin Ore (20)": 0,
+    "Copper Ores (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Copper Bars (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Rough Stones (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Tin Ore (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Tailoring
     #-------------------
-    "Linen Cloth (20)": 0,
-    "Bolt of Linen Cloth (20)": 0,
+    "Linen Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Bolt of Linen Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Engineering
     #-------------------
-    "Rough Blasting Powders (20)": 0,
-    "Delicate Copper Wires (10)": 0,
+    "Rough Blasting Powders (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Delicate Copper Wires (10)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Leatherworking
     #-------------------
-    "Light Armor Kits (20)": 0,
+    "Light Armor Kits (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Inscription
     #-------------------
-    "Moonglow Ink (20)": 0,
+    "Moonglow Ink (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Enchanting
     #-------------------
-    "Strange Dust (20)": 0,
-    "Lesser Magic Essence (3)": 0,
-    "Greater Magic Essence (1)": 0,
+    "Strange Dust (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Lesser Magic Essence (3)": EXCLUSIVE_VANILLA_ITEMS,
+    "Greater Magic Essence (1)": EXCLUSIVE_VANILLA_ITEMS,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Mining (50)": 0,
-    "Tailoring (5)": 0,
-    "Blacksmithing (5)": 0,
-    "Engineering (5)": 0,
-    "Alchemy (5)": 0,
-    "Skinning (50)": 0,
-    "Enchanting (1)": 0,
-    "Herbalism (50)": 0,
-    "Inscription (5)": 0,
-    "Jewelcrafting (5)": 0,
-    "Leatherworking (5)": 0,
+    "Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Instances
@@ -277,38 +324,38 @@ var milestones = {
     #---------------------------------------
 
     # Kalimdor
-    "Complete a chapter (Ashenvale)": 0,
-    "Complete a chapter (Desolace)": 0,
-    "Complete a chapter (Dustwallow Marsh)": 0,
-    "Complete a chapter (Felwood)": 0,
-    "Complete a chapter (Feralas)": 0,
-    "Complete a chapter (Silithus)": 0,
-    "Complete a chapter (Stonetalon Mountains)": 0,
-    "Complete a chapter (Southern Barrens)": 0,
-    "Complete a chapter (Tanaris)": 0,
-    "Complete a chapter (Thousand Needles)": 0,
-    "Complete a chapter (Un'Goro Crater)": 0,
-    "Complete a chapter (Winterspring)": 0,
+    "Complete a chapter (Ashenvale)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Desolace)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Dustwallow Marsh)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Felwood)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Feralas)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Silithus)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Stonetalon Mountains)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Southern Barrens)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Tanaris)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Thousand Needles)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Un'Goro Crater)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Winterspring)": EXCLUSIVE_CLASSIC_CHAPTERS,
 
     # Eastern Kingdom
-    "Complete a chapter (Arathi Highlands)": 0,
-    "Complete a chapter (Badlands)": 0,
-    "Complete a chapter (Blasted Lands)": 0,
-    "Complete a chapter (Burning Steppes)": 0,
-    "Complete a chapter (Cape of Stranglethorn)": 0,
-    "Complete a chapter (Eastern Plaguelands)": 0,
-    "Complete a chapter (Hinterlands)": 0,
-    "Complete a chapter (Northern Stranglethorn)": 0,
-    "Complete a chapter (Searing Gorge)": 0,
-    "Complete a chapter (Swamp of Sorrows)": 0,
-    "Complete a chapter (Western Plaguelands)": 0,
+    "Complete a chapter (Arathi Highlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Badlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Blasted Lands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Burning Steppes)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Cape of Stranglethorn)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Eastern Plaguelands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Hinterlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Northern Stranglethorn)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Searing Gorge)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Swamp of Sorrows)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Western Plaguelands)": EXCLUSIVE_CLASSIC_CHAPTERS,
 
     # Faction-specific only
-    "Complete a chapter (Westfall / Northern Barrens)": 0,
-    "Complete a chapter (Loch Modan / Silverpine Forest)": 0,
-    "Complete a chapter (Darkshore / Azshara)": 0,
-    "Complete a chapter (Bloodmyst Isle / Ghostlands)": 0,
-    "Complete a chapter (Redridge Mountains / Hillsbrad Foothills)": 0,
+    "Complete a chapter (Westfall / Northern Barrens)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Loch Modan / Silverpine Forest)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Darkshore / Azshara)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Bloodmyst Isle / Ghostlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
+    "Complete a chapter (Redridge Mountains / Hillsbrad Foothills)": EXCLUSIVE_CLASSIC_CHAPTERS,
 
     #-------------------------------------------------------------------------------
     # Burning Crusade - 200
@@ -317,8 +364,8 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Exodar / Silvermoon": 0,
-    "Hearthstone Shattrath City": 0,
+    "Hearthstone Exodar / Silvermoon": EXCLUSIVE_HEARTHSTONE,
+    "Hearthstone Shattrath City": EXCLUSIVE_HEARTHSTONE,
     "Allegiance to Aldor / Scryers": 0,
 
     #---------------------------------------
@@ -329,86 +376,86 @@ var milestones = {
     # General
     #-------------------
 
-    "Glowcap (5)": 0,
-    "Clam Bar (1)": 0,
-    "Marsh Lichen (20)": 0,
-    "Mote of Water (1)": 0,
-    "Mote of Air (1)": 0,
-    "Mote of Earth (1)": 0,
-    "Mote of Fire (1)": 0,
-    "Mote of Life (1)": 0,
-    "Mote of Mana (1)": 0,
-    "Mote of Shadow (1)": 0,
+    "Glowcap (5)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Clam Bar (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Marsh Lichen (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Water (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Air (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Earth (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Fire (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Life (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Mana (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mote of Shadow (1)": EXCLUSIVE_OUTLANDS_ITEMS,
 
     # Craftable
-    "Netherweave Bag": 0,
+    "Netherweave Bag": EXCLUSIVE_OUTLANDS_ITEMS,
 
     #-------------------
     # Herbalism
     #-------------------
-    "Dreaming Glory (20)": 0,
-    "Felweed (20)": 0,
-    "Rageveil (20)": 0,
-    "Flame Cap (1)": 0,
-    "Terocone (20)": 0,
-    "Ancient Lichen (20)": 0,
-    "Netherbloom (20)": 0,
-    "Nightmare Vine (5)": 0,
-    "Mana Thistle (5)": 0,
-    "Fel Lotus (1)": 0,
+    "Dreaming Glory (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Felweed (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Rageveil (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Flame Cap (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Terocone (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Ancient Lichen (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Netherbloom (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Nightmare Vine (5)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Mana Thistle (5)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Fel Lotus (1)": EXCLUSIVE_OUTLANDS_ITEMS,
 
     #-------------------
     # Skinning
     #-------------------
-    "Knothide Leather Scraps (20)": 0,
-    "Knothide Leather (20)": 0,
-    "Heavy Knothide Leather (20)": 0, #?: can starter account obtain this?
-    "Thick Clefthoof Leather (20)": 0,
-    "Crystal Infused Leather (20)": 0,
-    "Fel Scales (20)": 0,
+    "Knothide Leather Scraps (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Knothide Leather (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Heavy Knothide Leather (20)": EXCLUSIVE_OUTLANDS_ITEMS, #?: can starter account obtain this?
+    "Thick Clefthoof Leather (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Crystal Infused Leather (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Fel Scales (20)": EXCLUSIVE_OUTLANDS_ITEMS,
 
     #-------------------
     # Mining
     #-------------------
-    "Fel Iron Ore (20)": 0,
-    "Adamantite Ore (20)": 0,
-    "Khorium Ore (1)": 0,
-    "Eternium Ore (1)": 0,
+    "Fel Iron Ore (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Adamantite Ore (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Khorium Ore (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Eternium Ore (1)": EXCLUSIVE_OUTLANDS_ITEMS,
 
     #-------------------
     # Tailoring
     #-------------------
-    "Netherweave Cloth (20)": 0,
-    "Netherweb Spider Silk (1)": 0,
-    "Primal Mooncloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
-    "Shadowcloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
-    "Spellweave (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
+    "Netherweave Cloth (20)": EXCLUSIVE_OUTLANDS_ITEMS,
+    "Netherweb Spider Silk (1)": EXCLUSIVE_OUTLANDS_ITEMS,
+    # "Primal Mooncloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
+    # "Shadowcloth (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
+    # "Spellweave (1)": EXCLUSIVE_CLOTH_CRAFT, #?: might be too difficult to obtain in a timely manner
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Outland Mining (50)": 0,
-    "Outland Tailoring (5)": 0,
-    "Outland Blacksmithing (5)": 0,
-    "Outland Engineering (5)": 0,
-    "Outland Alchemy (5)": 0,
-    "Outland Skinning (50)": 0,
-    "Outland Enchanting (1)": 0,
-    "Outland Herbalism (50)": 0,
-    "Outland Inscription (5)": 0,
-    "Outland Jewelcrafting (5)": 0,
-    "Outland Leatherworking (5)": 0,
+    "Outland Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Outland Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Outland Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Outland Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Outland Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Hellfire Peninsula)": 0,
-    "Complete a chapter (Zangarmarsh)": 0,
-    "Complete a chapter (Terokkar Forest)": 0,
-    "Complete a chapter (Nagrand)": 0,
-    "Complete a chapter (Blade's Edge Mountains)": 0,
-    # "Complete a chapter (Shadowmoon Valley)": 0, #?: requires level 25+ for quests
-    # "Complete a chapter (Netherstorm)": 0, #?: requires level 25+ for quests
+    "Complete a chapter (Hellfire Peninsula)": EXCLUSIVE_OUTLANDS_CHAPTERS,
+    "Complete a chapter (Zangarmarsh)": EXCLUSIVE_OUTLANDS_CHAPTERS,
+    "Complete a chapter (Terokkar Forest)": EXCLUSIVE_OUTLANDS_CHAPTERS,
+    "Complete a chapter (Nagrand)": EXCLUSIVE_OUTLANDS_CHAPTERS,
+    "Complete a chapter (Blade's Edge Mountains)": EXCLUSIVE_OUTLANDS_CHAPTERS,
+    # "Complete a chapter (Shadowmoon Valley)": EXCLUSIVE_OUTLANDS_CHAPTERS, #?: requires level 25+ for quests
+    # "Complete a chapter (Netherstorm)": EXCLUSIVE_OUTLANDS_CHAPTERS, #?: requires level 25+ for quests
 
     #---------------------------------------
     # Instances
@@ -449,7 +496,7 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Dalaran (WOTLK)": 0,
+    "Hearthstone Dalaran (WOTLK)": EXCLUSIVE_HEARTHSTONE,
 
     #---------------------------------------
     # Items
@@ -458,39 +505,39 @@ var milestones = {
     #-------------------
     # General
     #-------------------
-    "Crystallized Air (1)": 0,
-    "Crystallized Earth (1)": 0,
-    "Crystallized Fire (1)": 0,
-    "Crystallized Life (1)": 0,
-    "Crystallized Shadow (1)": 0,
-    "Crystallized Water (1)": 0,
+    "Crystallized Air (1)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Crystallized Earth (1)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Crystallized Fire (1)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Crystallized Life (1)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Crystallized Shadow (1)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Crystallized Water (1)": EXCLUSIVE_NORTHREND_ITEMS,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Northren Mining (50)": 0,
-    "Northren Tailoring (5)": 0,
-    "Northren Blacksmithing (5)": 0,
-    "Northren Engineering (5)": 0,
-    "Northren Alchemy (5)": 0,
-    "Northren Skinning (50)": 0,
-    "Northren Enchanting (1)": 0,
-    "Northren Herbalism (50)": 0,
-    "Northren Inscription (5)": 0,
-    "Northren Jewelcrafting (5)": 0,
-    "Northren Leatherworking (5)": 0,
+    "Northren Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Northren Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Northren Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Northren Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Northren Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Borean Tundra)": 0,
-    "Complete a chapter (Howling Fjord)": 0,
-    "Complete a chapter (Dragonblight)": 0,
-    "Complete a chapter (Grizzly Hills)": 0,
-    "Complete a chapter (Zul'Drak)": 0,
-    "Complete a chapter (Sholazar Basin)": 0,
-    # "Complete a chapter (Icecrown)": 0, #?: quests req level 25+
-    # "Complete a chapter (Storm Peaks)": 0, #?: quests req level 25+
+    "Complete a chapter (Borean Tundra)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    "Complete a chapter (Howling Fjord)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    "Complete a chapter (Dragonblight)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    "Complete a chapter (Grizzly Hills)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    "Complete a chapter (Zul'Drak)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    "Complete a chapter (Sholazar Basin)": EXCLUSIVE_NORTHREND_CHAPTERS,
+    # "Complete a chapter (Icecrown)": EXCLUSIVE_NORTHREND_CHAPTERS, #?: quests req level 25+
+    # "Complete a chapter (Storm Peaks)": EXCLUSIVE_NORTHREND_CHAPTERS, #?: quests req level 25+
 
     #---------------------------------------
     # Instances
@@ -535,36 +582,36 @@ var milestones = {
     #-------------------
     # General
     #-------------------
-    "Volatile Air (1)": 0,
-    "Volatile Earth (1)": 0,
-    "Volatile Fire (1)": 0,
-    "Volatile Water (1)": 0,
-    "Volatile Life (1)": 0,
+    "Volatile Air (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    "Volatile Earth (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    "Volatile Fire (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    "Volatile Water (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    "Volatile Life (1)": EXCLUSIVE_CATACLYSM_ITEMS,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Cataclysm Mining (50)": 0,
-    "Cataclysm Tailoring (5)": 0,
-    "Cataclysm Blacksmithing (5)": 0,
-    "Cataclysm Engineering (5)": 0,
-    "Cataclysm Alchemy (5)": 0,
-    "Cataclysm Skinning (50)": 0,
-    "Cataclysm Enchanting (1)": 0,
-    "Cataclysm Herbalism (50)": 0,
-    "Cataclysm Inscription (5)": 0,
-    "Cataclysm Jewelcrafting (5)": 0,
-    "Cataclysm Leatherworking (5)": 0,
+    "Cataclysm Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
     #!: Cata zones requires level 30+
-    # "Complete a chapter (Vashj'ir)": 0,
-    # "Complete a chapter (Mount Hyjal)": 0,
-    # "Complete a chapter (Deepholm)": 0,
-    # "Complete a chapter (Uldum)": 0,
-    # "Complete a chapter (Twilight Highlands)": 0,
+    # "Complete a chapter (Vashj'ir)": EXCLUSIVE_CATACLYSM_CHAPTERS,
+    # "Complete a chapter (Mount Hyjal)": EXCLUSIVE_CATACLYSM_CHAPTERS,
+    # "Complete a chapter (Deepholm)": EXCLUSIVE_CATACLYSM_CHAPTERS,
+    # "Complete a chapter (Uldum)": EXCLUSIVE_CATACLYSM_CHAPTERS,
+    # "Complete a chapter (Twilight Highlands)": EXCLUSIVE_CATACLYSM_CHAPTERS,
 
     #---------------------------------------
     # Instances
@@ -579,7 +626,7 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Shrine of Seven Stars / Shrine of Two Moons": 0,
+    "Hearthstone Shrine of Seven Stars / Shrine of Two Moons": EXCLUSIVE_HEARTHSTONE,
 
     #---------------------------------------
     # Items
@@ -588,32 +635,32 @@ var milestones = {
     #-------------------
     # General
     #-------------------
-    "Mote of Harmony (5)": 0,
+    "Mote of Harmony (5)": EXCLUSIVE_PANDARIA_ITEMS,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Pandaria Mining (50)": 0,
-    "Pandaria Tailoring (5)": 0,
-    "Pandaria Blacksmithing (5)": 0,
-    "Pandaria Engineering (5)": 0,
-    "Pandaria Alchemy (5)": 0,
-    "Pandaria Skinning (50)": 0,
-    "Pandaria Enchanting (1)": 0,
-    "Pandaria Herbalism (50)": 0,
-    "Pandaria Inscription (5)": 0,
-    "Pandaria Jewelcrafting (5)": 0,
-    "Pandaria Leatherworking (5)": 0,
+    "Pandaria Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Jade Forest)": 0,
-    "Complete a chapter (Valley of the Four Winds)": 0,
-    "Complete a chapter (Krasarang Wilds)": 0,
-    "Complete a chapter (Kun-Lai Summit)": 0,
-    # "Complete a chapter (Townlong Steppes)": 0, #!: requires level 30+
-    # "Complete a chapter (Dread Wastes)": 0, #!: requires level 30+
+    "Complete a chapter (Jade Forest)": EXCLUSIVE_PANDARIA_CHAPTERS,
+    "Complete a chapter (Valley of the Four Winds)": EXCLUSIVE_PANDARIA_CHAPTERS,
+    "Complete a chapter (Krasarang Wilds)": EXCLUSIVE_PANDARIA_CHAPTERS,
+    "Complete a chapter (Kun-Lai Summit)": EXCLUSIVE_PANDARIA_CHAPTERS,
+    # "Complete a chapter (Townlong Steppes)": EXCLUSIVE_PANDARIA_CHAPTERS, #!: requires level 30+
+    # "Complete a chapter (Dread Wastes)": EXCLUSIVE_PANDARIA_CHAPTERS, #!: requires level 30+
 
     #---------------------------------------
     # Instances
@@ -641,7 +688,6 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Garrison": 0,
     "Garrison Hearthstone (item)": 0,
     "Collect 500 garrison resources": 0,
     "Kill 5 rares (WoD)": 0,
@@ -651,26 +697,26 @@ var milestones = {
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Draenor Mining (50)": 0,
-    "Draenor Tailoring (5)": 0,
-    "Draenor Blacksmithing (5)": 0,
-    "Draenor Engineering (5)": 0,
-    "Draenor Alchemy (5)": 0,
-    "Draenor Skinning (50)": 0,
-    "Draenor Enchanting (1)": 0,
-    "Draenor Herbalism (50)": 0,
-    "Draenor Inscription (5)": 0,
-    "Draenor Jewelcrafting (5)": 0,
-    "Draenor Leatherworking (5)": 0,
+    "Draenor Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Shadowmoon Valley / Frostfire Ridge)": 0,
-    # "Complete a chapter (Gorgrond)": 0,
-    # "Complete a chapter (Talador)": 0,
-    # "Complete a chapter (Spires of Arak)": 0,
-    # "Complete a chapter (Nagrand WoD)": 0,
+    "Complete a chapter (Shadowmoon Valley / Frostfire Ridge)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    # "Complete a chapter (Gorgrond)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    # "Complete a chapter (Talador)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    # "Complete a chapter (Spires of Arak)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    # "Complete a chapter (Nagrand WoD)": EXCLUSIVE_DRANEOR_CHAPTERS,
 
     #---------------------------------------
     # Instances
@@ -697,32 +743,32 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Dalaran (Legion)": 0,
+    "Hearthstone Dalaran (Legion)": EXCLUSIVE_HEARTHSTONE,
     "Dalaran Hearthstone (item)": 0,
     "Complete a bonus objective (Legion)": 0,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Broken Isles Mining (50)": 0,
-    "Broken Isles Tailoring (5)": 0,
-    "Broken Isles Blacksmithing (5)": 0,
-    "Broken Isles Engineering (5)": 0,
-    "Broken Isles Alchemy (5)": 0,
-    "Broken Isles Skinning (50)": 0,
-    "Broken Isles Enchanting (1)": 0,
-    "Broken Isles Herbalism (50)": 0,
-    "Broken Isles Inscription (5)": 0,
-    "Broken Isles Jewelcrafting (5)": 0,
-    "Broken Isles Leatherworking (5)": 0,
+    "Broken Isles Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Azsuna)": 0,
-    "Complete a chapter (Highmountain)": 0,
-    "Complete a chapter (Stormhiem)": 0,
-    "Complete a chapter (Val'sharah)": 0,
+    "Complete a chapter (Azsuna)": EXCLUSIVE_LEGION_CHAPTERS,
+    "Complete a chapter (Highmountain)": EXCLUSIVE_LEGION_CHAPTERS,
+    "Complete a chapter (Stormhiem)": EXCLUSIVE_LEGION_CHAPTERS,
+    "Complete a chapter (Val'sharah)": EXCLUSIVE_LEGION_CHAPTERS,
 
     #---------------------------------------
     # Instances
@@ -755,30 +801,30 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Boralus / Dazar'alor": 0,
+    "Hearthstone Boralus / Dazar'alor": EXCLUSIVE_HEARTHSTONE,
     "Complete a bonus objective (BFA)": 0,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Kul Tiran Mining (50)": 0,
-    "Kul Tiran Tailoring (5)": 0,
-    "Kul Tiran Blacksmithing (5)": 0,
-    "Kul Tiran Engineering (5)": 0,
-    "Kul Tiran Alchemy (5)": 0,
-    "Kul Tiran Skinning (50)": 0,
-    "Kul Tiran Enchanting (1)": 0,
-    "Kul Tiran Herbalism (50)": 0,
-    "Kul Tiran Inscription (5)": 0,
-    "Kul Tiran Jewelcrafting (5)": 0,
-    "Kul Tiran Leatherworking (5)": 0,
+    "Kul Tiran Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Tiragarde Sound / Zuldazar)": 0,
-    "Complete a chapter (Drustvar / Nazmir)": 0,
-    "Complete a chapter (Stormsong Valley / Vol'dun)": 0,
+    "Complete a chapter (Tiragarde Sound / Zuldazar)": EXCLUSIVE_BFA_CHAPTERS,
+    "Complete a chapter (Drustvar / Nazmir)": EXCLUSIVE_BFA_CHAPTERS,
+    "Complete a chapter (Stormsong Valley / Vol'dun)": EXCLUSIVE_BFA_CHAPTERS,
 
     #---------------------------------------
     # Instances
@@ -808,7 +854,7 @@ var milestones = {
     #---------------------------------------
     # General
     #---------------------------------------
-    "Hearthstone Oribos": 0,
+    "Hearthstone Oribos": EXCLUSIVE_HEARTHSTONE,
     "Join a covenant": 0,
     "Complete a bonus objective (Shadowlands)": 0,
 
@@ -823,25 +869,25 @@ var milestones = {
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Shadowlands Mining (50)": 0,
-    "Shadowlands Tailoring (5)": 0,
-    "Shadowlands Blacksmithing (5)": 0,
-    "Shadowlands Engineering (5)": 0,
-    "Shadowlands Alchemy (5)": 0,
-    "Shadowlands Skinning (50)": 0,
-    "Shadowlands Enchanting (1)": 0,
-    "Shadowlands Herbalism (50)": 0,
-    "Shadowlands Inscription (5)": 0,
-    "Shadowlands Jewelcrafting (5)": 0,
-    "Shadowlands Leatherworking (5)": 0,
+    "Shadowlands Mining (50)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
     #---------------------------------------
-    "Complete a chapter (Bastion)": 0,
-    "Complete a chapter (Maldraxxus)": 0,
-    "Complete a chapter (Ardenweald)": 0,
-    "Complete a chapter (Revendreth)": 0,
+    "Complete a chapter (Bastion)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
+    "Complete a chapter (Maldraxxus)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
+    "Complete a chapter (Ardenweald)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
+    "Complete a chapter (Revendreth)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
 
     #---------------------------------------
     # Chapters
@@ -933,11 +979,47 @@ func _curate(milestone: String, pos: int) -> bool:
     if milestones[milestone] == 0:
         return true
 
-    # If it's 1000 or above - means exclusive to the board
-    if milestones[milestone] >= 1000:
+    # Allow 1 exclusive milestone per board
+    if milestones[milestone] >= EXCLUSIVE_ONE_START && milestones[milestone] <= EXCLUSIVE_ONE_END:
         for i in picked_milestones:
             if milestones[i] == milestones[milestone]:
                 return false
+
+    # Allow 2 exclusive milestones per board
+    if milestones[milestone] >= EXCLUSIVE_TWO_START && milestones[milestone] <= EXCLUSIVE_TWO_END:
+        var count := 0
+        for i in picked_milestones:
+            if milestones[i] == milestones[milestone]:
+                count += 1
+        if count >= 2:
+            return false
+
+    # Allow 3 exclusive milestones per board
+    if milestones[milestone] >= EXCLUSIVE_THREE_START && milestones[milestone] <= EXCLUSIVE_THREE_END:
+        var count := 0
+        for i in picked_milestones:
+            if milestones[i] == milestones[milestone]:
+                count += 1
+        if count >= 3:
+            return false
+
+    # Allow 4 exclusive milestones per board
+    if milestones[milestone] >= EXCLUSIVE_FOUR_START && milestones[milestone] <= EXCLUSIVE_FOUR_END:
+        var count := 0
+        for i in picked_milestones:
+            if milestones[i] == milestones[milestone]:
+                count += 1
+        if count >= 4:
+            return false
+
+    # Allow 5 exclusive milestones per board
+    if milestones[milestone] >= EXCLUSIVE_FIVE_START && milestones[milestone] <= EXCLUSIVE_FIVE_END:
+        var count := 0
+        for i in picked_milestones:
+            if milestones[i] == milestones[milestone]:
+                count += 1
+        if count >= 5:
+            return false
 
     # Vertical check
     for i in range(pos, 0, -5):
