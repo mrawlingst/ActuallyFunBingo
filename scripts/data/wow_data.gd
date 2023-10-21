@@ -70,6 +70,7 @@ var milestones = {
     "Rare Item (1)": 0,
 
     "Tabard (1)": 0,
+    "Rep Tabard (1)": 0,
     "Shirt (1)": 0,
 
     "Purchase racial mount": 0,
@@ -137,6 +138,13 @@ var milestones = {
     "Green Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
     "Red Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
     "White Leather Bag (1)": EXCLUSIVE_DROP_BAGS,
+
+    # Rep Tabards
+    "Stormwind City / Orgrimmar Tabard (1)": 0,
+    "Ironforge / Undercity Tabard (1)": 0,
+    "Darnassus / Thunderbluff Tabard (1)": 0,
+    "Exodar / Silvermoon City Tabard (1)": 0,
+    "Gnomeregan / Darkspear Tabard (1)": 0,
 
     #-------------------
     # Herbalism
