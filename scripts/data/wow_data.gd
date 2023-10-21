@@ -29,15 +29,15 @@ const EXCLUSIVE_CLOTH_CRAFT := 1001
 const EXCLUSIVE_HEARTHSTONE := 2000
 const EXCLUSIVE_DUNGEONS := 2001
 const EXCLUSIVE_RAIDS := 2002
-const EXCLUSIVE_VANILLA_ITEMS := 2003
-const EXCLUSIVE_OUTLANDS_ITEMS := 2004
-const EXCLUSIVE_NORTHREND_ITEMS := 2006
-const EXCLUSIVE_CATACLYSM_ITEMS := 2007
-const EXCLUSIVE_PANDARIA_ITEMS := 2008
-const EXCLUSIVE_DRANEOR_ITEMS := 2009
-const EXCLUSIVE_LEGION_ITEMS := 2010
-const EXCLUSIVE_BFA_ITEMS := 2011
-const EXCLUSIVE_SHADOWLANDS_ITEMS := 2012
+const EXCLUSIVE_VANILLA_ITEMS := 4050
+const EXCLUSIVE_OUTLANDS_ITEMS := 4050
+const EXCLUSIVE_NORTHREND_ITEMS := 4050
+const EXCLUSIVE_CATACLYSM_ITEMS := 4050
+const EXCLUSIVE_PANDARIA_ITEMS := 4050
+const EXCLUSIVE_DRANEOR_ITEMS := 4050
+const EXCLUSIVE_LEGION_ITEMS := 4050
+const EXCLUSIVE_BFA_ITEMS := 4050
+const EXCLUSIVE_SHADOWLANDS_ITEMS := 4050
 
 # 3 exclusives
 const EXCLUSIVE_CRAFT_UNIQUE_ITEMS := 3000
@@ -514,6 +514,19 @@ var milestones = {
     "Crystallized Shadow (1)": EXCLUSIVE_NORTHREND_ITEMS,
     "Crystallized Water (1)": EXCLUSIVE_NORTHREND_ITEMS,
 
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Goldclover (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Fire Leaf (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Tiger Lily (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Talandra's Rose (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Adder's Tongue (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Deadnettle (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Lichbloom (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Icethorn (20)": EXCLUSIVE_NORTHREND_ITEMS,
+    "Frost Lotus (1)": EXCLUSIVE_NORTHREND_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -643,6 +656,16 @@ var milestones = {
     #-------------------
     "Mote of Harmony (5)": EXCLUSIVE_PANDARIA_ITEMS,
 
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Green Tea Leaf (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Rain Poppy (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Silkweed (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Snow Lily (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Fool's Cap (20)": EXCLUSIVE_PANDARIA_ITEMS,
+    "Golden Lotus (1)": EXCLUSIVE_PANDARIA_ITEMS,
+
     #---------------------------------------
     # Professions
     #---------------------------------------
@@ -703,6 +726,20 @@ var milestones = {
     "Complete a bonus objective (WoD)": 0,
 
     #---------------------------------------
+    # Items
+    #---------------------------------------
+
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Frostweed (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Starflow (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Fireweed (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Gorgrond Flytrap (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Talador Orchid (20)": EXCLUSIVE_DRANEOR_ITEMS,
+    "Nagrand Arrowbloom (20)": EXCLUSIVE_DRANEOR_ITEMS,
+
+    #---------------------------------------
     # Professions
     #---------------------------------------
     "Draenor Mining (50)": EXCLUSIVE_PROFESSIONS,
@@ -756,6 +793,21 @@ var milestones = {
     "Hearthstone Dalaran (Legion)": EXCLUSIVE_HEARTHSTONE,
     "Dalaran Hearthstone (item)": 0,
     "Complete a bonus objective (Legion)": 0,
+
+    #---------------------------------------
+    # Items
+    #---------------------------------------
+
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Aethril (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Astral Glory (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Dreamleaf (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Fjarnskaggl (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Foxflower (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Starlight Rose (20)": EXCLUSIVE_LEGION_ITEMS,
+    "Felwort (1)": EXCLUSIVE_LEGION_ITEMS,
 
     #---------------------------------------
     # Professions
@@ -817,6 +869,21 @@ var milestones = {
     "Complete a bonus objective (BFA)": 0,
 
     #---------------------------------------
+    # General
+    #---------------------------------------
+
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Akunda's Bite (20)": EXCLUSIVE_BFA_ITEMS,
+    "Riverbud (20)": EXCLUSIVE_BFA_ITEMS,
+    "Sea Stalk (20)": EXCLUSIVE_BFA_ITEMS,
+    "Siren's Pollen (20)": EXCLUSIVE_BFA_ITEMS,
+    "Star Moss (20)": EXCLUSIVE_BFA_ITEMS,
+    "Winter's Kiss (20)": EXCLUSIVE_BFA_ITEMS,
+    "Anchor Weed (20)": EXCLUSIVE_BFA_ITEMS,
+
+    #---------------------------------------
     # Professions
     #---------------------------------------
     "Kul Tiran Mining (50)": EXCLUSIVE_PROFESSIONS,
@@ -871,6 +938,20 @@ var milestones = {
     "Hearthstone Oribos": EXCLUSIVE_HEARTHSTONE,
     "Join a covenant": 0,
     "Complete a bonus objective (Shadowlands)": 0,
+
+    #---------------------------------------
+    # General
+    #---------------------------------------
+
+    #-------------------
+    # Herbalism
+    #-------------------
+    "Death Blossom (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Marrowroot (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Rising Glory (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Vigil's Torch (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Widowbloom (20)": EXCLUSIVE_SHADOWLANDS_ITEMS,
+    "Nightshade (1)": EXCLUSIVE_SHADOWLANDS_ITEMS,
 
     #---------------------------------------
     # Covenants
