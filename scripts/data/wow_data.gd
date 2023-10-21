@@ -124,8 +124,6 @@ var milestones = {
     # Professions
     #---------------------------------------
     "Archaeology (5)": 0,
-    "Cooking (25)": 0,
-    "Fishing (25)": 0,
 
     "Craft unique Tailoring items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
     "Craft unique Engineering items (5)": EXCLUSIVE_CRAFT_UNIQUE_ITEMS,
@@ -278,11 +276,13 @@ var milestones = {
     "Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Instances
@@ -440,11 +440,13 @@ var milestones = {
     "Outland Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Outland Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Outland Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Outland Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Outland Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Outland Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Outland Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Outland Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Outland Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Outland Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Outland Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -521,11 +523,13 @@ var milestones = {
     "Northren Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Northren Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Northren Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Northren Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Northren Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Northren Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Northren Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Northren Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Northren Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Northren Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Northren Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -597,11 +601,13 @@ var milestones = {
     "Cataclysm Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Cataclysm Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Cataclysm Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -646,11 +652,13 @@ var milestones = {
     "Pandaria Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Pandaria Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Pandaria Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Pandaria Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -703,11 +711,13 @@ var milestones = {
     "Draenor Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Draenor Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Draenor Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Draenor Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Draenor Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Draenor Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Draenor Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Draenor Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Draenor Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -756,11 +766,13 @@ var milestones = {
     "Broken Isles Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Broken Isles Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Broken Isles Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Broken Isles Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -813,11 +825,13 @@ var milestones = {
     "Kul Tiran Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Kul Tiran Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Kul Tiran Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Kul Tiran Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
@@ -875,11 +889,13 @@ var milestones = {
     "Shadowlands Engineering (5)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Alchemy (5)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Shadowlands Enchanting (1)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Enchanting (5)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Herbalism (50)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Inscription (5)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
     "Shadowlands Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    "Shadowlands Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
