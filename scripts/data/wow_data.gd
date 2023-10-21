@@ -5,8 +5,8 @@ var helpLink = "http://www.wowhead.com/"
 
 const EXCLUSIVE_DROP_BAGS := 1000
 const EXCLUSIVE_CLOTH_CRAFT := 1001
-const EXCLUSIVE_DUNGEONS := 101
-const EXCLUSIVE_RAIDS := 102
+const EXCLUSIVE_DUNGEONS := 1002
+const EXCLUSIVE_RAIDS := 1002
 const EXCLUSIVE_COVENANTS := 103
 
 var milestones = {
