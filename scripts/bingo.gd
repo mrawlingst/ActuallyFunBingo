@@ -199,3 +199,14 @@ func _on_time_edit_panel_gui_input(event: InputEvent) -> void:
 func _on_rules_panel_gui_input(event: InputEvent) -> void:
     if event is InputEventMouseButton && event.pressed && (event.button_index == MOUSE_BUTTON_LEFT || event.button_index == MOUSE_BUTTON_RIGHT):
         _on_rules_close_button_pressed()
+
+@onready var n_hide_container: PanelContainer = $HideContainer
+func _on_hide_container_gui_input(event: InputEvent) -> void:
+    if event is InputEventMouseButton && event.pressed && (event.button_index == MOUSE_BUTTON_LEFT || event.button_index == MOUSE_BUTTON_RIGHT):
+        n_hide_container.visible = false
+        n_hide_checkbox.button_pressed = false
+        n_timer.start_timer()
+
+@onready var n_hide_checkbox: CheckBox = $HideCheckbox
+func _on_hide_checkbox_pressed() -> void:
+    n_hide_container.visible = n_hide_checkbox.button_pressed
