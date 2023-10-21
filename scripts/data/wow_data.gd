@@ -1035,7 +1035,7 @@ var RaceClassTable: Dictionary = {
     "Zandalari Troll"       = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk", "Paladin", "Druid", "Shaman",               ],
     "Vulpera"               = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
 
-    "Pandaren"              = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",            "Druid",                         ],
+    "Pandaren"              = ["Warrior", "Hunter", "Mage", "Rogue", "Priest", "Warlock", "Death Knight", "Monk",                     "Shaman",               ],
 }
 
 var ClassSpecsTable: Dictionary = {
