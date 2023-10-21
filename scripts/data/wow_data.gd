@@ -119,7 +119,6 @@ var milestones = {
     # Crafted
     "Linen Bag (1)": 0,
     "Red Linen Bag (1)": 0,
-    "Kodo Hide Bag": 0,
 
     # Purchasable
     "Small Brown Pouch (1)": 0,
