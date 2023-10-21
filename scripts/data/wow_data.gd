@@ -591,6 +591,8 @@ var milestones = {
     #-------------------------------------------------------------------------------
     # Cataclysm - 400
     #-------------------------------------------------------------------------------
+    #!: it appears that cata content is not really accessible until level 30 which locks
+    #!: starter accounts out
 
     #---------------------------------------
     # Items
@@ -599,28 +601,28 @@ var milestones = {
     #-------------------
     # General
     #-------------------
-    "Volatile Air (1)": EXCLUSIVE_CATACLYSM_ITEMS,
-    "Volatile Earth (1)": EXCLUSIVE_CATACLYSM_ITEMS,
-    "Volatile Fire (1)": EXCLUSIVE_CATACLYSM_ITEMS,
-    "Volatile Water (1)": EXCLUSIVE_CATACLYSM_ITEMS,
-    "Volatile Life (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    # "Volatile Air (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    # "Volatile Earth (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    # "Volatile Fire (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    # "Volatile Water (1)": EXCLUSIVE_CATACLYSM_ITEMS,
+    # "Volatile Life (1)": EXCLUSIVE_CATACLYSM_ITEMS,
 
     #---------------------------------------
     # Professions
     #---------------------------------------
-    "Cataclysm Mining (50)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Tailoring (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Engineering (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Alchemy (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Skinning (50)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Enchanting (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Herbalism (50)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Inscription (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Cooking (25)": EXCLUSIVE_PROFESSIONS,
-    "Cataclysm Fishing (25)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Mining (50)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Tailoring (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Blacksmithing (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Engineering (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Alchemy (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Skinning (50)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Enchanting (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Herbalism (50)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Inscription (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Jewelcrafting (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Leatherworking (5)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Cooking (25)": EXCLUSIVE_PROFESSIONS,
+    # "Cataclysm Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
     # Chapters
