@@ -128,7 +128,10 @@ var milestones = {
     "Rep Tabard (1)": 0,
     "Shirt (1)": 0,
 
-    "Purchase racial mount": 0,
+    "Purchase rare ground mount (1)": 0,
+    "Purchase epic ground mount (1)": 0,
+    "Purchase rare flying mount (1)": 0,
+    "Purchase epic flying mount (1)": 0,
 
     #---------------------------------------
     # Professions
