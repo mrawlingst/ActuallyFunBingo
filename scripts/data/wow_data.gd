@@ -25,6 +25,16 @@ const EXCLUSIVE_COVENANTS := 103
 const EXCLUSIVE_DROP_BAGS := 1000
 const EXCLUSIVE_CLOTH_CRAFT := 1001
 
+const EXCLUSIVE_CLASSIC_CHAPTERS := 1002
+const EXCLUSIVE_OUTLANDS_CHAPTERS := 1002
+const EXCLUSIVE_NORTHREND_CHAPTERS := 1002
+const EXCLUSIVE_CATACLYSM_CHAPTERS := 1002
+const EXCLUSIVE_PANDARIA_CHAPTERS := 1002
+const EXCLUSIVE_DRANEOR_CHAPTERS := 1002
+const EXCLUSIVE_LEGION_CHAPTERS := 1002
+const EXCLUSIVE_BFA_CHAPTERS := 1002
+const EXCLUSIVE_SHADOWLANDS_CHAPTERS := 1002
+
 # 2 exclusives
 const EXCLUSIVE_HEARTHSTONE := 2000
 const EXCLUSIVE_DUNGEONS := 2001
@@ -44,15 +54,15 @@ const EXCLUSIVE_CRAFT_UNIQUE_ITEMS := 3000
 const EXCLUSIVE_PROFESSIONS := 3002
 
 # 5 exclusives
-const EXCLUSIVE_CLASSIC_CHAPTERS := 5000
-const EXCLUSIVE_OUTLANDS_CHAPTERS := 5000
-const EXCLUSIVE_NORTHREND_CHAPTERS := 5000
-const EXCLUSIVE_CATACLYSM_CHAPTERS := 5000
-const EXCLUSIVE_PANDARIA_CHAPTERS := 5000
-const EXCLUSIVE_DRANEOR_CHAPTERS := 5000
-const EXCLUSIVE_LEGION_CHAPTERS := 5000
-const EXCLUSIVE_BFA_CHAPTERS := 5000
-const EXCLUSIVE_SHADOWLANDS_CHAPTERS := 5000
+const EXCLUSIVE_CLASSIC_QUESTS := 5000
+const EXCLUSIVE_OUTLANDS_QUESTS := 5000
+const EXCLUSIVE_NORTHREND_QUESTS := 5000
+const EXCLUSIVE_CATACLYSM_QUESTS := 5000
+const EXCLUSIVE_PANDARIA_QUESTS := 5000
+const EXCLUSIVE_DRANEOR_QUESTS := 5000
+const EXCLUSIVE_LEGION_QUESTS := 5000
+const EXCLUSIVE_BFA_QUESTS := 5000
+const EXCLUSIVE_SHADOWLANDS_QUESTS := 5000
 
 var milestones = {
     #-------------------------------------------------------------------------------
@@ -330,7 +340,7 @@ var milestones = {
     "Discover Onyxia's Lair": EXCLUSIVE_RAIDS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
 
     # Kalimdor
@@ -347,6 +357,19 @@ var milestones = {
     "Complete a chapter (Un'Goro Crater)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Winterspring)": EXCLUSIVE_CLASSIC_CHAPTERS,
 
+    "Complete 30 quests (Ashenvale)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Desolace)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Dustwallow Marsh)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Felwood)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Feralas)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Silithus)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Stonetalon Mountains)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Southern Barrens)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Tanaris)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Thousand Needles)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Un'Goro Crater)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Winterspring)": EXCLUSIVE_CLASSIC_QUESTS,
+
     # Eastern Kingdom
     "Complete a chapter (Arathi Highlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Badlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
@@ -360,12 +383,30 @@ var milestones = {
     "Complete a chapter (Swamp of Sorrows)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Western Plaguelands)": EXCLUSIVE_CLASSIC_CHAPTERS,
 
+    "Complete 30 quests (Arathi Highlands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Badlands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Blasted Lands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Burning Steppes)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Cape of Stranglethorn)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Eastern Plaguelands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Hinterlands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Northern Stranglethorn)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Searing Gorge)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Swamp of Sorrows)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Western Plaguelands)": EXCLUSIVE_CLASSIC_QUESTS,
+
     # Faction-specific only
     "Complete a chapter (Westfall / Northern Barrens)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Loch Modan / Silverpine Forest)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Darkshore / Azshara)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Bloodmyst Isle / Ghostlands)": EXCLUSIVE_CLASSIC_CHAPTERS,
     "Complete a chapter (Redridge Mountains / Hillsbrad Foothills)": EXCLUSIVE_CLASSIC_CHAPTERS,
+
+    "Complete 30 quests (Westfall / Northern Barrens)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Loch Modan / Silverpine Forest)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Darkshore / Azshara)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Bloodmyst Isle / Ghostlands)": EXCLUSIVE_CLASSIC_QUESTS,
+    "Complete 30 quests (Redridge Mountains / Hillsbrad Foothills)": EXCLUSIVE_CLASSIC_QUESTS,
 
     #-------------------------------------------------------------------------------
     # Burning Crusade - 200
@@ -459,7 +500,7 @@ var milestones = {
     "Outland Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Hellfire Peninsula)": EXCLUSIVE_OUTLANDS_CHAPTERS,
     "Complete a chapter (Zangarmarsh)": EXCLUSIVE_OUTLANDS_CHAPTERS,
@@ -468,6 +509,14 @@ var milestones = {
     "Complete a chapter (Blade's Edge Mountains)": EXCLUSIVE_OUTLANDS_CHAPTERS,
     # "Complete a chapter (Shadowmoon Valley)": EXCLUSIVE_OUTLANDS_CHAPTERS, #?: requires level 25+ for quests
     # "Complete a chapter (Netherstorm)": EXCLUSIVE_OUTLANDS_CHAPTERS, #?: requires level 25+ for quests
+
+    "Complete 30 quests (Hellfire Peninsula)": EXCLUSIVE_OUTLANDS_QUESTS,
+    "Complete 30 quests (Zangarmarsh)": EXCLUSIVE_OUTLANDS_QUESTS,
+    "Complete 30 quests (Terokkar Forest)": EXCLUSIVE_OUTLANDS_QUESTS,
+    "Complete 30 quests (Nagrand)": EXCLUSIVE_OUTLANDS_QUESTS,
+    "Complete 30 quests (Blade's Edge Mountains)": EXCLUSIVE_OUTLANDS_QUESTS,
+    # "Complete 30 quests (Shadowmoon Valley)": EXCLUSIVE_OUTLANDS_QUESTS, #?: requires level 25+ for quests
+    # "Complete 30 quests (Netherstorm)": EXCLUSIVE_OUTLANDS_QUESTS, #?: requires level 25+ for quests
 
     #---------------------------------------
     # Instances
@@ -562,7 +611,7 @@ var milestones = {
     "Northren Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Borean Tundra)": EXCLUSIVE_NORTHREND_CHAPTERS,
     "Complete a chapter (Howling Fjord)": EXCLUSIVE_NORTHREND_CHAPTERS,
@@ -572,6 +621,15 @@ var milestones = {
     "Complete a chapter (Sholazar Basin)": EXCLUSIVE_NORTHREND_CHAPTERS,
     # "Complete a chapter (Icecrown)": EXCLUSIVE_NORTHREND_CHAPTERS, #?: quests req level 25+
     # "Complete a chapter (Storm Peaks)": EXCLUSIVE_NORTHREND_CHAPTERS, #?: quests req level 25+
+
+    "Complete 30 quests (Borean Tundra)": EXCLUSIVE_NORTHREND_QUESTS,
+    "Complete 30 quests (Howling Fjord)": EXCLUSIVE_NORTHREND_QUESTS,
+    "Complete 30 quests (Dragonblight)": EXCLUSIVE_NORTHREND_QUESTS,
+    "Complete 30 quests (Grizzly Hills)": EXCLUSIVE_NORTHREND_QUESTS,
+    "Complete 30 quests (Zul'Drak)": EXCLUSIVE_NORTHREND_QUESTS,
+    "Complete 30 quests (Sholazar Basin)": EXCLUSIVE_NORTHREND_QUESTS,
+    # "Complete 30 quests (Icecrown)": EXCLUSIVE_NORTHREND_QUESTS, #?: quests req level 25+
+    # "Complete 30 quests (Storm Peaks)": EXCLUSIVE_NORTHREND_QUESTS, #?: quests req level 25+
 
     #---------------------------------------
     # Instances
@@ -642,7 +700,7 @@ var milestones = {
     # "Cataclysm Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     #!: Cata zones requires level 30+
     # "Complete a chapter (Vashj'ir)": EXCLUSIVE_CATACLYSM_CHAPTERS,
@@ -650,6 +708,12 @@ var milestones = {
     # "Complete a chapter (Deepholm)": EXCLUSIVE_CATACLYSM_CHAPTERS,
     # "Complete a chapter (Uldum)": EXCLUSIVE_CATACLYSM_CHAPTERS,
     # "Complete a chapter (Twilight Highlands)": EXCLUSIVE_CATACLYSM_CHAPTERS,
+
+    # "Complete 30 quests (Vashj'ir)": EXCLUSIVE_CATACLYSM_QUESTS,
+    # "Complete 30 quests (Mount Hyjal)": EXCLUSIVE_CATACLYSM_QUESTS,
+    # "Complete 30 quests (Deepholm)": EXCLUSIVE_CATACLYSM_QUESTS,
+    # "Complete 30 quests (Uldum)": EXCLUSIVE_CATACLYSM_QUESTS,
+    # "Complete 30 quests (Twilight Highlands)": EXCLUSIVE_CATACLYSM_QUESTS,
 
     #---------------------------------------
     # Instances
@@ -711,7 +775,7 @@ var milestones = {
     "Pandaria Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Jade Forest)": EXCLUSIVE_PANDARIA_CHAPTERS,
     "Complete a chapter (Valley of the Four Winds)": EXCLUSIVE_PANDARIA_CHAPTERS,
@@ -719,6 +783,13 @@ var milestones = {
     "Complete a chapter (Kun-Lai Summit)": EXCLUSIVE_PANDARIA_CHAPTERS,
     # "Complete a chapter (Townlong Steppes)": EXCLUSIVE_PANDARIA_CHAPTERS, #!: requires level 30+
     # "Complete a chapter (Dread Wastes)": EXCLUSIVE_PANDARIA_CHAPTERS, #!: requires level 30+
+
+    "Complete 30 quests (Jade Forest)": EXCLUSIVE_PANDARIA_QUESTS,
+    "Complete 30 quests (Valley of the Four Winds)": EXCLUSIVE_PANDARIA_QUESTS,
+    "Complete 30 quests (Krasarang Wilds)": EXCLUSIVE_PANDARIA_QUESTS,
+    "Complete 30 quests (Kun-Lai Summit)": EXCLUSIVE_PANDARIA_QUESTS,
+    # "Complete 30 quests (Townlong Steppes)": EXCLUSIVE_PANDARIA_QUESTS, #!: requires level 30+
+    # "Complete 30 quests (Dread Wastes)": EXCLUSIVE_PANDARIA_QUESTS, #!: requires level 30+
 
     #---------------------------------------
     # Instances
@@ -791,13 +862,20 @@ var milestones = {
     "Draenor Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
+    #!: dont think you can just quest next zone without completing the previous zone?
     "Complete a chapter (Shadowmoon Valley / Frostfire Ridge)": EXCLUSIVE_DRANEOR_CHAPTERS,
-    # "Complete a chapter (Gorgrond)": EXCLUSIVE_DRANEOR_CHAPTERS,
-    # "Complete a chapter (Talador)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    "Complete a chapter (Gorgrond)": EXCLUSIVE_DRANEOR_CHAPTERS,
+    "Complete a chapter (Talador)": EXCLUSIVE_DRANEOR_CHAPTERS,
     # "Complete a chapter (Spires of Arak)": EXCLUSIVE_DRANEOR_CHAPTERS,
     # "Complete a chapter (Nagrand WoD)": EXCLUSIVE_DRANEOR_CHAPTERS,
+
+    "Complete 30 quests (Shadowmoon Valley / Frostfire Ridge)": EXCLUSIVE_DRANEOR_QUESTS,
+    "Complete 30 quests (Gorgrond)": EXCLUSIVE_DRANEOR_QUESTS,
+    "Complete 30 quests (Talador)": EXCLUSIVE_DRANEOR_QUESTS,
+    # "Complete 30 quests (Spires of Arak)": EXCLUSIVE_DRANEOR_QUESTS,
+    # "Complete 30 quests (Nagrand WoD)": EXCLUSIVE_DRANEOR_QUESTS,
 
     #---------------------------------------
     # Instances
@@ -867,12 +945,17 @@ var milestones = {
     "Broken Isles Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Azsuna)": EXCLUSIVE_LEGION_CHAPTERS,
     "Complete a chapter (Highmountain)": EXCLUSIVE_LEGION_CHAPTERS,
     "Complete a chapter (Stormhiem)": EXCLUSIVE_LEGION_CHAPTERS,
     "Complete a chapter (Val'sharah)": EXCLUSIVE_LEGION_CHAPTERS,
+
+    "Complete 30 quests (Azsuna)": EXCLUSIVE_LEGION_QUESTS,
+    "Complete 30 quests (Highmountain)": EXCLUSIVE_LEGION_QUESTS,
+    "Complete 30 quests (Stormhiem)": EXCLUSIVE_LEGION_QUESTS,
+    "Complete 30 quests (Val'sharah)": EXCLUSIVE_LEGION_QUESTS,
 
     #---------------------------------------
     # Instances
@@ -948,11 +1031,14 @@ var milestones = {
     "Kul Tiran Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Tiragarde Sound / Zuldazar)": EXCLUSIVE_BFA_CHAPTERS,
     "Complete a chapter (Drustvar / Nazmir)": EXCLUSIVE_BFA_CHAPTERS,
     # "Complete a chapter (Stormsong Valley / Vol'dun)": EXCLUSIVE_BFA_CHAPTERS, #!: requires level 30
+
+    "Complete 30 quests (Tiragarde Sound / Zuldazar)": EXCLUSIVE_BFA_QUESTS,
+    "Complete 30 quests (Drustvar / Nazmir)": EXCLUSIVE_BFA_QUESTS,
 
     #---------------------------------------
     # Instances
@@ -1036,15 +1122,20 @@ var milestones = {
     "Shadowlands Fishing (25)": EXCLUSIVE_PROFESSIONS,
 
     #---------------------------------------
-    # Chapters
+    # Chapters / Quests
     #---------------------------------------
     "Complete a chapter (Bastion)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
     "Complete a chapter (Maldraxxus)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
     "Complete a chapter (Ardenweald)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
     "Complete a chapter (Revendreth)": EXCLUSIVE_SHADOWLANDS_CHAPTERS,
 
+    "Complete 30 quests (Bastion)": EXCLUSIVE_SHADOWLANDS_QUESTS,
+    "Complete 30 quests (Maldraxxus)": EXCLUSIVE_SHADOWLANDS_QUESTS,
+    "Complete 30 quests (Ardenweald)": EXCLUSIVE_SHADOWLANDS_QUESTS,
+    "Complete 30 quests (Revendreth)": EXCLUSIVE_SHADOWLANDS_QUESTS,
+
     #---------------------------------------
-    # Chapters
+    # Instances
     #---------------------------------------
 
     # Dungeons
