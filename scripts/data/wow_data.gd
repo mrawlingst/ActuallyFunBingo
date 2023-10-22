@@ -234,11 +234,11 @@ var milestones = {
     #-------------------
     "Ruined Leather Scraps (20)": EXCLUSIVE_VANILLA_ITEMS,
     "Light Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
-    "Medium Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
-    "Heavy Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
+    # "Medium Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
+    # "Heavy Leather (20)": EXCLUSIVE_VANILLA_ITEMS,
     "Light Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
-    "Medium Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
-    "Heavy Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
+    # "Medium Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
+    # "Heavy Hide (3)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
     # Mining
