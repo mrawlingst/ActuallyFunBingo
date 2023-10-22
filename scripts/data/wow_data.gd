@@ -262,6 +262,11 @@ var milestones = {
     # Tailoring
     #-------------------
     "Linen Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Wool Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Silk Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Mageweave Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+    "Runecloth (20)": EXCLUSIVE_VANILLA_ITEMS,
+
     "Bolt of Linen Cloth (20)": EXCLUSIVE_VANILLA_ITEMS,
 
     #-------------------
