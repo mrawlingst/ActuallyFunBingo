@@ -8,11 +8,21 @@ signal TimerClicked
 
 var time_elapsed: float = 0
 
+signal CountdownTimerExpired
+
 func _process(delta):
     if !timer_active:
+        set_process(false)
         return
 
-    time_elapsed += delta
+    if bingo_info.bingoMode == "Countdown":
+        time_elapsed -= delta
+        if time_elapsed < 0:
+            time_elapsed = 0
+            CountdownTimerExpired.emit()
+            pause_timer()
+    else:
+        time_elapsed += delta
 
     n_time_label.text = get_formatted_elapsed_time()
 
@@ -25,8 +35,11 @@ func _on_start_pause_pressed():
 func _on_reset_pressed():
     set_process(false)
     timer_active = false
-    time_elapsed = 0
-    n_time_label.text = elapsed_fmt % [0, 0, 0, 0]
+    if bingo_info.bingoMode == "Countdown":
+        time_elapsed = 3 * 3600
+    else:
+        time_elapsed = 0
+    n_time_label.text = get_formatted_elapsed_time()
     get_node("Start Pause").text = "Start"
     get_node("../Seed Generator/HBoxContainer/Generate").set_disabled(false)
     get_node("../Seed Generator/HBoxContainer/Reset").set_disabled(false)

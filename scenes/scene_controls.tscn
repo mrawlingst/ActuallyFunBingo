@@ -46,7 +46,6 @@ theme_override_constants/margin_right = 25
 
 [node name="Contents" type="RichTextLabel" parent="MarginContainer2/VBoxContainer/MarginContainer"]
 layout_mode = 2
-size_flags_vertical = 6
 bbcode_enabled = true
 text = "[font_size=24][center][u]General[/u][/center][/font_size]
 
@@ -63,11 +62,13 @@ The goal is to cover 5 milestones in a vertical, horizontal, or diagonal row to 
 
 [font_size=24][center][u]Blackout[/u][/center][/font_size]
 
-The goal is to cover [b][u]all[/u][/b] milestones before the timer stops.
+The goal is to cover [b][u]all[/u][/b] milestones as quickly as you can.
+
+[font_size=24][center][u]Countdown[/u][/center][/font_size]
+
+The goal is to complete as many milestones as you can before the timer countdowns to zero.
 
 Essentially a speedrun to complete everything."
-fit_content = true
-scroll_active = false
 
 [node name="Back" type="Button" parent="MarginContainer2/VBoxContainer"]
 custom_minimum_size = Vector2(75, 0)

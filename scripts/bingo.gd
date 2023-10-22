@@ -52,7 +52,7 @@ func populate_card():
 func check_for_bingo(id):
     if bingo_info.bingoMode == "Standard":
         check_standard_bingo()
-    elif bingo_info.bingoMode == "Blackout":
+    elif bingo_info.bingoMode == "Blackout" || bingo_info.bingoMode == "Countdown":
         check_blackout_bingo()
 
 func check_standard_bingo():
@@ -113,8 +113,8 @@ func _on_back_pressed():
 func _on_Modes_item_selected(ID):
     bingo_info.bingoMode = get_node("Modes").get_item_text(ID)
 
-    n_seed_generator._on_reset_pressed()
-    n_timer._on_reset_pressed()
+    if bingo_info.bingoMode == "Countdown":
+        n_timer.set_time_elapsed(3 * 3600)
 
 func _on_GameHelp_meta_clicked(meta):
     OS.shell_open(meta)
@@ -210,3 +210,11 @@ func _on_hide_container_gui_input(event: InputEvent) -> void:
 @onready var n_hide_checkbox: CheckBox = $HideCheckbox
 func _on_hide_checkbox_pressed() -> void:
     n_hide_container.visible = n_hide_checkbox.button_pressed
+
+
+func _on_timer_countdown_timer_expired() -> void:
+    for i in range(25):
+        var btn: TextureButton = get_node("VBoxContainer/Card/Milestone_" + str(i + 1))
+        if (btn as TextureButton).is_pressed():
+            continue
+        (btn as TextureButton).disabled = true
