@@ -35,6 +35,8 @@ const EXCLUSIVE_LEGION_CHAPTERS := 1002
 const EXCLUSIVE_BFA_CHAPTERS := 1002
 const EXCLUSIVE_SHADOWLANDS_CHAPTERS := 1002
 
+const EXCLUSIVE_GENERAL_CHAPTERS := 1003
+
 # 2 exclusives
 const EXCLUSIVE_HEARTHSTONE := 2000
 const EXCLUSIVE_DUNGEONS := 2001
@@ -88,9 +90,9 @@ var milestones = {
     "Kill a rare": 0,
     "Complete a bonus objective": 0,
 
-    "Complete chapters (5)": 0,
-    "Complete chapters (7)": 0,
-    "Complete a chapter in a zone": 0,
+    "Complete chapters (2)": EXCLUSIVE_GENERAL_CHAPTERS,
+    "Complete chapters (3)": EXCLUSIVE_GENERAL_CHAPTERS,
+    "Complete a chapter in a zone": EXCLUSIVE_GENERAL_CHAPTERS,
 
     "Complete quests (50)": 0,
     "Complete quests (75)": 0,
