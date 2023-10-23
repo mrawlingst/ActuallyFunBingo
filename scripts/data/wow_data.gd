@@ -37,6 +37,8 @@ const EXCLUSIVE_SHADOWLANDS_CHAPTERS := 1002
 
 const EXCLUSIVE_GENERAL_CHAPTERS := 1003
 
+const EXCLUSIVE_GENERAL_QUESTS := 1004
+
 # 2 exclusives
 const EXCLUSIVE_HEARTHSTONE := 2000
 const EXCLUSIVE_DUNGEONS := 2001
@@ -94,9 +96,9 @@ var milestones = {
     "Complete chapters (3)": EXCLUSIVE_GENERAL_CHAPTERS,
     "Complete a chapter in a zone": EXCLUSIVE_GENERAL_CHAPTERS,
 
-    "Complete quests (50)": 0,
-    "Complete quests (75)": 0,
-    "Complete quests (100)": 0,
+    "Complete quests (50)": EXCLUSIVE_GENERAL_QUESTS,
+    "Complete quests (75)": EXCLUSIVE_GENERAL_QUESTS,
+    "Complete quests (100)": EXCLUSIVE_GENERAL_QUESTS,
 
     "Two honored reputations": 0,
 
